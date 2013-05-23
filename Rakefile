@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MediMongo::Application.load_tasks
+Medilines::Application.load_tasks

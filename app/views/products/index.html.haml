@@ -3,15 +3,14 @@
 %table
   %tr
     %th Slug
-    %th Title
     %th Brand
+    %th Name
     %th Type
     %th Price
-    %th Country
     %th Options
     %th Features
+    %th Design
     %th Description
-    %th Excerpt
     %th Slogan
     %th
     %th
@@ -20,15 +19,14 @@
   - @products.each do |product|
     %tr
       %td= product.slug
-      %td= product.title
       %td= product.brand
+      %td= product.name
       %td= product.type
       %td= product.price
-      %td= product.country
       %td= product.options
       %td= product.features
+      %td= product.design
       %td= product.description
-      %td= product.excerpt
       %td= product.slogan
       %td= link_to 'Show', product
       %td= link_to 'Edit', edit_product_path(product)

@@ -4,15 +4,14 @@ describe "products/show" do
   before(:each) do
     @product = assign(:product, stub_model(Product,
       :slug => "Slug",
-      :title => "Title",
-      :brand => "Brand",
+      :brand => nil,
+      :name => "Name",
       :type => "Type",
       :price => 1,
-      :country => "Country",
-      :options => "",
-      :features => "",
+      :options => "MyText",
+      :features => "MyText",
+      :design => "MyText",
       :description => "MyText",
-      :excerpt => "Excerpt",
       :slogan => "Slogan"
     ))
   end
@@ -21,15 +20,14 @@ describe "products/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Slug/)
-    rendered.should match(/Title/)
-    rendered.should match(/Brand/)
+    rendered.should match(//)
+    rendered.should match(/Name/)
     rendered.should match(/Type/)
     rendered.should match(/1/)
-    rendered.should match(/Country/)
-    rendered.should match(//)
-    rendered.should match(//)
     rendered.should match(/MyText/)
-    rendered.should match(/Excerpt/)
+    rendered.should match(/MyText/)
+    rendered.should match(/MyText/)
+    rendered.should match(/MyText/)
     rendered.should match(/Slogan/)
   end
 end

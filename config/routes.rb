@@ -1,4 +1,13 @@
-MediMongo::Application.routes.draw do
+Medilines::Application.routes.draw do
+  resources :categories
+
+
+  resources :brands
+
+
+  resources :products
+
+
   resources :products
   
   root :to => 'application#home'

@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-MediMongo::Application.config.session_store :cookie_store, key: '_MediMongo_session'
+Medilines::Application.config.session_store :cookie_store, key: '_Medilines_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# MediMongo::Application.config.session_store :active_record_store
+# Medilines::Application.config.session_store :active_record_store
