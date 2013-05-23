@@ -1,0 +1,39 @@
+%h1 Listing products
+
+%table
+  %tr
+    %th Slug
+    %th Title
+    %th Brand
+    %th Type
+    %th Price
+    %th Country
+    %th Options
+    %th Features
+    %th Description
+    %th Excerpt
+    %th Slogan
+    %th
+    %th
+    %th
+
+  - @products.each do |product|
+    %tr
+      %td= product.slug
+      %td= product.title
+      %td= product.brand
+      %td= product.type
+      %td= product.price
+      %td= product.country
+      %td= product.options
+      %td= product.features
+      %td= product.description
+      %td= product.excerpt
+      %td= product.slogan
+      %td= link_to 'Show', product
+      %td= link_to 'Edit', edit_product_path(product)
+      %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Product', new_product_path

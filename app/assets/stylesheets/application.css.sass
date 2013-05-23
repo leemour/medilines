@@ -1,0 +1,282 @@
+@import 'normalize'
+@import 'products'
+
+body
+  background-color: #FFF
+  color: #333
+  font-family: tahoma, arial, helvetica, sans-serif
+  font-size: 13px
+  line-height: 18px
+
+p, ol, ul, td
+  font-family: verdana, arial, helvetica, sans-serif
+  font-size: 13px
+  line-height: 18px
+
+pre
+  background-color: #eee
+  padding: 10px
+  font-size: 11px
+
+a
+  color: #006ED5
+  &:visited
+    color: #7D84C6
+  &:hover
+    color: #2193FF
+  &:active
+    color: #3A81C4
+
+div
+  &.field, &.actions
+    margin-bottom: 10px
+
+#notice
+  color: green
+
+.field_with_errors
+  padding: 2px
+  background-color: red
+  display: table
+
+#error_explanation
+  width: 450px
+  border: 2px solid red
+  padding: 7px
+  padding-bottom: 0
+  margin-bottom: 20px
+  background-color: #f0f0f0
+  h2
+    text-align: left
+    font-weight: bold
+    padding: 5px 5px 5px 15px
+    font-size: 12px
+    margin: -7px
+    margin-bottom: 0px
+    background-color: #c00
+    color: #fff
+  ul li
+    font-size: 12px
+    list-style: square
+
+h1
+  color: #aba97f
+  text-size: 20px
+  font-weight: normal
+  margin: 10px 0
+  
+h2
+  color: #aba97f
+  text-size: 18px
+  
+h3
+  color: #aba97f
+  text-size: 16px
+  margin: 10px 0 0
+
+ol, ul
+  padding: 0
+  margin: 0
+
+dt
+  float: left
+  clear: left
+ 
+dd
+  float: left
+  margin-left: 10px
+  
+address
+  font-style: normal
+
+.container
+  max-width: 1100px
+  margin: 0 auto
+  overflow: hidden
+  padding: 10px 20px
+
+section#main
+  min-height: 600px
+
+section.intro, section#main
+  padding: 0 10px
+
+header
+  margin-top: 20px
+  padding: 0 10px
+  address.contacts
+    float: right
+    height: 50px
+    overflow: hidden
+    margin-top: 5px
+    width: 400px
+    .main
+      float: left
+      height: 50px
+      padding-right: 20px
+      width: 210px
+      .tel
+        float: right
+        font-size: 24px
+        line-height: 0.9em
+        margin-bottom: 3px
+        margin-top: 2px
+      .email
+        float: right
+        font-size: 14px
+        margin: 2px 0
+    .alternative
+      p
+        clear: right
+        color: #5a6273
+        float: left
+        font-size: 19px
+        margin: 0 0 9px
+        
+
+.nav
+  margin: 10px 0
+  li
+    float: left
+    list-style-type: none
+
+.inactive
+  color: #AAAAAA
+
+#main-menu
+  clear: both
+  overflow: hidden
+  margin-left: -7px
+  width: 100%
+  li
+    padding: 10px
+    font-size: 16px
+
+#service-menu
+  overflow: hidden
+  margin: 10px 0 20px
+  li
+    width: 50%
+    img
+      float: left
+      margin-right: 10px
+    h2
+      color: #ABA97F
+      font-size: 16px
+      a
+        color: #9E994A
+        &:visited
+          color: #9E994A
+        &:hover
+          color: #A88D6A
+        &:active
+          color: #878456
+          
+  dl
+    float: left
+    dt
+      font-weight: bold
+
+.intro
+  background-color: #FAFAEA
+  border-top: 2px solid #DDDDDD
+  border-bottom: 2px solid #DDDDDD
+  clear: both
+  header
+    margin: 0
+  h1
+    color: #aba97f
+    font-size: 20px
+    font-weight: normal
+    margin-top: 5px
+  p
+    margin: 5px 0
+
+.outro
+  clear: both
+  padding: 0 10px
+
+.full-contacts
+  float: left
+  min-width: 250px
+  overflow: hidden
+  width: 30%
+  p
+    margin: 3px 0
+
+.brand
+  clear: both
+  overflow: hidden
+  margin-bottom: 20px
+  img
+    float: left
+    margin-right: 20px
+  .brand-description
+    background-color: #fafaea
+    float: left
+    margin-right: 30px
+    max-width: 300px
+    overflow: hidden
+    padding: 0 20px 20px
+    img
+      margin-right: 4px
+  .details
+    float: left
+    h4
+      font-size: 18px
+      font-weight: normal
+      color: #6248A0
+      margin-top: 5px
+    ul
+      list-style-type: square
+      list-style-position: inside
+  &.forest
+    .brand-description
+      border-left: 3px solid #a9bf4a
+      margin-left: 7px
+      h2
+        color: #a9bf4a
+    h4
+      color: #a9bf4a
+  &.fedesa
+    .brand-description
+      border-left: 3px solid #ba4712
+      h2
+        color: #ba4712
+      img
+        margin-top: 3px
+    h4
+      color: #ba4712
+
+#ya-maps
+  background-color: #EEEEEE
+  border: 1px solid #CCCCCC
+  float: right
+  height: 500px
+  margin: 10px 20px 20px 0
+  min-width: 300px
+  width: 60%
+
+footer
+  background-color: #FAFAEA
+  border-top: 2px solid #DDDDDD
+  clear: both
+  margin-top: 20px
+  padding: 20px 10px
+  overflow: hidden
+  p
+    color: #5a6273
+    font-size: 14px
+  .address
+    float: left
+    ul
+      clear: both
+    li
+      color: #5a6273
+      font-size: 15px
+      float: left
+      list-style-type: none
+      margin-right: 10px
+  .details
+    float: right 
+  

@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Slug:
+  = @product.slug
+%p
+  %b Title:
+  = @product.title
+%p
+  %b Brand:
+  = @product.brand
+%p
+  %b Type:
+  = @product.type
+%p
+  %b Price:
+  = @product.price
+%p
+  %b Country:
+  = @product.country
+%p
+  %b Options:
+  = @product.options
+%p
+  %b Features:
+  = @product.features
+%p
+  %b Description:
+  = @product.description
+%p
+  %b Excerpt:
+  = @product.excerpt
+%p
+  %b Slogan:
+  = @product.slogan
+
+= link_to 'Edit', edit_product_path(@product)
+\|
+= link_to 'Back', products_path

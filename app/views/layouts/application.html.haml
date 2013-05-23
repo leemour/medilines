@@ -1,0 +1,84 @@
+!!! 5
+%html{lang: 'ru'}
+  %head
+    %title Стоматологические установки Медилайн Сервис
+    %meta{charset: 'utf8-'}/
+    %meta{name: 'description', content: @seo.description}/
+    %meta{name: 'keywords', content: @seo.keywords}/
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    -#= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"
+    = javascript_include_tag "http://api-maps.yandex.ru/1.1/index.xml?key=AHmYPk4BAAAA4fPMKgIAreYWA9M7VyWe2kPO7v_Fm8D1FkIAAAAAAAAAAACgkdIcRaAFjXx19j3-CWk_wRyafA==~AEUcQE4BAAAA1RrrawIANcs4c1C_SkGCiOQuhZYQOgDcI6wAAAAAAAAAAADevNxdiWRwyYnpe3RpZirPWhouOg=="
+    = csrf_meta_tags
+    /[if lt IE 9]
+      %script{ :src => '//html5shiv.googlecode.com/svn/trunk/html5.js' }
+  %body
+    %header
+      .container
+        = link_to image_tag("logo.png", :size => "277x56", :alt => "Медилиайн Сервис"), root_path
+        
+        %address.contacts
+          .main
+            %p.tel (812) 983-49-96
+            %p.email= mail_to 'info@medilines.ru'
+          .alternative
+            %p.tel 8 921 375-74-61
+            %p.tel 8 905 287-72-47
+        
+        %nav#main-menu
+          %ul.nav
+            %li
+              = link_to 'Установки', dentals_path
+            %li.inactive
+              -#=link_to 'Визуализация', visuals_path
+              Визуализация
+            %li.inactive
+              -#=link_to 'Комплектующие', complects_path
+              Комплектующие
+            %li.inactive
+              -#=link_to 'Запчасти', spares_path
+              Запчасти
+            %li
+              =link_to 'Скачать каталог', '/docs/MediLines_Catalog_2013.pdf'
+            %li
+              =link_to 'Контакты', contacts_path
+    
+    - if @page    
+      %section.intro
+        .container
+          %header
+            %h1= @page.header
+          %p= @page.intro
+          
+    %section#main
+      .container
+      
+        = yield
+    
+    - if @page     
+      %section.outro
+        .container
+          %h3= @page.header2
+          %p= @page.outro
+        
+
+    %footer
+      .container
+        %address.address
+          %p.address Санкт-Петербург, ул. Коллонтай, д. 41 лит. Д, оф. 205
+          %ul.tel
+            %li
+              %strong (812) 983-49-96,
+            %li 8 921 375-74-61,
+            %li 8 921 375-74-61,
+            %li (812) 587-97-05 - факс
+          
+        %address.details
+          %p © 2011, ООО «Медилайн Сервис»
+          %p= link_to 'Контакты', contacts_path
+          
+          
+          
+          
