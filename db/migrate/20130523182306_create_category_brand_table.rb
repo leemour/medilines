@@ -1,13 +1,14 @@
 class CreateCategoryBrandTable < ActiveRecord::Migration
   def up
-    create_table :category_brand, :id => false do |t|
+    create_table :categories_brands, :id => false do |t|
       t.references :category, :null => false
       t.references :brand, :null => false
     end
 
-    add_index(:category_brand, [:category_id, :brand_id])
+    add_index(:categories_brands, [:category_id, :brand_id])
   end
 
   def down
+    drop_table :categories_brands
   end
 end
