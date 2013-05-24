@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
 
-  before_filter :get_brands, :only => [:new, :edit]
-  def get_brands
+  before_filter :get_brands_categories, :only => [:new, :edit]
+  def get_brands_categories
     @brands = Brand.all
+    @categories = Category.all
   end
 
   # GET /products

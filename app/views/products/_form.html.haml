@@ -10,18 +10,22 @@
     = f.label :slug
     = f.text_field :slug
   .field
-    = f.label :brand
-    = f.select(:brand, @brands.map {|b| [b.name, b.id]})
-  .field
     = f.label :name
     = f.text_field :name
-  = f.label :image
-  = image_tag(@product.image_url) if @product.image?
-  = f.file_field :image
-  = f.hidden_field :image_cache
+  .field
+    = f.label :brand_id
+    = f.select(:brand_id, @brands.map {|b| [b.name, b.id]})
+  .field
+    = f.label :category_id
+    = f.select(:category_id, @categories.map {|c| [c.name, c.id]})
+  .field
+    = f.label :image
+    = image_tag(@product.image_url) if @product.image?
+    = f.file_field :image
+    = f.hidden_field :image_cache
 
-  = f.label :remove_image
-  = f.check_box :remove_image
+    = f.label :remove_image
+    = f.check_box :remove_image
   .field
     = f.label :type
     = f.text_field :type

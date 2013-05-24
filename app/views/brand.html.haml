@@ -4,11 +4,11 @@
 - if @products
   - @products.each do |product|
     %tr
+      %td= image_tag(product.image_url(:thumb))
       %td= product.slug
       %td= product.name
       %td= product.type
       %td= product.price
-      %td= product.country
       %td= product.options
       %td= product.features
       %td= product.description
