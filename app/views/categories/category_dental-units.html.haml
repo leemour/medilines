@@ -1,10 +1,15 @@
+- @brands.each do |brand|
+  %p= brand.name
+
 .brand.forest
   = image_tag("forest-brand.jpg", :size => "150x153", :alt => "Cтоматологическое кресло Forest")
+
   .brand-description
     %h2 Forest Dental
     = image_tag("us.png", :size => "16x16", :alt => "Флаг США")
     США
     %p Форест является одним из передовых производителей в Северной Америке. Современные технологии в роскошном дизайне за разумную цену.
+
   .details
     %h4 48 вариантов!
     %p Получите установку вашей мечты, выбрав из:
@@ -15,12 +20,14 @@
 
 .brand.fedesa
   = image_tag("fedesa-brand.jpg", :size => "157x152", :alt => "Cтоматологическое кресло Fedesa")
+
   .brand-description
     %h2 Fedesa
     = image_tag("es.png", :size => "16x11", :alt => "Флаг Испании")
     = image_tag("ch-flag.png", :size => "16x11", :alt => "Флаг Швейцарии")
     Испания — Швейцария
     %p Федеса является одним из наиболее прогрессивных производителей в Испании. Европейский лидер продаж.
+
   .details
     %h4 7 моделей
     %ul

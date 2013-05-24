@@ -7,6 +7,9 @@ gem 'haml', '>= 3.1.6'
 gem 'bootstrap-sass', '>= 2.0.4.0'
 gem 'jquery-rails'
 
+gem 'friendly_id'
+gem 'russian'
+
 group :production do
   gem 'pg'
   gem 'unicorn' # server

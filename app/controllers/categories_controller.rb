@@ -1,4 +1,24 @@
 class CategoriesController < ApplicationController
+
+  before_filter :brands_for_view, :only => [:new, :edit]
+  def brands_for_view
+    @brands = Brand.all
+  end
+
+  before_filter :brands_for_saving, :only => [:create, :update]
+  def brands_for_saving
+    @brands = Brand.find(params[:category][:brand_ids]) if
+        params[:category][:brand_ids]
+    @brands ||= []
+  end
+
+  # Saving brands associated with category
+  def save_brands(category, set_brands)
+    category.brands.destroy_all
+    set_brands.each {|brand| category.brands << brand }
+  end
+
+
   # GET /categories
   # GET /categories.json
   def index
@@ -41,6 +61,7 @@ class CategoriesController < ApplicationController
   # POST /categories.json
   def create
     @category = Category.new(params[:category])
+    save_brands(@category, @brands)
 
     respond_to do |format|
       if @category.save
@@ -57,6 +78,7 @@ class CategoriesController < ApplicationController
   # PUT /categories/1.json
   def update
     @category = Category.find(params[:id])
+    save_brands(@category, @brands)
 
     respond_to do |format|
       if @category.update_attributes(params[:category])

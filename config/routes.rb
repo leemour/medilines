@@ -13,7 +13,8 @@ Medilines::Application.routes.draw do
   root :to => 'application#home'
   get '/contacts'       => 'application#contacts', as: :contacts
   
-  get '/dental-units'   => 'application#category', as: :dentals,    product_type: :dentals
+  get '/dental-units'   => 'application#category', as: :dentals,
+      product_type: :'dental-units'
   get '/visual-systems' => 'application#category', as: :visuals,    product_type: :visuals
   get '/components'     => 'application#category', as: :components, product_type: :components
   get '/spare-parts'    => 'application#category', as: :spares,     product_type: :spares

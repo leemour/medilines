@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
   end
   
   def category
+    @brands = Brand.find_all_in_category(params[:product_type])
     render "/categories/category_#{params[:product_type]}"
   end
   

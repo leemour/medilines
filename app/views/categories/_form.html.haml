@@ -15,5 +15,11 @@
   .field
     = f.label :description
     = f.text_area :description
+  .field
+    = f.label :brand
+    - @brands.each do |brand|
+      = check_box_tag "category[brand_ids][]", brand.id, @category.brands.include?(brand)
+      = brand.name
+
   .actions
     = f.submit 'Save'
