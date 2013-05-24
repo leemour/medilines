@@ -3,7 +3,7 @@
     = image_tag(brand.image_url, :size => "150x153", :alt => "Cтоматологическое кресло Forest")
 
     .brand-description
-      %h2= brand.name
+      %h2= link_to brand.name, dental_brand_path(brand)
       = image_tag(brand.flag_url, :alt => "Флаг #{brand.country}")
       = brand.country
       %p= brand.description

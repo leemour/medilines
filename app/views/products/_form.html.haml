@@ -11,10 +11,17 @@
     = f.text_field :slug
   .field
     = f.label :brand
-    = f.text_field :brand
+    = f.select(:brand, @brands.map {|b| [b.name, b.id]})
   .field
     = f.label :name
     = f.text_field :name
+  = f.label :image
+  = image_tag(@product.image_url) if @product.image?
+  = f.file_field :image
+  = f.hidden_field :image_cache
+
+  = f.label :remove_image
+  = f.check_box :remove_image
   .field
     = f.label :type
     = f.text_field :type

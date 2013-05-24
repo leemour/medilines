@@ -27,7 +27,9 @@ class ApplicationController < ActionController::Base
   end
   
   def brand
-    @products = Product.where(type: params[:product_type], brand: params[:brand])
+    @products = Product.joins(:brand).where(:brands => {:slug => params[:brand]})\
+      .joins(:category).where(category: {slug: params[:product_type]})
+    #@brands = Brand.joins(:categories).where(categories: {slug: params[:product_type]})
     render '/brand'
   end
   

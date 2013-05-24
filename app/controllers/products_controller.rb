@@ -1,4 +1,10 @@
 class ProductsController < ApplicationController
+
+  before_filter :get_brands, :only => [:new, :edit]
+  def get_brands
+    @brands = Brand.all
+  end
+
   # GET /products
   # GET /products.json
   def index

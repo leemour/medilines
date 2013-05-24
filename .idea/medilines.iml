@@ -59,6 +59,7 @@
     <orderEntry type="library" scope="PROVIDED" name="launchy (v2.3.0, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.3, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.22, RVM: ruby-1.9.3-p392) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_magick (v3.5.0, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.2, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="newrelic_rpm (v3.6.0.83, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.9, RVM: ruby-1.9.3-p392) [gem]" level="application" />
@@ -83,6 +84,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.7, RVM: ruby-1.9.3-p392) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="subexec (v0.2.3, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.3.7, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.12, RVM: ruby-1.9.3-p392) [gem]" level="application" />

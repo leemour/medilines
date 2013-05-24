@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'friendly_id'
 gem 'russian'
 gem 'carrierwave'
+gem 'mini_magick'
 
 group :production do
   gem 'pg'
