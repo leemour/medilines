@@ -6,9 +6,9 @@ gem 'rails', '3.2.13'
 gem 'haml', '>= 3.1.6'
 gem 'bootstrap-sass', '>= 2.0.4.0'
 gem 'jquery-rails'
-
 gem 'friendly_id'
 gem 'russian'
+gem 'carrierwave'
 
 group :production do
   gem 'pg'

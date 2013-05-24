@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130524081631) do
+ActiveRecord::Schema.define(:version => 20130524130814) do
 
   create_table "brands", :force => true do |t|
     t.string   "name"
@@ -23,7 +23,11 @@ ActiveRecord::Schema.define(:version => 20130524081631) do
     t.string   "flag"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.text     "details"
+    t.string   "slug"
   end
+
+  add_index "brands", ["slug"], :name => "index_brands_on_slug"
 
   create_table "brands_categories", :id => false, :force => true do |t|
     t.integer "category_id", :null => false

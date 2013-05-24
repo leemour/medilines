@@ -7,20 +7,23 @@
   %b Country:
   = @brand.country
 %p
+  %b Logo:
+  = @brand.logo
+%p
+  %b Image:
+  = image_tag @brand.image_url.to_s
+%p
+  %b Flag:
+  = image_tag @brand.flag_url.to_s
+%p
   %b Slogan:
   = @brand.slogan
 %p
   %b Description:
   = @brand.description
 %p
-  %b Logo:
-  = @brand.logo
-%p
-  %b Image:
-  = @brand.image
-%p
-  %b Flag:
-  = @brand.flag
+  %b Details:
+  = @brand.details
 
 = link_to 'Edit', edit_brand_path(@brand)
 \|

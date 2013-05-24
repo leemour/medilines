@@ -9,6 +9,9 @@
 %p
   %b Description:
   = @category.description
+%p
+  %b Brands:
+  = @category.brands.map(&:name).join(', ')
 
 = link_to 'Edit', edit_category_path(@category)
 \|
