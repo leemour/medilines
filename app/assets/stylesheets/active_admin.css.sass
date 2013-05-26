@@ -8,8 +8,8 @@
 // $sidebar-width: 242px;
 
 // Active Admin's got SASS!
-@import "active_admin/mixins";
-@import "active_admin/base";
+@import "active_admin/mixins"
+@import "active_admin/base"
 
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
@@ -27,3 +27,21 @@
 // .active_admin       applies to any Active Admin namespace
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
+
+body.active_admin #header
+  font-size: 14px
+
+#dashboard
+  font-weight: bold
+
+body.active_admin #title_bar
+  padding: 3px 30px
+
+body.active_admin .breadcrumb
+  margin-bottom: 5px
+
+body.active_admin #title_bar h2
+  font-size: 1.6em
+
+body.active_admin #title_bar .action_items a
+  padding: 10px 15px 8px

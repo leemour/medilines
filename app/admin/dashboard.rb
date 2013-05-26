@@ -1,3 +1,4 @@
+# encoding: UTF-8
 ActiveAdmin.register_page "Dashboard" do
 
   menu :priority => 1, :label => proc{ I18n.t("active_admin.dashboard") }
@@ -8,6 +9,23 @@ ActiveAdmin.register_page "Dashboard" do
         span I18n.t("active_admin.dashboard_welcome.welcome")
         small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
+    end
+
+    section "Recent Products" do
+      table_for Product.order("created_at desc").limit(5) do
+        column :name
+        column :created_at
+      end
+      strong { link_to "View All Products", admin_products_path }
+    end
+
+    section do
+      h3 "Недавно добавленные товары"
+      table_for Product.order("created_at desc").limit(5) do
+        column 'Название', :name
+        column 'Добавлен', :created_at
+      end
+      strong { link_to "Все товары", admin_products_path }
     end
 
     # Here is an example of a simple dashboard with columns and panels.
