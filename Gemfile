@@ -11,6 +11,10 @@ gem 'russian'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'activeadmin'
+gem 'meta_search'
+gem 'country-select'
+
 group :production do
   gem 'pg'
   gem 'unicorn' # server
