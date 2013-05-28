@@ -13,5 +13,7 @@ class Product < ActiveRecord::Base
   scope :components, joins(:category).where(categories: {slug: 'components'})
   scope :spares, joins(:category).where(categories: {slug: 'spare-parts'})
 
+  scope :recent, proc { |n| order("created_at desc").limit(n) }
+
   mount_uploader :image, ProductImageUploader
 end

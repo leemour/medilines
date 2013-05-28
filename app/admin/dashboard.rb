@@ -11,36 +11,29 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-    section "Recent Products" do
-      table_for Product.order("created_at desc").limit(5) do
-        column :name
-        column :created_at
+    panel "Недавно добавленные товары" do
+      table_for Product.recent(5).map do
+        column 'Название', :name do |product|
+          link_to(product.name, admin_product_path(product))
+        end
+        column 'Добавлен', :created_at
       end
       strong { link_to "View All Products", admin_products_path }
     end
 
-    section do
-      h3 "Недавно добавленные товары"
-      table_for Product.order("created_at desc").limit(5) do
-        column 'Название', :name
-        column 'Добавлен', :created_at
-      end
-      strong { link_to "Все товары", admin_products_path }
-    end
-
     # Here is an example of a simple dashboard with columns and panels.
     #
-    # columns do
+    #columns do
     #   column do
     #     panel "Recent Posts" do
     #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
+    #         Product.recent(5).map do |product|
+    #           li link_to(product.name, admin_product_path(product))
     #         end
     #       end
     #     end
     #   end
-
+    #end
     #   column do
     #     panel "Info" do
     #       para "Welcome to ActiveAdmin."
