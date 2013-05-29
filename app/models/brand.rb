@@ -10,6 +10,7 @@ class Brand < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
   mount_uploader :flag, ImageUploader
+  mount_uploader :logo, ImageUploader
 
   def remove_image=(val)
     image_will_change! if val

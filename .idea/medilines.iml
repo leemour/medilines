@@ -38,7 +38,6 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.2, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="columnize (v0.3.6, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="compass (v0.12.2, RVM: ruby-1.9.3-p392) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="country-select (v1.1.1, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber (v1.2.5, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v1.3.1, RVM: ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber-rails-training-wheels (v1.0.0, RVM: ruby-1.9.3-p392) [gem]" level="application" />

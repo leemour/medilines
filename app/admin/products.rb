@@ -7,9 +7,11 @@ ActiveAdmin.register Product do
 
   menu :priority => 2
   #belongs_to :category
+  #navigation_menu :product
   #belongs_to :brand
 
   index do
+    selectable_column
     column :slug
     column :name, :sortable => :name do |product|
       link_to product.name, admin_product_path(product)
@@ -36,4 +38,14 @@ ActiveAdmin.register Product do
 
   filter :category, :as => :select, :collection => proc { Category.all }
   filter :brand, :as => :select, :collection => proc { Brand.all }
+
+
+  #form do |f|
+  #  f.inputs "Admin Details" do
+  #    f.input :email
+  #    f.input :password
+  #    f.input :password_confirmation
+  #  end
+  #  f.actions
+  #end
 end

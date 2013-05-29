@@ -2,6 +2,7 @@ ActiveAdmin.register Category do
   menu :priority => 4
 
   index do
+    selectable_column
     column :slug
     column :name
     column :description
