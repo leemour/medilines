@@ -1,6 +1,6 @@
 - @brands.each do |brand|
   %div{class: "brand #{brand.slug}"}
-    = image_tag(brand.image_url, :size => "150x153", :alt => "Cтоматологическое кресло Forest")
+    = image_tag(brand.image_url, :alt => "Cтоматологическое кресло #{brand.name}")
 
     .brand-description
       %h2= link_to brand.name, dental_brand_path(brand)

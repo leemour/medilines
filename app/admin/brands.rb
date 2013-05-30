@@ -30,14 +30,24 @@ ActiveAdmin.register Brand do
     default_actions
   end
 
+  filter :name, :label => "Названию"
+  filter :slug, :label => "Ссылке"
+  filter :country, :label => "Стране"
+  filter :created_at
+  filter :updated_at
+
   form(:html => { :multipart => true }) do |f|
     f.inputs "Описание бренда" do
-      f.input :slug, :hint => "Генерируется автоматически", :required => false
+      f.input :slug
+  filter :hint => "Генерируется автоматически", :required => false
       f.input :name, :required => true
       f.input :country, as: :string, :required => true
-      f.input :logo
-      f.input :image
-      f.input :flag
+      f.input :flag, :hint => img_with_url(f, :flag)
+      f.input :flag_cache, :as => :hidden
+      f.input :image, :hint => img_with_url(f, :image)
+      f.input :image_cache, :as => :hidden
+      f.input :logo, :hint => img_with_url(f, :logo)
+      f.input :logo_cache, :as => :hidden
       f.input :slogan
       f.input :description, :required => true
       f.input :details

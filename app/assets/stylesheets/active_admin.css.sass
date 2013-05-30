@@ -31,11 +31,20 @@
 body.active_admin #header
   font-size: 14px
 
-#dashboard
+body.active_admin #dashboard
   font-weight: bold
 
+body.active_admin #header
+  padding: 9px 20px
+
 body.active_admin #title_bar
-  padding: 3px 30px
+  padding: 3px 15px
+
+body.active_admin #active_admin_content
+  padding: 0 20px 20px
+
+body.active_admin #footer p
+  display: none
 
 body.active_admin .breadcrumb
   margin-bottom: 5px
@@ -51,12 +60,58 @@ body.active_admin #title_bar #titlebar_right
   height: 40px
   padding-top: 1px
 
-body.active_admin #active_admin_content
-  padding-top: 0
-
 body.active_admin .inline-list .fragment
   float: left
 
 body.active_admin form .inline-list fieldset ol > li label
   margin: 0 3px 0 10px
   width: auto
+
+body.active_admin form span.img-url
+  border: 1px solid #ddd
+  color: #000
+  float: left
+  font-size: 13px
+  font-style: normal
+  margin-right: 3px
+  padding: 2px 3px
+
+body.active_admin form li.hidden
+  padding: 0
+
+body.active_admin form input[type=text],
+body.active_admin form input[type=password],
+body.active_admin form input[type=email],
+body.active_admin form input[type=number],
+body.active_admin form input[type=url],
+body.active_admin form input[type=tel],
+body.active_admin form textarea
+  font-size: 13px
+
+body.active_admin .breadcrumb a,
+body.active_admin .breadcrumb a:link,
+body.active_admin .breadcrumb a:visited,
+body.active_admin .breadcrumb a:active
+  color: #676f76
+
+body.active_admin #active_admin_content #main_content_wrapper #main_content
+  margin-right: 250px
+
+body.active_admin #active_admin_content #sidebar
+  margin-left: -230px
+  width: 230px
+
+body.active_admin .sidebar_section select
+  width: 200px
+
+body.active_admin .sidebar_section input[type=text]
+  width: 180px
+
+body.active_admin form.filter_form .filter_form_field.filter_date_range input[type=text]
+  font-size: 12px
+  width: 77px
+  padding: 8px 6px 7px
+
+body.active_admin form input[type=submit],
+body.active_admin form.filter_form a.clear_filters_btn
+  padding: 5px 12px 4px
