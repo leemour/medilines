@@ -1,0 +1,12 @@
+- @brands.each do |brand|
+  %div{class: "brand #{brand.slug}"}
+    = image_tag(brand.image_url, :alt => "Cтоматологическое кресло #{brand.name}")
+
+    .brand-description
+      %h2= link_to brand.name, visual_brand_path(brand)
+      = image_tag(brand.flag_url, :alt => "Флаг #{brand.country}")
+      = brand.country
+      %p= brand.description
+
+    .details
+      = brand.details.html_safe

@@ -13,6 +13,7 @@ gem 'mini_magick'
 
 gem 'activeadmin'
 gem 'meta_search'
+gem 'ckeditor'
 
 group :production do
   gem 'pg'

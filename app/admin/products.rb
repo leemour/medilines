@@ -4,6 +4,7 @@ ActiveAdmin.register Product do
   scope "Визуализация", :visuals
   scope "Компоненты", :components
   scope "Запчасти", :spares
+  scope "Все", :all
 
   menu :priority => 2
   #belongs_to :category
@@ -46,6 +47,32 @@ ActiveAdmin.register Product do
   filter :updated_at
 
 
+  show :title => :name do |product|
+    panel "Товар #{product.name}" do
+      attributes_table_for product do
+        row :id
+        row :slug
+        row :name
+        row :brand
+        row :category
+        row :image do
+          image_tag(product.image.url) if product.image.url
+        end
+        row :type
+        row :price
+        row :slogan
+        row :options
+        row :features
+        row :design
+        row :description
+        row :created_at
+        row :updated_at
+      end
+    end
+
+    active_admin_comments
+  end
+
   form(:html => { :multipart => true }) do |f|
     f.inputs "Описание товара #{f.object.name if f.object.name}" do
       f.input :slug, :hint => "Генерируется автоматически", :required => false
@@ -60,7 +87,7 @@ ActiveAdmin.register Product do
       f.input :options
       f.input :features
       f.input :design
-      f.input :description
+      f.input :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 200 }}
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
       f.input :updated_at, :wrapper_html => { :class => 'inline-list' }
 

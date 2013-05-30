@@ -36,6 +36,8 @@ ActiveAdmin.register Brand do
   filter :created_at
   filter :updated_at
 
+
+
   form(:html => { :multipart => true }) do |f|
     f.inputs "Описание бренда #{f.object.name if f.object.name}" do
       f.input :slug, :hint => "Генерируется автоматически", :required => false

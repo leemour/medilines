@@ -8,10 +8,10 @@ class Product < ActiveRecord::Base
                   :slogan, :slug, :type, :brand_id, :category_id, :image,
                   :remove_image, :image_cache
 
-  scope :dentals, joins(:category).where(categories: {slug: 'dental-units'})
-  scope :visuals, joins(:category).where(categories: {slug: 'visual_systems'})
+  scope :dentals,    joins(:category).where(categories: {slug: 'dental-units'})
+  scope :visuals,    joins(:category).where(categories: {slug: 'visual-systems'})
   scope :components, joins(:category).where(categories: {slug: 'components'})
-  scope :spares, joins(:category).where(categories: {slug: 'spare-parts'})
+  scope :spares,     joins(:category).where(categories: {slug: 'spare-parts'})
 
   scope :recent, proc { |n| order("created_at desc").limit(n) }
 

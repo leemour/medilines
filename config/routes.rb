@@ -1,30 +1,30 @@
 Medilines::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :categories
-  resources :brands
-  resources :products
+  #resources :categories
+  #resources :brands
+  #resources :products
   
   root :to => 'application#home'
   get '/contacts'       => 'application#contacts', as: :contacts
   
-  get '/dental-units'   => 'application#category', as: :dentals,
-      product_type: :'dental-units'
-  get '/visual-systems' => 'application#category', as: :visuals,    product_type: :visuals
+  get '/dental-units'   => 'application#category', as: :dentals,    product_type: :'dental-units'
+  get '/visual-systems' => 'application#category', as: :visuals,    product_type: :'visual-systems'
   get '/components'     => 'application#category', as: :components, product_type: :components
   get '/spare-parts'    => 'application#category', as: :spares,     product_type: :spares
   
-  get '/dental-units/:brand'   => 'application#brand', as: :dental_brand,
-      product_type: :'dental-units'
-  get '/visual-systems/:brand' => 'application#brand', as: :visual_brand,    product_type: :visuals
+  get '/dental-units/:brand'   => 'application#brand', as: :dental_brand,    product_type: :'dental-units'
+  get '/visual-systems/:brand' => 'application#brand', as: :visual_brand,    product_type: :'visual-systems'
   get '/components/:brand'     => 'application#brand', as: :component_brand, product_type: :components
   get '/spare-parts/:brand'    => 'application#brand', as: :spare_brand,     product_type: :spares
   
-  get '/dental-units/:brand/:product'   => 'application#product', as: :dental_product,    product_type: :dentals
-  get '/visual-systems/:brand/:product' => 'application#product', as: :visual_product,    product_type: :visuals
+  get '/dental-units/:brand/:product'   => 'application#product', as: :dental_product,    product_type: :'dental-units'
+  get '/visual-systems/:brand/:product' => 'application#product', as: :visual_product,    product_type: :'visual-systems'
   get '/components/:brand/:product'     => 'application#product', as: :component_product, product_type: :components
   get '/spare-parts/:brand/:product'    => 'application#product', as: :spare_product,     product_type: :spares
   
