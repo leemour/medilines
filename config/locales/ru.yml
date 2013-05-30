@@ -43,6 +43,8 @@ ru:
       category:
         slug: Ссылка
         name: Название
+        brand: Бренды
+        brands: Бренды
         description: Описание
         created_at: Создан
         updated_at: Изменен

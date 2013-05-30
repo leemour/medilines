@@ -10,13 +10,13 @@ ActiveAdmin.register Brand do
       link_to brand.name, admin_brand_path(brand)
     end
     column :country
-    column :slogan
+    #column :slogan
     column :description do |brand|
       brand.description[0..60]
     end
-    column :details do |brand|
-      brand.details[0..100].html_safe
-    end
+    #column :details do |brand|
+    #  brand.details[0..100].html_safe
+    #end
     column :flag do |brand|
       image_tag(brand.flag_url.to_s) if brand.flag?
     end
@@ -37,9 +37,8 @@ ActiveAdmin.register Brand do
   filter :updated_at
 
   form(:html => { :multipart => true }) do |f|
-    f.inputs "Описание бренда" do
-      f.input :slug
-  filter :hint => "Генерируется автоматически", :required => false
+    f.inputs "Описание бренда #{f.object.name if f.object.name}" do
+      f.input :slug, :hint => "Генерируется автоматически", :required => false
       f.input :name, :required => true
       f.input :country, as: :string, :required => true
       f.input :flag, :hint => img_with_url(f, :flag)

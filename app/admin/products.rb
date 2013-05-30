@@ -23,14 +23,16 @@ ActiveAdmin.register Product do
        product.category.name
     end
     column :image do |product|
-       image_tag(product.image_url(:thumb).to_s)
+       image_tag(product.image_url(:thumb).to_s) if product.image_url
     end
     column :type
-    column :price
+    column :price do |product|
+      number_to_currency product.price, :unit => "р", :precision => 0
+    end
     #column :options
     #column :features
     #column :design
-    column :description
+    #column :description
     #column :slogan
 
     default_actions
@@ -44,12 +46,25 @@ ActiveAdmin.register Product do
   filter :updated_at
 
 
-  #form do |f|
-  #  f.inputs "Admin Details" do
-  #    f.input :email
-  #    f.input :password
-  #    f.input :password_confirmation
-  #  end
-  #  f.actions
-  #end
+  form(:html => { :multipart => true }) do |f|
+    f.inputs "Описание товара #{f.object.name if f.object.name}" do
+      f.input :slug, :hint => "Генерируется автоматически", :required => false
+      f.input :name, :required => true
+      f.input :brand
+      f.input :category
+      f.input :image, :hint => img_with_url(f, :image)
+      f.input :image_cache, :as => :hidden
+      f.input :type
+      f.input :price
+      f.input :slogan
+      f.input :options
+      f.input :features
+      f.input :design
+      f.input :description
+      f.input :created_at, :wrapper_html => { :class => 'inline-list' }
+      f.input :updated_at, :wrapper_html => { :class => 'inline-list' }
+
+      f.actions
+    end
+  end
 end
