@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="medilines.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -197,7 +195,7 @@
           <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="62" column="0" selection-start="2309" selection-end="2309" vertical-scroll-proportion="0.5116022">
+                <state line="64" column="61" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.5447514">
                   <folding />
                 </state>
               </provider>
@@ -1255,7 +1253,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2309" selection-end="2309" vertical-scroll-proportion="0.5116022">
+        <state line="64" column="61" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.5447514">
           <folding />
         </state>
       </provider>
