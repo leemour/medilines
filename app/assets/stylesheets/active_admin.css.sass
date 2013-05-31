@@ -14,6 +14,64 @@
 //body.active_admin
 //  @include global-reset
 
+// Instead reset here
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  font:
+    weight: inherit
+    style: inherit
+    size: 100%
+    family: inherit
+  vertical-align: baseline
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  display: block
+
+body
+  line-height: 1
+  color: black
+  background: white
+
+ol, ul
+  list-style: none
+
+table
+  border-collapse: separate
+  border-spacing: 0
+  vertical-align: middle
+
+caption, th, td
+  text-align: left
+  font-weight: normal
+  vertical-align: middle
+
+q, blockquote
+  quotes: "" ""
+  &:before, &:after
+    content: ""
+
+a img
+  border: 0 none
+
+input:focus
+  outline: 0
+  border: 0 none
+
 // Partials
 body.active_admin
   @import "active_admin/typography"
@@ -69,144 +127,163 @@ body.active_admin
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
-body.active_admin #header
-  font-size: 14px
+body.active_admin
+  &.show .attributes_table th
+    text-align: right
+    padding-right: 30px
+    width: 100px
 
-body.active_admin #dashboard
-  font-weight: bold
+  #header
+    font-size: 14px
+    padding: 9px 20px
 
-body.active_admin #header
-  padding: 9px 20px
+    h1
+      font-size: 17px
+      padding-top: 1px
 
-body.active_admin #title_bar
-  padding: 3px 15px
+  #dashboard
+    font-weight: bold
 
-body.active_admin #active_admin_content
-  padding: 0 20px 20px
+  #title_bar
+    padding: 3px 15px
 
-body.active_admin #footer p
-  display: none
+    h2
+      font-size: 1.6em
 
-body.active_admin .breadcrumb
-  margin-bottom: 5px
+    .action_items a
+      padding: 8px 15px
 
-body.active_admin #title_bar h2
-  font-size: 1.6em
+    #titlebar_left,
+    #titlebar_right
+      height: 40px
+      padding-top: 1px
 
-body.active_admin #title_bar .action_items a
-  padding: 10px 15px 8px
+  #active_admin_content
+    padding: 0 20px 20px
 
-body.active_admin #title_bar #titlebar_left,
-body.active_admin #title_bar #titlebar_right
-  height: 40px
-  padding-top: 1px
+  #footer p
+    display: none
 
-body.active_admin .inline-list .fragment
-  float: left
+  .breadcrumb
+    margin-bottom: 5px
 
-body.active_admin form .inline-list fieldset ol > li label
-  margin: 0 3px 0 10px
-  width: auto
+  .inline-list .fragment
+    float: left
 
-body.active_admin form span.img-url
-  border: 1px solid #ddd
-  color: #000
-  float: left
-  font-size: 13px
-  font-style: normal
-  margin-right: 3px
-  padding: 2px 3px
+  form .inline-list fieldset ol > li label
+    margin: 0 3px 0 10px
+    width: auto
 
-body.active_admin form li.hidden
-  padding: 0
+  form span.img-url
+    border: 1px solid #ddd
+    color: #000
+    float: left
+    font-size: 13px
+    font-style: normal
+    margin-right: 3px
+    padding: 2px 3px
 
-body.active_admin form input[type=text],
-body.active_admin form input[type=password],
-body.active_admin form input[type=email],
-body.active_admin form input[type=number],
-body.active_admin form input[type=url],
-body.active_admin form input[type=tel],
-body.active_admin form textarea
-  font-size: 13px
+  form li.hidden
+    padding: 0
 
-body.active_admin .breadcrumb a,
-body.active_admin .breadcrumb a:link,
-body.active_admin .breadcrumb a:visited,
-body.active_admin .breadcrumb a:active
-  color: #676f76
+  form input[type=text],
+  form input[type=password],
+  form input[type=email],
+  form input[type=number],
+  form input[type=url],
+  form input[type=tel],
+  form textarea
+    font-size: 13px
 
-body.active_admin #active_admin_content #main_content_wrapper #main_content
-  margin-right: 250px
+  .breadcrumb a,
+  .breadcrumb a:link,
+  .breadcrumb a:visited,
+  .breadcrumb a:active
+    color: #676f76
 
-body.active_admin #active_admin_content #sidebar
-  margin-left: -230px
-  width: 230px
+  #active_admin_content #main_content_wrapper #main_content
+    margin-right: 250px
 
-body.active_admin .sidebar_section select
-  width: 200px
+  #active_admin_content #sidebar
+    margin-left: -230px
+    width: 230px
 
-body.active_admin .sidebar_section input[type=text]
-  width: 180px
+  .sidebar_section select
+    width: 200px
 
-body.active_admin form.filter_form .filter_form_field.filter_date_range input[type=text]
-  font-size: 12px
-  width: 77px
-  padding: 8px 6px 7px
+  .sidebar_section input[type=text]
+    width: 180px
 
-body.active_admin form input[type=submit],
-body.active_admin form.filter_form a.clear_filters_btn
-  padding: 5px 12px 4px
+  form.filter_form .filter_form_field.filter_date_range input[type=text]
+    font-size: 12px
+    width: 77px
+    padding: 8px 6px 7px
 
-body.active_admin table.index_table th
-  padding: 5px 10px 3px 10px
+  form input[type=submit],
+  form.filter_form a.clear_filters_btn
+    font-size: 12px
+    line-height: 1.3
+    padding: 5px 10px 4px
 
-body.active_admin table.index_table td
-  padding: 8px 8px 6p
+  table.index_table th
+    padding: 5px 10px 3px 10px
 
-body.active_admin form fieldset ol > li label
-  width: 120px
+  table.index_table td
+    padding: 8px 8px 6p
 
-body.active_admin form fieldset > ol > li p.inline-hints
-  margin-left: 120px
+  form fieldset ol > li label
+    width: 120px
 
-body.active_admin form fieldset > ol > li fieldset ol
-  padding-left: 120px
+  form fieldset > ol > li p.inline-hints
+    margin-left: 120px
 
-body.active_admin form fieldset > ol > li.inline-list.check_boxes fieldset ol li,
-body.active_admin form fieldset > ol > li.inline-list.radio fieldset ol li
-  margin: 0
+  form fieldset > ol > li fieldset ol
+    padding-left: 120px
 
-body.active_admin form fieldset > ol > li.inline-list.check_boxes fieldset ol li label,
-body.active_admin form fieldset > ol > li.inline-list.radio fieldset ol li label
-  float: left
-  overflow: hidden
-  margin-right: 10px
-  width: auto
+  form fieldset > ol > li.inline-list.check_boxes fieldset ol li,
+  form fieldset > ol > li.inline-list.radio fieldset ol li
+    margin: 0
 
-body.active_admin table.index_table th.price
-  min-width: 70px
+  form fieldset > ol > li.inline-list.check_boxes fieldset ol li label,
+  form fieldset > ol > li.inline-list.radio fieldset ol li label
+    float: left
+    overflow: hidden
+    margin-right: 10px
+    padding: 2px 0 0 2px
+    width: auto
 
-body.active_admin table.index_table td.price
-  padding: 10px 1px 8px 6px
+  table.index_table th.price
+    min-width: 70px
 
-// Dashboard
-body.active_admin.admin_dashboard
-  .blank_slate_container
-    clear: none
-    text-align: left
-    .blank_slate
-      display: block
-  #sidebar h3
+  table.index_table td.price
+    padding: 10px 1px 8px 6px
+
+  // Dashboard
+  &.admin_dashboard
+    .blank_slate_container
+      clear: none
+      margin-bottom: 10px
+      text-align: left
+      .blank_slate
+        display: block
+    #sidebar h3
+      margin-top: 0
+
+
+  .with_sidebar .blank_slate_container .blank_slate
     margin-top: 0
 
+  .panel.recent-products th
+    max-width: 200px
+    text-align: left
 
-body.active_admin .with_sidebar .blank_slate_container .blank_slate
-  margin-top: 0
-
-body.active_admin .panel.recent-products th
-  max-width: 200px
-  text-align: left
-
-body.active_admin .cke_chrome
+// CKEditor
+.cke_chrome
   width: 76% !important
   overflow: hidden
+
+.cke_combo__fontsize .cke_combo_text
+  width: 50px !important
+
+.cke_combopanel
+  width: 170px !important

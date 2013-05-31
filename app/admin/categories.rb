@@ -31,9 +31,6 @@ ActiveAdmin.register Category do
         row :description
         row :created_at
         row :updated_at
-        #row :image do
-        #  image_tag(cat.image.url)
-        #end
       end
     end
 

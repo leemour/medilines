@@ -61,10 +61,18 @@ ActiveAdmin.register Product do
         row :type
         row :price
         row :slogan
-        row :options
-        row :features
-        row :design
-        row :description
+        row :options do
+          product.options.html_safe
+        end
+        row :features do
+          product.features.html_safe
+        end
+        row :design do
+          product.design.html_safe
+        end
+        row :description do
+          product.description.html_safe
+        end
         row :created_at
         row :updated_at
       end
@@ -84,9 +92,9 @@ ActiveAdmin.register Product do
       f.input :type
       f.input :price
       f.input :slogan
-      f.input :options
-      f.input :features
-      f.input :design
+      f.input :options, :as =>:ckeditor
+      f.input :features, :as =>:ckeditor
+      f.input :design, :as =>:ckeditor
       f.input :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 200 }}
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
       f.input :updated_at, :wrapper_html => { :class => 'inline-list' }

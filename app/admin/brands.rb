@@ -37,6 +37,35 @@ ActiveAdmin.register Brand do
   filter :updated_at
 
 
+  show :title => :name do |brand|
+    panel "Бренд #{brand.name}" do
+      attributes_table_for brand do
+        row :id
+        row :slug
+        row :name
+        row :country
+        row :flag do
+          image_tag(brand.flag.url) if brand.flag.url
+        end
+        row :image do
+          image_tag(brand.image.url) if brand.image.url
+        end
+        row :logo do
+          image_tag(brand.logo.url) if brand.logo.url
+        end
+        row :slogan
+        row :description
+        row :details do
+          brand.details.html_safe
+        end
+        row :created_at
+        row :updated_at
+      end
+    end
+
+    active_admin_comments
+  end
+  
 
   form(:html => { :multipart => true }) do |f|
     f.inputs "Описание бренда #{f.object.name if f.object.name}" do
@@ -51,7 +80,7 @@ ActiveAdmin.register Brand do
       f.input :logo_cache, :as => :hidden
       f.input :slogan
       f.input :description, :required => true
-      f.input :details
+      f.input :details, :as =>:ckeditor
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
       f.input :updated_at, :wrapper_html => { :class => 'inline-list' }
 

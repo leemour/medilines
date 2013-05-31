@@ -1,1 +1,0 @@
-CKEDITOR.editorConfig=function(o){o.language="fr",o.uiColor="#AADC6E"};
