@@ -1,5 +1,5 @@
 CKEDITOR.editorConfig = function( config )
 {
-  config.language = 'fr';
-  config.uiColor = '#AADC6E';
+  config.language = 'ru';
+//  config.uiColor = '#AADC6E';
 };

@@ -611,6 +611,8 @@ active_admin/application.js: active_admin/application-ef000610726ad7e8f36acdb1a7
 active_admin/application/index.js: active_admin/application-ef000610726ad7e8f36acdb1a724261a.js
 active_admin/pages/application.js: active_admin/pages/application-9962e9eb4723fd98f06bcc5dd97d3416.js
 active_admin/pages/application/index.js: active_admin/pages/application-9962e9eb4723fd98f06bcc5dd97d3416.js
+active_admin/print.css: active_admin/print-a043e4b69e1dfb0d85401176dac0c956.css
+active_admin/print/index.css: active_admin/print-a043e4b69e1dfb0d85401176dac0c956.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png

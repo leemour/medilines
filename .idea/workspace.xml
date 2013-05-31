@@ -2,7 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin-9eed4eccac1ca8c320dc35118f8b5a9d.css.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin-9eed4eccac1ca8c320dc35118f8b5a9d.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin-fd8d7df778368c7b4497702eb72ba3fa.js.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin-fd8d7df778368c7b4497702eb72ba3fa.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin.css.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin.js.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/application-6d796595ef93aaeb19a9474406efa939.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/application-6d796595ef93aaeb19a9474406efa939.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/application-78ffc377a35952ee5c56e6fc6dab1236.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/application-78ffc377a35952ee5c56e6fc6dab1236.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin/pages/application-9962e9eb4723fd98f06bcc5dd97d3416.js.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin/pages/application-9962e9eb4723fd98f06bcc5dd97d3416.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/active_admin/application-ef000610726ad7e8f36acdb1a724261a.js.gz" afterPath="$PROJECT_DIR$/public/assets/active_admin/application-ef000610726ad7e8f36acdb1a724261a.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-f192eebf936f2bb75a9aaf608dfa84a2.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-f192eebf936f2bb75a9aaf608dfa84a2.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-f1951da4cb97c4f50241582f8a6987c7.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-f1951da4cb97c4f50241582f8a6987c7.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/application.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/application.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/build-config-812fc0383e78aea4964dd6eca987f225.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/build-config-812fc0383e78aea4964dd6eca987f225.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/build-config.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/build-config.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/ckeditor-afbc26c4bfe8df29118310d9e39d3e9b.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/ckeditor-afbc26c4bfe8df29118310d9e39d3e9b.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/ckeditor.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/ckeditor.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/config-b35f39028a79113f05242ee2c94f643d.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/config-b35f39028a79113f05242ee2c94f643d.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/config.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/config.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/contents-1b13569e9620782f423d4cd3ce931750.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/contents-1b13569e9620782f423d4cd3ce931750.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/contents.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/contents.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog-127c5cda000b63ab8b6e1845890ebff9.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog-127c5cda000b63ab8b6e1845890ebff9.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_ie-6c07d1f9995e3e7b063b57a811afb219.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_ie-6c07d1f9995e3e7b063b57a811afb219.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_ie7-d81267d3119b42c7f14e35bff8d88862.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_ie7-d81267d3119b42c7f14e35bff8d88862.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_ie8-672d4558aca2eb11bc01b0f9341fe3bf.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_ie8-672d4558aca2eb11bc01b0f9341fe3bf.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_iequirks-e5db54770dbfaba528e81daed6cfa3d7.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_iequirks-e5db54770dbfaba528e81daed6cfa3d7.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_opera-5596f297b942fcb8a82a5ed4afb56339.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/dialog_opera-5596f297b942fcb8a82a5ed4afb56339.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor-5198d98f620a71889ad6a31652198115.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor-5198d98f620a71889ad6a31652198115.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_gecko-33ca7f1e90ee24936176294c97c449d7.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_gecko-33ca7f1e90ee24936176294c97c449d7.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_ie-ab5d498cac4fc2a29b13ee6cccbe499e.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_ie-ab5d498cac4fc2a29b13ee6cccbe499e.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_ie7-131dc34c22b086e3551b8f96738fb776.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_ie7-131dc34c22b086e3551b8f96738fb776.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_ie8-e48fbafe03774757a9fa8ab121cb7b21.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_ie8-e48fbafe03774757a9fa8ab121cb7b21.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_iequirks-c79926492804685013d6b13997c396eb.css.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/skins/moono/editor_iequirks-c79926492804685013d6b13997c396eb.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/init-17a81d3f572d6bd62c97acb77c3b21a6.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/init-17a81d3f572d6bd62c97acb77c3b21a6.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/init.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/init.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/ckeditor/styles-329c9c441d1b88cc90efc10925337a77.js.gz" afterPath="$PROJECT_DIR$/public/assets/ckeditor/styles-329c9c441d1b88cc90efc10925337a77.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="medilines.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -144,7 +184,7 @@
           <file leaf-file-name="dashboard.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="30" column="0" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.50391936">
+                <state line="27" column="9" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.45352742">
                   <folding />
                 </state>
               </provider>
@@ -163,15 +203,6 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="application.css.sass" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="86" column="19" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="active_admin.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/initializers/active_admin.rb">
               <provider selected="true" editor-type-id="text-editor">
@@ -181,21 +212,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="2" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#43#102#0" expanded="true" />
-                  </folding>
+                <state line="3" column="31" selection-start="75" selection-end="102" vertical-scroll-proportion="0.04901961">
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="64" column="61" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.5447514">
+                <state line="64" column="36" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -289,8 +318,8 @@
         <option value="$PROJECT_DIR$/app/admin/products.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.sass" />
         <option value="$PROJECT_DIR$/app/admin/dashboard.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" />
       </list>
     </option>
   </component>
@@ -355,6 +384,68 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ckeditor (v4.0.4, RVM: ruby-1.9.3-p392) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ckeditor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ckeditor (v4.0.4, RVM: ruby-1.9.3-p392) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ckeditor (v4.0.4, RVM: ruby-1.9.3-p392) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -536,6 +627,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ckeditor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1067,7 +1198,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838982" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17312944" sideWeight="0.672148" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1616603" sideWeight="0.672148" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1143,18 +1274,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@global/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_all.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="383" selection-end="393" vertical-scroll-proportion="0.1472192" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="19" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0">
@@ -1235,25 +1354,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="36" selection-start="2363" selection-end="2363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/ckeditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.50391936">
+        <state line="27" column="9" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.45352742">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/ckeditor-4.0.4/vendor/assets/javascripts/ckeditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="43" selection-start="206" selection-end="206" vertical-scroll-proportion="0.08287293">
+          <folding>
+            <element signature="e#0#161#0" expanded="true" />
+            <element signature="e#206#332#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="2" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#43#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="61" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.5447514">
+        <state line="3" column="31" selection-start="75" selection-end="102" vertical-scroll-proportion="0.04901961">
           <folding />
         </state>
       </provider>
