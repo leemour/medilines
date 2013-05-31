@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="" />
+    <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="medilines.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369977653022" ignored="false" />
@@ -54,6 +58,7 @@
     <file path="/category_visual-systems.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369929384004" ignored="false" />
     <file path="/home.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369930852386" ignored="false" />
     <file path="/application.css.sass" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369930997923" ignored="false" />
+    <file path="/production.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369984303761" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +146,7 @@
           <file leaf-file-name="dashboard.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="0" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.52071667">
+                <state line="30" column="0" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.50391936">
                   <folding />
                 </state>
               </provider>
@@ -181,7 +186,18 @@
           <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="4" column="2" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#43#102#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="62" column="0" selection-start="2309" selection-end="2309" vertical-scroll-proportion="0.5116022">
                   <folding />
                 </state>
               </provider>
@@ -223,10 +239,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="schema.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/schema.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="95" column="48" selection-start="4120" selection-end="4120" vertical-scroll-proportion="0.67955804">
+                <state line="73" column="21" selection-start="3229" selection-end="3229" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -261,8 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/admin/brands.rb" />
-        <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/home.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
@@ -277,6 +291,8 @@
         <option value="$PROJECT_DIR$/app/admin/products.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.sass" />
         <option value="$PROJECT_DIR$/app/admin/dashboard.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -550,6 +566,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1097,13 +1145,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@global/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_typography.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@global/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_all.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="33" selection-start="383" selection-end="393" vertical-scroll-proportion="0.1472192" />
@@ -1126,13 +1167,6 @@
     <entry file="file://$PROJECT_DIR$/config/initializers/active_admin.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="30" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1189,13 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.52071667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="198" column="13" selection-start="5592" selection-end="5592" vertical-scroll-proportion="0.0">
@@ -1205,7 +1232,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="48" selection-start="4120" selection-end="4120" vertical-scroll-proportion="0.67955804">
+        <state line="73" column="21" selection-start="3229" selection-end="3229" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.50391936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="2" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#43#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="2309" selection-end="2309" vertical-scroll-proportion="0.5116022">
           <folding />
         </state>
       </provider>

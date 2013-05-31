@@ -61,4 +61,6 @@ Medilines::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  # Active Admin
+  config.assets.precompile += %w[active_admin.css active_admin.js]
 end
