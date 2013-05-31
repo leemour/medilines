@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/dashboard.rb" afterPath="$PROJECT_DIR$/app/admin/dashboard.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/medilines.iml" afterPath="$PROJECT_DIR$/.idea/medilines.iml" />
-    </list>
+    <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="" />
     <ignored path="medilines.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369977653022" ignored="false" />
@@ -145,7 +141,7 @@
           <file leaf-file-name="dashboard.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="79" selection-start="609" selection-end="609" vertical-scroll-proportion="0.20156775">
+                <state line="31" column="0" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.52071667">
                   <folding />
                 </state>
               </provider>
@@ -218,10 +214,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="active_admin.css.sass" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="active_admin.css.sass" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="196" column="16" selection-start="5557" selection-end="5557" vertical-scroll-proportion="0.6132597">
+                <state line="198" column="13" selection-start="5592" selection-end="5592" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="schema.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/db/schema.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="95" column="48" selection-start="4120" selection-end="4120" vertical-scroll-proportion="0.67955804">
                   <folding />
                 </state>
               </provider>
@@ -1092,11 +1097,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/active_admin/views_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@global/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_typography.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1191,14 +1191,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="79" selection-start="609" selection-end="609" vertical-scroll-proportion="0.20156775">
+        <state line="31" column="0" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.52071667">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="16" selection-start="5557" selection-end="5557" vertical-scroll-proportion="0.6132597">
+        <state line="198" column="13" selection-start="5592" selection-end="5592" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="48" selection-start="4120" selection-end="4120" vertical-scroll-proportion="0.67955804">
           <folding />
         </state>
       </provider>
