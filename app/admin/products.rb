@@ -1,15 +1,12 @@
 # encoding: UTF-8
 ActiveAdmin.register Product do
+  menu :priority => 2
+
   scope "Стоматолог. кресла", :dentals
   scope "Визуализация", :visuals
   scope "Компоненты", :components
   scope "Запчасти", :spares
   scope "Все", :all
-
-  menu :priority => 2
-  #belongs_to :category
-  #navigation_menu :product
-  #belongs_to :brand
 
   index do
     selectable_column

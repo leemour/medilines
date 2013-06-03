@@ -43,8 +43,9 @@ ru:
       category:
         slug: Ссылка
         name: Название
-        brand: Бренды
-        brands: Бренды
+        parent_id: Родительская
+        parent: Родительская
+        logo: Лого
         description: Описание
         created_at: Создан
         updated_at: Изменен

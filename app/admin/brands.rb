@@ -10,13 +10,9 @@ ActiveAdmin.register Brand do
       link_to brand.name, admin_brand_path(brand)
     end
     column :country
-    #column :slogan
     column :description do |brand|
       brand.description[0..60]
     end
-    #column :details do |brand|
-    #  brand.details[0..100].html_safe
-    #end
     column :flag do |brand|
       image_tag(brand.flag_url.to_s) if brand.flag?
     end
