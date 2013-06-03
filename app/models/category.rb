@@ -8,7 +8,7 @@ class Category < ActiveRecord::Base
 
   attr_accessible :description, :name, :slug, :parent, :logo, :parent_id
 
-  scope :roots,      where("parent_id IS NULL OR parent_id = ''")
+  scope :roots,      where("parent_id IS NULL")
   scope :dentals,    joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'dental-units'})
   scope :visuals,    joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'visual-systems'})
   scope :components, joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'components'})

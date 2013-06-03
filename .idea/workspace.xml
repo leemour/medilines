@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130603104522_change_product_columns.rb" afterPath="$PROJECT_DIR$/db/migrate/20130603104522_change_product_columns.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/products.rb" afterPath="$PROJECT_DIR$/app/admin/products.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/ru.yml" afterPath="$PROJECT_DIR$/config/locales/ru.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/category.rb" afterPath="$PROJECT_DIR$/app/models/category.rb" />
     </list>
     <ignored path="medilines.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,7 +11,7 @@
     <file path="/a.rxml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369678752532" ignored="false" />
     <file path="/application.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369579036655" ignored="false" />
     <file path="/unicorn.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369327331746" ignored="false" />
-    <file path="/a.dummy" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370274411952" ignored="false" />
+    <file path="/a.dummy" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370283938960" ignored="false" />
     <file path="/config.ru" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369329125787" ignored="false" />
     <file path="/brand.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369826654304" ignored="false" />
     <file path="/category.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370253200771" ignored="false" />
@@ -89,12 +84,12 @@
     <splitter split-orientation="horizontal" split-proportion="0.4762215">
       <split-first>
         <leaf>
-          <file leaf-file-name="category.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="category.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/models/category.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="0" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
+                <state line="10" column="47" selection-start="313" selection-end="313" vertical-scroll-proportion="0.16574585">
                   <folding>
-                    <element signature="e#1193#1251#0" expanded="true" />
+                    <element signature="e#1175#1233#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -103,7 +98,7 @@
           <file leaf-file-name="general.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/general.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="0" selection-start="708" selection-end="718" vertical-scroll-proportion="0.0">
+                <state line="17" column="10" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -127,19 +122,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="products.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="products.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/admin/products.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="47" column="17" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.39779004">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ru.yml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="47" column="18" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
+                <state line="47" column="17" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -148,7 +134,7 @@
           <file leaf-file-name="categories.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/admin/categories.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="38" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+                <state line="41" column="25" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -176,10 +162,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="34" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
+                <state line="18" column="8" selection-start="977" selection-end="977" vertical-scroll-proportion="0.29834256">
                   <folding />
                 </state>
               </provider>
@@ -230,10 +216,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db/schema.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="75" column="31" selection-start="3290" selection-end="3290" vertical-scroll-proportion="0.17348066">
+                <state line="75" column="31" selection-start="3290" selection-end="3290" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -276,7 +262,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20130603073952_add_parent_category_to_categories.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130603075430_rename_parent_to_parent_id.rb" />
         <option value="$PROJECT_DIR$/app/helpers/active_admin/views_helper.rb" />
-        <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/app/admin/categories.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130603104522_change_product_columns.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130603170816_change_description_type_in_product.rb" />
@@ -284,6 +269,7 @@
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/config/locales/ru.yml" />
         <option value="$PROJECT_DIR$/app/admin/products.rb" />
+        <option value="$PROJECT_DIR$/app/models/category.rb" />
       </list>
     </option>
   </component>
@@ -595,24 +581,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="locales" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1191,22 +1159,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/active_admin.css.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="22" selection-start="5426" selection-end="5426" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@global/gems/activerecord-3.2.13/lib/active_record/scoping/named.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="12" selection-start="7129" selection-end="7129" vertical-scroll-proportion="0.5314917">
-          <folding>
-            <element signature="e#7125#7726#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392@global/gems/activerecord-3.2.13/lib/active_record/associations/preloader/has_and_belongs_to_many.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="12" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.48066297">
@@ -1228,13 +1180,6 @@
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="26" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/categories.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1283,13 +1228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="18" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/product.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="45" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
@@ -1297,26 +1235,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1193#1251#0" expanded="true" />
-          </folding>
+        <state line="75" column="31" selection-start="3290" selection-end="3290" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/general.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="31" selection-start="3290" selection-end="3290" vertical-scroll-proportion="0.17348066">
+        <state line="17" column="10" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="39" selection-start="752" selection-end="755" vertical-scroll-proportion="0.60394263">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/products.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="17" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.39779004">
+        <state line="47" column="17" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="8" selection-start="977" selection-end="977" vertical-scroll-proportion="0.29834256">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/categories.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="25" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="47" selection-start="313" selection-end="313" vertical-scroll-proportion="0.16574585">
+          <folding>
+            <element signature="e#1175#1233#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
