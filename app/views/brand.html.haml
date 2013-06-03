@@ -4,15 +4,13 @@
 - if @products
   - @products.each do |product|
     %tr
-      %td= image_tag(product.image_url(:thumb))
+      %td= image_tag(product.image_url(:thumb)) if product.image_url
       %td= product.slug
       %td= product.name
-      %td= product.type
       %td= product.price
-      %td= product.options
-      %td= product.features
-      %td= product.description
-      %td= product.design
       %td= product.slogan
+      %td= product.features
+      %td= product.description1.html_safe if product.description1
+      %td= product.description2.html_safe if product.description2
 - else
   %p В данной категории товаров нет.
