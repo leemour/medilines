@@ -23,15 +23,12 @@ ActiveAdmin.register Product do
     column :image do |product|
        image_tag(product.image_url(:thumb).to_s) if product.image_url
     end
-    column :type
+    column :description1 do |product|
+      product.description1[0..60]
+    end
     column :price do |product|
       number_to_currency product.price, :unit => "р", :precision => 0
     end
-    #column :options
-    #column :features
-    #column :design
-    #column :description
-    #column :slogan
 
     default_actions
   end
@@ -55,20 +52,16 @@ ActiveAdmin.register Product do
         row :image do
           image_tag(product.image.url) if product.image.url
         end
-        row :type
         row :price
         row :slogan
-        row :options do
-          product.options.html_safe
-        end
         row :features do
           product.features.html_safe
         end
-        row :design do
-          product.design.html_safe
+        row :description1 do
+          product.description1.html_safe if product.description1
         end
-        row :description do
-          product.description.html_safe
+        row :description2 do
+          product.description2.html_safe if product.description2
         end
         row :created_at
         row :updated_at
@@ -86,13 +79,11 @@ ActiveAdmin.register Product do
       f.input :category
       f.input :image, :hint => img_with_url(f, :image)
       f.input :image_cache, :as => :hidden
-      f.input :type
       f.input :price
       f.input :slogan
-      f.input :options, :as =>:ckeditor
-      f.input :features, :as =>:ckeditor
-      f.input :design, :as =>:ckeditor
-      f.input :description, :as => :ckeditor, :input_html => { :ckeditor => { :height => 200 }}
+      f.input :features,     :as =>:ckeditor
+      f.input :description1, :as =>:ckeditor
+      f.input :description2, :as => :ckeditor, :input_html => { :ckeditor => { :height => 200 }}
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
       f.input :updated_at, :wrapper_html => { :class => 'inline-list' }
 

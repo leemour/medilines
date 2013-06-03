@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603075923) do
+ActiveRecord::Schema.define(:version => 20130603170816) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -98,18 +98,16 @@ ActiveRecord::Schema.define(:version => 20130603075923) do
   create_table "products", :force => true do |t|
     t.string   "slug"
     t.integer  "brand_id"
-    t.string   "name"
-    t.string   "type"
-    t.integer  "price"
-    t.text     "options"
-    t.text     "features"
-    t.text     "design"
-    t.text     "description"
-    t.string   "slogan"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "image"
     t.integer  "category_id"
+    t.string   "name"
+    t.integer  "price"
+    t.text     "features"
+    t.text     "description1"
+    t.text     "description2"
+    t.string   "slogan"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "image"
   end
 
   add_index "products", ["brand_id"], :name => "index_products_on_brand_id"

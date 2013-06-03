@@ -4,8 +4,8 @@ class Product < ActiveRecord::Base
 
   belongs_to :brand
   belongs_to :category
-  attr_accessible :description, :design, :features, :name, :options, :price,
-                  :slogan, :slug, :type, :brand_id, :category_id, :image,
+  attr_accessible :description1, :description2, :features, :name, :price,
+                  :slogan, :slug, :brand_id, :category_id, :image,
                   :remove_image, :image_cache
 
   #scope :dentals,    joins(:category).where(categories: {slug: 'dental-units'})
