@@ -21,8 +21,8 @@ class Brand < ActiveRecord::Base
     new_record?
   end
 
-  def self.find_all_in_category(product_type)
-    category = Category.find_by_slug(product_type)
-    category.brands
+  def self.find_all_in_category(category)
+    products = Product.includes(:brand).find_all_by_category_id(category.id)
+    products.map { |pro| pro.brand }
   end
 end

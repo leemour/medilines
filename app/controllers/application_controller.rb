@@ -22,8 +22,9 @@ class ApplicationController < ActionController::Base
   end
   
   def category
-    @page = Category.get_info(params[:product_type])
-    @brands = Brand.find_all_in_category(params[:product_type])
+    @category = Category.find_by_slug(params[:product_type])
+    @page = Category.get_info(@category)
+    @brands = Brand.find_all_in_category(@category)
     render "/categories/category_#{params[:product_type]}"
   end
   

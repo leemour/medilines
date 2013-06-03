@@ -14,8 +14,7 @@ class Category < ActiveRecord::Base
   scope :components, joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'components'})
   scope :spares,     joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'spare-parts'})
 
-  def self.get_info(slug)
-    category = Category.find_by_slug(slug)
+  def self.get_info(category)
     struct = Struct.new :header, :intro, :header2, :outro
     @page = struct.new
     @page.header  = category.name
