@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/promotions.html.haml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/active_admin-9ca8f5d81db2af76471be980155315ac.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/active_admin-9ca8f5d81db2af76471be980155315ac.css.gz" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/active_admin-fd8d7df778368c7b4497702eb72ba3fa.js" afterPath="" />
@@ -1014,17 +1013,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/us-238691e8450c6bd68131f09bcf546d4a.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/us.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/admin_user.rb" afterPath="$PROJECT_DIR$/app/admin/admin_user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/brand.html.haml" afterPath="$PROJECT_DIR$/app/views/brand.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/categories/category_with_products.html.haml" afterPath="$PROJECT_DIR$/app/views/categories/category_with_products.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/page.rb" afterPath="$PROJECT_DIR$/app/models/page.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/pages.rb" afterPath="$PROJECT_DIR$/app/admin/pages.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product.html.haml" afterPath="$PROJECT_DIR$/app/views/product.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/products.rb" afterPath="$PROJECT_DIR$/app/admin/products.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="medilines.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1040,7 +1029,7 @@
     <file path="/20130523182306_create_category_brand_table.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369373450079" ignored="false" />
     <file path="/20130524053231_remove_index_category_brand.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369373579481" ignored="false" />
     <file path="/20130524053619_drop_table_category_brand.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369373822613" ignored="false" />
-    <file path="/application_controller.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370356933641" ignored="false" />
+    <file path="/application_controller.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370370255058" ignored="false" />
     <file path="/category_dentals.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369375377389" ignored="false" />
     <file path="/routes.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370354551377" ignored="false" />
     <file path="/20130524063604_rename_categories_brands.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369377400221" ignored="false" />
@@ -1090,7 +1079,7 @@
     <file path="/404.html" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370339611854" ignored="false" />
     <file path="/general.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370341582295" ignored="false" />
     <file path="/20130604103625_create_pages.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370342256000" ignored="false" />
-    <file path="/page.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370357073153" ignored="false" />
+    <file path="/page.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370370583443" ignored="false" />
     <file path="/pages.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370343456335" ignored="false" />
     <file path="/category_with_brands.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370351258607" ignored="false" />
     <file path="/application_helper.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370348349315" ignored="false" />
@@ -1137,14 +1126,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="47" selection-start="819" selection-end="819" vertical-scroll-proportion="0.64772725">
+                <state line="18" column="27" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="e#98#173#0" expanded="true" />
                     <element signature="e#179#247#0" expanded="true" />
-                    <element signature="e#251#325#0" expanded="true" />
+                    <element signature="e#331#1046#0" expanded="true" />
                     <element signature="e#1052#1322#0" expanded="true" />
                     <element signature="e#1328#1459#0" expanded="true" />
                     <element signature="e#1888#2160#0" expanded="true" />
@@ -1192,18 +1181,18 @@
           <file leaf-file-name="page.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/page.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="40" column="41" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0">
+                <state line="37" column="22" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0">
                   <folding>
-                    <element signature="e#3202#3260#0" expanded="true" />
+                    <element signature="e#1952#2010#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="category_with_products.html.haml" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="category_with_products.html.haml" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/categories/category_with_products.html.haml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="38" selection-start="285" selection-end="285" vertical-scroll-proportion="-3.4615386">
+                <state line="5" column="53" selection-start="230" selection-end="230" vertical-scroll-proportion="0.08650519">
                   <folding />
                 </state>
               </provider>
@@ -1240,10 +1229,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/routes.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="39" column="2" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.66477275">
+                <state line="28" column="41" selection-start="1011" selection-end="1011" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -1258,10 +1247,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/db/schema.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="110" column="25" selection-start="4531" selection-end="4531" vertical-scroll-proportion="0.0">
+                <state line="93" column="0" selection-start="3904" selection-end="3904" vertical-scroll-proportion="0.32386363">
                   <folding />
                 </state>
               </provider>
@@ -1327,8 +1316,8 @@
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/views/product.html.haml" />
         <option value="$PROJECT_DIR$/app/views/brand.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/promotions.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/page.rb" />
       </list>
     </option>
@@ -2208,27 +2197,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/categories/category_with_products.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="38" selection-start="285" selection-end="285" vertical-scroll-proportion="-3.4615386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="39" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="24" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0">
@@ -2305,33 +2273,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/page.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="41" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0">
+        <state line="18" column="27" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#3202#3260#0" expanded="true" />
+            <element signature="e#98#173#0" expanded="true" />
+            <element signature="e#179#247#0" expanded="true" />
+            <element signature="e#331#1046#0" expanded="true" />
+            <element signature="e#1052#1322#0" expanded="true" />
+            <element signature="e#1328#1459#0" expanded="true" />
+            <element signature="e#1888#2160#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="2" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.66477275">
+        <state line="28" column="41" selection-start="1011" selection-end="1011" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="47" selection-start="819" selection-end="819" vertical-scroll-proportion="0.64772725">
+        <state line="93" column="0" selection-start="3904" selection-end="3904" vertical-scroll-proportion="0.32386363">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/page.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="22" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#98#173#0" expanded="true" />
-            <element signature="e#179#247#0" expanded="true" />
-            <element signature="e#251#325#0" expanded="true" />
-            <element signature="e#1052#1322#0" expanded="true" />
-            <element signature="e#1328#1459#0" expanded="true" />
-            <element signature="e#1888#2160#0" expanded="true" />
+            <element signature="e#1952#2010#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/categories/category_with_brands.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/categories/category_with_products.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="53" selection-start="230" selection-end="230" vertical-scroll-proportion="0.08650519">
+          <folding />
         </state>
       </provider>
     </entry>
