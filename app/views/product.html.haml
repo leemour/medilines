@@ -1,0 +1,9 @@
+%tr
+  %td= image_tag(@product.image_url(:thumb)) if @product.image_url
+  %td= @product.slug
+  %td= @product.name
+  %td= @product.price
+  %td= @product.slogan
+  %td= @product.features
+  %td= @product.description1.html_safe if @product.description1
+  %td= @product.description2.html_safe if @product.description2

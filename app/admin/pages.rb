@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 ActiveAdmin.register Page do
-  menu :priority => 6
+  menu :priority => 5
 
   index do
     selectable_column

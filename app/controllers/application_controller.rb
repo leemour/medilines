@@ -15,14 +15,20 @@ class ApplicationController < ActionController::Base
     render '/contacts'
   end
 
-  def promotion
-    @page = Page.promotion
+  def promotions
+    @page = Page.promotions
 
-    render '/contacts'
+    render '/promotions'
   end
   
   def category
-    @category = Category.find_by_slug(params[:product_type])
+    if params[:inner_category]
+      slug = params[:inner_category]
+    else
+      slug =  params[:category]
+    end
+
+    @category = Category.find_by_slug!(slug)
     @page = Page.get_info(@category)
 
     @categories = Category.find_children(@category)
@@ -33,20 +39,25 @@ class ApplicationController < ActionController::Base
       render "/categories/category_with_brands"
     else
       @products = @category.products
+      @products.path = "/#{params[:category]}
+        #{('/' + params[:inner_category]) if params[:inner_category]}"
       render "/categories/category_with_products"
     end
   end
   
   def brand
+    @brand = Brand.find_by_slug!(params[:brand])
+    @page = Page.get_info(@brand)
     @products = Product.joins(:brand).where(:brands => {:slug => params[:brand]}).
-      joins(:category).where(categories: {slug: params[:product_type]})
+      joins(:category).where(categories: {slug: params[:category]})
 
     render '/brand'
   end
   
   def product
-    @product = Product.where(type: params[:product_type], brand: params[:brand],
-                             title: params[:product])
+    @product = Product.find_by_slug!(params[:product])
+    @page = Page.get_info(@product)
+
     render '/product'
   end
 

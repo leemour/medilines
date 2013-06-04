@@ -10,43 +10,46 @@ Medilines::Application.routes.draw do
   #resources :brands
   #resources :products
   
-  root :to => 'application#home'
-  get '/contacts'       => 'application#contacts', as: :contacts
-  
+  root :to              => 'application#home'
+  get '/contacts'       => 'application#contacts',
+      as: :contacts,        :page => :contacts
+  get '/promotions'     => 'application#promotions',
+      as: :promotions,      :page => :contacts
+
   get '/dental-units'   => 'application#category',
-      as: :dentals,    product_type: :'dental-units'
+      as: :dentals,         :category => :'dental-units'
   get '/visual-systems' => 'application#category',
-      as: :visuals,    product_type: :'visual-systems'
+      as: :visuals,         :category => :'visual-systems'
   get '/components'     => 'application#category',
-      as: :components, product_type: :components
+      as: :components,      :category => :components
   get '/spare-parts'    => 'application#category',
-      as: :spares,     product_type: :spares
+      as: :spares,          :category => :spares
   
   get '/dental-units/:brand'             => 'application#brand',
-      as: :dental_brand,    product_type: :'dental-units'
-  get '/visual-systems/:category'        => 'application#category',
-      as: :visual_category,    product_type: :'visual-systems'
-  get '/visual-systems/:category/:brand' => 'application#brand',
-      as: :visual_category_brand,    product_type: :'visual-systems'
-  get '/components/:category/'               => 'application#category',
-      as: :component_category, product_type: :components
-  get '/components/:category/:brand'     => 'application#brand',
-      as: :component_category_brand, product_type: :components
+      as: :dental_brand,             :category => :'dental-units'
+  get '/visual-systems/:inner_category'        => 'application#category',
+      as: :visual_category,          :category => :'visual-systems'
+  get '/visual-systems/:inner_category/:product' => 'application#product',
+      as: :visual_category_brand,    :category => :'visual-systems'
+  get '/components/:inner_category/'           => 'application#category',
+      as: :component_category,       :category => :components
+  get '/components/:inner_category/:brand'     => 'application#product',
+      as: :component_category_brand, :category => :components
   get '/spare-parts/:brand'              => 'application#brand',
-      as: :spare_brand,     product_type: :spares
+      as: :spare_brand,              :category => :spares
   
   get '/dental-units/:brand/:product'   => 'application#product',
-      as: :dental_product,    product_type: :'dental-units'
+      as: :dental_product,    :category => :'dental-units'
   get '/visual-systems/:category/:brand/:product' => 'application#product',
-      as: :visual_product,    product_type: :'visual-systems'
+      as: :visual_product,    :category => :'visual-systems'
   get '/visual-systems/:brand/:product' => 'application#product',
-      as: :visual_product,    product_type: :'visual-systems'
+      as: :visual_product,    :category => :'visual-systems'
   get '/components/:brand/:product'     => 'application#product',
-      as: :component_product, product_type: :components
+      as: :component_product, :category => :components
   get '/components/:brand/:category/:product'     => 'application#product',
-      as: :component_product, product_type: :components
+      as: :component_product, :category => :components
   get '/spare-parts/:brand/:product'    => 'application#product',
-      as: :spare_product,     product_type: :spares
+      as: :spare_product,     :category => :spares
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

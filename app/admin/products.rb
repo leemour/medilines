@@ -3,10 +3,10 @@ ActiveAdmin.register Product do
   menu :priority => 2
 
   scope "Стоматолог. кресла", :dentals
-  scope "Визуализация", :visuals
-  scope "Компоненты", :components
-  scope "Запчасти", :spares
-  scope "Все", :all
+  scope "Визуализация",       :visuals
+  scope "Компоненты",         :components
+  scope "Запчасти",           :spares
+  scope "Все",                :all
 
   index do
     selectable_column

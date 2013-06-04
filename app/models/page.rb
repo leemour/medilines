@@ -12,12 +12,16 @@ class Page < ActiveRecord::Base
 
   def self.get_info(item = nil)
     if item
-      if item.has_attribute? :title
-        title = item.title
-      elsif item.has_attribute? :name
+      if item.has_attribute? :name
         title = item.name
+      elsif item.has_attribute? :title
+        title = item.title
       end
-      intro = item.description
+      if item.has_attribute? :description
+        intro = item.description
+      elsif item.has_attribute? :description1
+        intro = item.description1
+      end
     end
     title ||= ''
     intro ||= ''
@@ -33,9 +37,17 @@ class Page < ActiveRecord::Base
     struct = Struct.new :title, :intro, :content
     @page = struct.new
     @page.title   = 'Стоматологическое оборудование'
-    #@page.header   = 'Продажа специализированного стоматологического оборудования'
     @page.intro    = '«Медилайн Сервис» является поставщиком различного стоматологического оборудования. У нас вы можете приобрести стоматологические установки от бюджетного до премиум класса. Мы являемся официальными поставщиками стоматологических установок фирмы «Forest».'
-    #@page.header2  = 'Мы обеспечиваем надежную работу любого медициского оборудования'
+    @page.content    = 'У нас вы можете получить полный спектр услуг по монтажу, гарантийного и постгарантийного обслуживания стоматологического оборудования. наши специалисты будут всегда рады вам помочь в выборе стоматологического оборудования. В «Медилайн Сервис» можно купить стоматологическую установку, рентген, лазер, системы визуализации, комплектующие стоматологического кабинета.'
+    @page = Page.seo(@page)
+    @page
+  end
+
+  def self.promotions
+    struct = Struct.new :title, :intro, :content
+    @page = struct.new
+    @page.title   = 'Акции'
+    @page.intro    = 'Каждую неделю мы объявляем о новых, беспрецендентных акциях'
     @page.content    = 'У нас вы можете получить полный спектр услуг по монтажу, гарантийного и постгарантийного обслуживания стоматологического оборудования. наши специалисты будут всегда рады вам помочь в выборе стоматологического оборудования. В «Медилайн Сервис» можно купить стоматологическую установку, рентген, лазер, системы визуализации, комплектующие стоматологического кабинета.'
     @page = Page.seo(@page)
     @page

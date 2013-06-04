@@ -1,12 +1,10 @@
-- if @brands
-  = @brands.each(&:inspect)
-
 - if @products
   - @products.each do |product|
     %tr
       %td= image_tag(product.image_url(:thumb)) if product.image_url
       %td= product.slug
-      %td= product.name
+      %td= link_to product.name, controller => :application,
+        :action => :product, :product => product.slug
       %td= product.price
       %td= product.slogan
       %td= product.features
