@@ -4,6 +4,9 @@ ru:
       admin_user:
         one: Пользователь
         other: Пользователи
+      page:
+        one: Страница
+        other: Страницы
       brand:
         one: Бренд
         other: Бренды
@@ -28,6 +31,13 @@ ru:
         last_sign_in_ip: Последний вход с IP
         created_at: Создан
         updated_at: Изменен
+      page:
+        slug: Ссылка
+        title: Название
+        intro: Введение
+        content: Контент
+        created_at: Создана
+        updated_at: Изменена
       brand:
         slug: Ссылка
         name: Название

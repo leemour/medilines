@@ -5,6 +5,7 @@ class Category < ActiveRecord::Base
   friendly_id :name, :use => :slugged
 
   belongs_to :parent, :class_name => 'Category', :foreign_key => 'parent_id'
+  has_many :products
 
   attr_accessible :description, :name, :slug, :parent, :logo, :parent_id
 
@@ -21,6 +22,10 @@ class Category < ActiveRecord::Base
   scope :visuals,    join_parent('visual-systems')
   scope :components, join_parent('components')
   scope :spares,     join_parent('spare-parts')
+
+  def self.find_children(cat)
+    Category.find_all_by_parent_id(cat.id)
+  end
 
   def self.get_info(category)
     struct = Struct.new :header, :intro, :header2, :outro

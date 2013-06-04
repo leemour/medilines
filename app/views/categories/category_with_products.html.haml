@@ -1,0 +1,12 @@
+- @products.each do |product|
+  %div{class: "brand #{product.slug}"}
+    = image_tag(product.image_url, :alt => "#{@category.name} - #{product.name}")
+
+    .brand-description
+      %h2= link_to product.name, dental_product_path(product)
+      = product.price if product.price
+      = product.brand.name
+      %p= product.description1.html_safe if product.description1
+
+    .details
+      = product.description2.html_safe if product.description2

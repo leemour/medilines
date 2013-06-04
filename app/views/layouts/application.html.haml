@@ -1,10 +1,10 @@
 !!! 5
 %html{lang: 'ru'}
   %head
-    %title Стоматологические установки Медилайн Сервис
+    %title= page_title(@page) + 'Медилайн Сервис'
     %meta{charset: 'utf8-'}/
-    %meta{name: 'description', content: @seo.description}/
-    %meta{name: 'keywords', content: @seo.keywords}/
+    %meta{name: 'description', content: @page.description}/
+    %meta{name: 'keywords', content: @page.keywords}/
     = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag    "application", :media => "all"
     = stylesheet_link_tag    "application", :media => "all"
@@ -33,9 +33,8 @@
               = link_to 'Установки', dentals_path
             %li
               =link_to 'Визуализация', visuals_path
-            %li.inactive
-              -#=link_to 'Комплектующие', complects_path
-              Комплектующие
+            %li
+              =link_to 'Комплектующие', components_path
             %li.inactive
               -#=link_to 'Запчасти', spares_path
               Запчасти
@@ -44,12 +43,10 @@
             %li
               =link_to 'Контакты', contacts_path
     
-    - if @page    
+    - if @page.intro
       %section.intro
         .container
-          %header
-            %h1= @page.header
-          %p= @page.intro
+          = @page.intro.html_safe
           
     %section#main
       .container
@@ -58,13 +55,6 @@
 
 
         = yield
-
-
-    - if @page     
-      %section.outro
-        .container
-          %h3= @page.header2
-          %p= @page.outro
         
 
     %footer

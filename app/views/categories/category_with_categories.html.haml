@@ -1,0 +1,9 @@
+- @categories.each do |cat|
+  %div{class: "category #{cat.slug}"}
+    = image_tag(cat.logo_url, :alt => "Категория #{cat.name}") if cat.logo
+
+    .cat-description
+      %h2= link_to cat.name, visual_category_path(cat)
+
+    .details
+      %p= cat.description.html_safe if cat.description

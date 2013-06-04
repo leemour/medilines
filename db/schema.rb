@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603170816) do
+ActiveRecord::Schema.define(:version => 20130604103625) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -95,19 +95,30 @@ ActiveRecord::Schema.define(:version => 20130603170816) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
+  create_table "pages", :force => true do |t|
+    t.string   "slug"
+    t.string   "title"
+    t.string   "intro"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true
+
   create_table "products", :force => true do |t|
     t.string   "slug"
     t.integer  "brand_id"
-    t.integer  "category_id"
     t.string   "name"
     t.integer  "price"
     t.text     "features"
     t.text     "description1"
-    t.text     "description2"
     t.string   "slogan"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "image"
+    t.integer  "category_id"
+    t.text     "description2"
   end
 
   add_index "products", ["brand_id"], :name => "index_products_on_brand_id"

@@ -29,6 +29,6 @@ class Brand < ActiveRecord::Base
 
   def self.find_all_in_category(category)
     products = Product.includes(:brand).find_all_by_category_id(category.id)
-    products.map { |pro| pro.brand }
+    products.map { |product| product.brand }
   end
 end

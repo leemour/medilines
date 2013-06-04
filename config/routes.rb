@@ -13,21 +13,41 @@ Medilines::Application.routes.draw do
   root :to => 'application#home'
   get '/contacts'       => 'application#contacts', as: :contacts
   
-  get '/dental-units'   => 'application#category', as: :dentals,    product_type: :'dental-units'
-  get '/visual-systems' => 'application#category', as: :visuals,    product_type: :'visual-systems'
-  get '/components'     => 'application#category', as: :components, product_type: :components
-  get '/spare-parts'    => 'application#category', as: :spares,     product_type: :spares
+  get '/dental-units'   => 'application#category',
+      as: :dentals,    product_type: :'dental-units'
+  get '/visual-systems' => 'application#category',
+      as: :visuals,    product_type: :'visual-systems'
+  get '/components'     => 'application#category',
+      as: :components, product_type: :components
+  get '/spare-parts'    => 'application#category',
+      as: :spares,     product_type: :spares
   
-  get '/dental-units/:brand'   => 'application#brand', as: :dental_brand,    product_type: :'dental-units'
-  get '/visual-systems/:brand' => 'application#brand', as: :visual_brand,    product_type: :'visual-systems'
-  get '/components/:brand'     => 'application#brand', as: :component_brand, product_type: :components
-  get '/spare-parts/:brand'    => 'application#brand', as: :spare_brand,     product_type: :spares
+  get '/dental-units/:brand'             => 'application#brand',
+      as: :dental_brand,    product_type: :'dental-units'
+  get '/visual-systems/:category'        => 'application#category',
+      as: :visual_category,    product_type: :'visual-systems'
+  get '/visual-systems/:category/:brand' => 'application#brand',
+      as: :visual_category_brand,    product_type: :'visual-systems'
+  get '/components/:category/'               => 'application#category',
+      as: :component_category, product_type: :components
+  get '/components/:category/:brand'     => 'application#brand',
+      as: :component_category_brand, product_type: :components
+  get '/spare-parts/:brand'              => 'application#brand',
+      as: :spare_brand,     product_type: :spares
   
-  get '/dental-units/:brand/:product'   => 'application#product', as: :dental_product,    product_type: :'dental-units'
-  get '/visual-systems/:brand/:product' => 'application#product', as: :visual_product,    product_type: :'visual-systems'
-  get '/components/:brand/:product'     => 'application#product', as: :component_product, product_type: :components
-  get '/spare-parts/:brand/:product'    => 'application#product', as: :spare_product,     product_type: :spares
-  
+  get '/dental-units/:brand/:product'   => 'application#product',
+      as: :dental_product,    product_type: :'dental-units'
+  get '/visual-systems/:category/:brand/:product' => 'application#product',
+      as: :visual_product,    product_type: :'visual-systems'
+  get '/visual-systems/:brand/:product' => 'application#product',
+      as: :visual_product,    product_type: :'visual-systems'
+  get '/components/:brand/:product'     => 'application#product',
+      as: :component_product, product_type: :components
+  get '/components/:brand/:category/:product'     => 'application#product',
+      as: :component_product, product_type: :components
+  get '/spare-parts/:brand/:product'    => 'application#product',
+      as: :spare_product,     product_type: :spares
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -84,4 +104,8 @@ Medilines::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
 end
