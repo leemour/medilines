@@ -4,7 +4,7 @@ ActiveAdmin.register Category do
   menu :priority => 4
 
   scope "Корневые",           :roots
-  scope "Стоматолог. кресла", :dentals
+  scope "Стоматолог. уст.",   :dentals
   scope "Визуализация",       :visuals
   scope "Компоненты",         :components
   scope "Запчасти",           :spares

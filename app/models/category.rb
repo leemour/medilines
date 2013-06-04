@@ -8,11 +8,19 @@ class Category < ActiveRecord::Base
 
   attr_accessible :description, :name, :slug, :parent, :logo, :parent_id
 
+  validates_presence_of :name, :slug
+  validates_uniqueness_of :name, :slug
+  validates_length_of :name, :minimum => 4, :message => "Слишком короткое название"
+
   scope :roots,      where("parent_id IS NULL")
-  scope :dentals,    joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'dental-units'})
-  scope :visuals,    joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'visual-systems'})
-  scope :components, joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'components'})
-  scope :spares,     joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").where(cat2: {slug: 'spare-parts'})
+  scope :join_parent, lambda { |slug|
+    joins("JOIN categories AS cat2 ON categories.parent_id = cat2.id").
+    where("cat2.slug = ?", slug)
+  }
+  scope :dentals,    join_parent('dental-units')
+  scope :visuals,    join_parent('visual-systems')
+  scope :components, join_parent('components')
+  scope :spares,     join_parent('spare-parts')
 
   def self.get_info(category)
     struct = Struct.new :header, :intro, :header2, :outro

@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class Brand < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
@@ -7,6 +9,10 @@ class Brand < ActiveRecord::Base
   attr_accessible :country, :description, :details, :flag, :remove_flag,
                   :flag_cache, :image, :remove_image, :image_cache, :logo,
                   :name, :slogan, :slug
+
+  validates_presence_of :name, :slug
+  validates_uniqueness_of :name, :slug
+  validates_length_of :name, :minimum => 4, :message => "Слишком короткое название"
 
   mount_uploader :image, ImageUploader
   mount_uploader :flag, ImageUploader
