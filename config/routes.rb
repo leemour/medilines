@@ -11,11 +11,11 @@ Medilines::Application.routes.draw do
   #resources :products
   
   root :to              => 'application#page',
-                            :page => :home
+                            :page => 'home'
   get '/contacts'       => 'application#page',
-      as: :contacts,        :page => :contacts
+      as: :contacts,        :page => 'contacts'
   get '/promotions'     => 'application#page',
-      as: :promotions,      :page => :promotions
+      as: :promotions,      :page => 'promotions'
 
   scope '/dental-units', :category => 'dental-units' do
     root :to                              => 'application#category',

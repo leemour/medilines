@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/routing/application_routing_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/promotions.html.haml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/promotions.html.haml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/routing/brands_routing_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/routing/categories_routing_spec.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/contacts.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/contacts.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/home.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/home.html.haml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/routing/products_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/admin_routing_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/brand.html.haml" afterPath="$PROJECT_DIR$/app/views/brand.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/categories/category_with_categories.html.haml" afterPath="$PROJECT_DIR$/app/views/categories/category_with_categories.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/categories/category_with_products.html.haml" afterPath="$PROJECT_DIR$/app/views/categories/category_with_products.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/page.rb" afterPath="$PROJECT_DIR$/app/models/page.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/admin_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/admin_routing_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/routing/application_routing_spec.rb" afterPath="$PROJECT_DIR$/spec/routing/application_routing_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contact_form.rb" afterPath="$PROJECT_DIR$/app/models/contact_form.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -93,7 +82,9 @@
     <file path="/promotions.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370451539074" ignored="false" />
     <file path="/contact_form.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370444740063" ignored="false" />
     <file path="/contacts.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370452145219" ignored="false" />
-    <file path="/categories_routing_spec.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370453781869" ignored="false" />
+    <file path="/categories_routing_spec.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370460014476" ignored="false" />
+    <file path="/admin_routing_spec.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370454391796" ignored="false" />
+    <file path="/application_routing_spec.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370459825940" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +178,7 @@
           <file leaf-file-name="contact_form.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/models/contact_form.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="2" selection-start="34" selection-end="34" vertical-scroll-proportion="0.016797312">
+                <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -209,26 +200,37 @@
           <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/routes.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="25" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
+                <state line="17" column="49" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="admin_routing_spec.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="admin_routing_spec.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/spec/routing/admin_routing_spec.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="35" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="0.58790594">
+                <state line="35" column="0" selection-start="0" selection-end="858" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application_routing_spec.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="application_routing_spec.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/spec/routing/application_routing_spec.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+                <state line="53" column="56" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.537514">
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="routing_matchers.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/rspec-rails-2.13.0/lib/rspec/rails/matchers/routing_matchers.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="31" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#1847#1920#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -300,9 +302,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/product.html.haml" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/app/models/contact_form.rb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/views/home.html.haml" />
         <option value="$PROJECT_DIR$/app/views/promotions.html.haml" />
@@ -312,10 +312,12 @@
         <option value="$PROJECT_DIR$/app/views/brand.html.haml" />
         <option value="$PROJECT_DIR$/app/models/page.rb" />
         <option value="$PROJECT_DIR$/app/views/pages/contacts.html.haml" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/categories/category_with_categories.html.haml" />
         <option value="$PROJECT_DIR$/spec/routing/categories_routing_spec.rb" />
+        <option value="$PROJECT_DIR$/app/models/contact_form.rb" />
         <option value="$PROJECT_DIR$/spec/routing/admin_routing_spec.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/spec/routing/application_routing_spec.rb" />
       </list>
     </option>
   </component>
@@ -582,6 +584,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1033,26 +1049,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="19" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#195#564#0" expanded="true" />
-            <element signature="e#568#953#0" expanded="true" />
-            <element signature="e#959#1229#0" expanded="true" />
-            <element signature="e#1235#1383#0" expanded="true" />
-            <element signature="e#1812#2084#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/categories/category_with_brands.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="337" selection-end="337" vertical-scroll-proportion="0.14475271">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/brand.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
@@ -1097,13 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/contact_form.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="34" selection-end="34" vertical-scroll-proportion="0.016797312">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/contents.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="1" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
@@ -1125,13 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="25" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/categories/category_with_categories.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="-5.1923075">
@@ -1139,16 +1121,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/routing/application_routing_spec.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/contact_form.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="211" selection-end="211" vertical-scroll-proportion="0.06718925">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/routing/admin_routing_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="0.58790594">
+        <state line="35" column="0" selection-start="0" selection-end="858" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/rspec-rails-2.13.0/lib/rspec/rails/matchers/routing_matchers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1847#1920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="49" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/routing/application_routing_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="56" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.537514">
           <folding />
         </state>
       </provider>

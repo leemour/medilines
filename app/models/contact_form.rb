@@ -1,3 +1,3 @@
-class ContactForm < ActiveModel
-  
+class ContactForm
+
 end
