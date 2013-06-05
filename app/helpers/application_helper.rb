@@ -6,4 +6,8 @@ module ApplicationHelper
       ''
     end
   end
+
+  def root_cat(cat)
+    cat.split('-')[0]
+  end
 end

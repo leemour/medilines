@@ -8,8 +8,6 @@
         %dd США
         %dt= link_to 'Fedesa', dental_brand_path(:fedesa)
         %dd Испания
-        %dt= link_to 'Wandong Medical', dental_brand_path(:wandong)
-        %dd Китай
     
     %li
       = link_to image_tag("r_rentgen.jpg", :size => "", :alt => "Стоматологиеское кресло"), visuals_path
@@ -17,10 +15,8 @@
       %p В Медилайн Сервис можно купить стоматологическую установку, рентген, лазер, системы визуализации, комплектующие стоматологического кабинета.
       
     %li
-      -#= link_to image_tag("r_components.jpg", :size => "", :alt => "Стоматологиеское кресло"), root_path
-      = image_tag "r_components.jpg", :size => "", :alt => "Стоматологиеское кресло"
-      -#%h2= link_to 'Комплектующие стоматологического кабинета', root_path
-      %h2 Комплектующие стоматологического кабинета
+      = link_to image_tag("r_components.jpg", :size => "", :alt => "Стоматологиеское кресло"), components_path
+      %h2= link_to 'Комплектующие стоматологического кабинета', components_path
 
     %li
       -#= link_to image_tag("r_rentgen.jpg", :size => "", :alt => "Стоматологиеское кресло"), root_path

@@ -12,6 +12,12 @@ class Page < ActiveRecord::Base
 
   attr_accessor :path
 
+  def self.get_page(slug)
+    @page = Page.find_by_slug(slug)
+    @page = Page.seo(@page)
+    @page
+  end
+
   def self.get_info(item = nil)
     if item
       if item.has_attribute? :name
@@ -19,6 +25,7 @@ class Page < ActiveRecord::Base
       elsif item.has_attribute? :title
         title = item.title
       end
+
       if item.has_attribute? :description
         intro = item.description
       elsif item.has_attribute? :description1
@@ -31,28 +38,6 @@ class Page < ActiveRecord::Base
     @page = struct.new
     @page.title = title
     @page.intro = intro
-    @page = Page.seo(@page)
-    @page
-  end
-
-  def self.home
-    struct = Struct.new :title, :intro, :content
-    @page = struct.new
-    @page.title   = 'Стоматологическое оборудование'
-    @page.intro    = '«Медилайн Сервис» является поставщиком различного стоматологического оборудования. У нас вы можете приобрести стоматологические установки от бюджетного до премиум класса. Мы являемся официальными поставщиками стоматологических установок фирмы «Forest».'
-    @page.content    = 'У нас вы можете получить полный спектр услуг по монтажу, гарантийного и постгарантийного обслуживания стоматологического оборудования. наши специалисты будут всегда рады вам помочь в выборе стоматологического оборудования. В «Медилайн Сервис» можно купить стоматологическую установку, рентген, лазер, системы визуализации, комплектующие стоматологического кабинета.'
-    @page = Page.seo(@page)
-    @page
-  end
-
-  def self.promotions
-    @page = Page.find_by_slug('promotions')
-    @page = Page.seo(@page)
-    @page
-  end
-
-  def self.contacts
-    @page = Page.find_by_slug('contacts')
     @page = Page.seo(@page)
     @page
   end

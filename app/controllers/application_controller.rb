@@ -1,24 +1,11 @@
 #encoding: utf-8
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
-  def home
-    #raise 'error'
-    @page = Page.home
 
-    render '/home'
-  end
-  
-  def contacts
-    @page = Page.contacts
+  def page
+    @page = Page.get_page(params[:page])
 
-    render '/contacts'
-  end
-
-  def promotions
-    @page = Page.promotions
-
-    render '/promotions'
+    render "/pages/#{params[:page]}"
   end
   
   def category

@@ -3,7 +3,7 @@
     = image_tag(cat.logo_url, :alt => "Категория #{cat.name}") if cat.logo
 
     .cat-description
-      %h2= link_to cat.name, visual_category_path(cat)
+      %h2= link_to cat.name, url_for([root_cat(params[:category]), cat])
 
     .details
       %p= cat.description.html_safe if cat.description
