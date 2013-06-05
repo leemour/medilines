@@ -3,7 +3,8 @@
     = image_tag(product.image_url, :alt => "#{@category.name} - #{product.name}")
 
     .brand-description
-      %h2= link_to product.name, "/#{@products.path}/#{product.slug}"
+      -#%h2= link_to product.name, "/#{@products.path}/#{product.slug}"
+      %h2= link_to product.name, url_for([params[:category].split('-')[0], @category, product.brand, product])
       = product.price if product.price
       = product.brand.name
       %p= product.description1.html_safe if product.description1

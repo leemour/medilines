@@ -10,6 +10,8 @@ class Page < ActiveRecord::Base
   validates_uniqueness_of :title, :slug
   validates_length_of :title, :minimum => 3, :message => "Слишком короткое название"
 
+  attr_accessor :path
+
   def self.get_info(item = nil)
     if item
       if item.has_attribute? :name

@@ -16,40 +16,49 @@ Medilines::Application.routes.draw do
   get '/promotions'     => 'application#promotions',
       as: :promotions,      :page => :contacts
 
-  get '/dental-units'   => 'application#category',
-      as: :dentals,         :category => :'dental-units'
-  get '/visual-systems' => 'application#category',
-      as: :visuals,         :category => :'visual-systems'
-  get '/components'     => 'application#category',
-      as: :components,      :category => :components
-  get '/spare-parts'    => 'application#category',
-      as: :spares,          :category => :spares
-  
-  get '/dental-units/:brand'             => 'application#brand',
-      as: :dental_brand,             :category => :'dental-units'
-  get '/visual-systems/:inner_category'        => 'application#category',
-      as: :visual_category,          :category => :'visual-systems'
-  get '/visual-systems/:inner_category/:product' => 'application#product',
-      as: :visual_category_brand,    :category => :'visual-systems'
-  get '/components/:inner_category/'           => 'application#category',
-      as: :component_category,       :category => :components
-  get '/components/:inner_category/:brand'     => 'application#product',
-      as: :component_category_brand, :category => :components
-  get '/spare-parts/:brand'              => 'application#brand',
-      as: :spare_brand,              :category => :spares
-  
-  get '/dental-units/:brand/:product'   => 'application#product',
-      as: :dental_product,    :category => :'dental-units'
-  get '/visual-systems/:category/:brand/:product' => 'application#product',
-      as: :visual_product,    :category => :'visual-systems'
-  get '/visual-systems/:brand/:product' => 'application#product',
-      as: :visual_product,    :category => :'visual-systems'
-  get '/components/:brand/:product'     => 'application#product',
-      as: :component_product, :category => :components
-  get '/components/:brand/:category/:product'     => 'application#product',
-      as: :component_product, :category => :components
-  get '/spare-parts/:brand/:product'    => 'application#product',
-      as: :spare_product,     :category => :spares
+  scope '/dental-units', :category => 'dental-units' do
+    root :to                              => 'application#category',
+        as: :dentals
+    get ':brand'                          => 'application#brand',
+        as: :dental_brand
+    get ':brand/:product'                 => 'application#product',
+        as: :dental_brand_product
+  end
+
+  scope '/visual-systems', :category => 'visual-systems' do
+    root :to                              => 'application#category',
+        as: :visuals
+    get ':inner_category'                 => 'application#inner_category',
+        as: :visual_category
+    get ':inner_category/:brand'          => 'application#brand',
+        as: :visual_category_product
+    get ':inner_category/:brand/:product' => 'application#product',
+        as: :visual_category_brand_product
+  end
+
+  scope '/components', :category => 'components' do
+    root :to                              => 'application#category',
+         as: :components
+    get ':inner_category'                 => 'application#inner_category',
+        as: :components_category
+    get ':inner_category/:brand'          => 'application#brand',
+        as: :components_category_product
+    get ':inner_category/:brand/:product' => 'application#product',
+        as: :components_category_brand_product
+  end
+
+  #scope '/spare-parts', :category => 'spare-parts' do
+  #  root :to                              => 'application#category',
+  #       as: :spares
+  #  get ':inner_category'                 => 'application#inner_category',
+  #      as: :spare_category
+  #  get ':inner_category/:brand'          => 'application#brand',
+  #      as: :spare_category_product
+  #  get ':inner_category/:brand/:product' => 'application#product',
+  #      as: :spare_category_brand_product
+  #end
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

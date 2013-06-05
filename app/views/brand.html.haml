@@ -3,8 +3,7 @@
     %tr
       %td= image_tag(product.image_url(:thumb)) if product.image_url
       %td= product.slug
-      %td= link_to product.name, controller => :application,
-        :action => :product, :product => product.slug
+      %td= link_to product.name, url_for(['dental', @brand, product])
       %td= product.price
       %td= product.slogan
       %td= product.features

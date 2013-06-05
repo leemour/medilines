@@ -22,25 +22,27 @@ class ApplicationController < ActionController::Base
   end
   
   def category
-    if params[:inner_category]
-      slug = params[:inner_category]
-    else
-      slug =  params[:category]
-    end
-
-    @category = Category.find_by_slug!(slug)
+    @category = Category.find_by_slug!(params[:category])
     @page = Page.get_info(@category)
+    @subcategories = Category.find_children(@category)
 
-    @categories = Category.find_children(@category)
-    if not @categories.empty?
-      render "/categories/category_with_categories"
-    elsif @category.products.count > 1
+    if @subcategories.empty?
       @brands = Brand.find_all_in_category(@category)
       render "/categories/category_with_brands"
     else
-      @products = @category.products
-      @products.path = "/#{params[:category]}
-        #{('/' + params[:inner_category]) if params[:inner_category]}"
+      render "/categories/category_with_categories"
+    end
+  end
+
+  def inner_category
+    @category = Category.find_by_slug!(params[:inner_category])
+    @page = Page.get_info(@category)
+
+    if @category.products.count > 1
+      @brands = Brand.find_all_in_category(@category)
+      render "/categories/category_with_brands"
+    else
+      @products = @category.products.includes(:brand)
       render "/categories/category_with_products"
     end
   end
@@ -55,7 +57,7 @@ class ApplicationController < ActionController::Base
   end
   
   def product
-    @product = Product.find_by_slug!(params[:product])
+    @product = Product.includes(:brand).find_by_slug!(params[:product])
     @page = Page.get_info(@product)
 
     render '/product'
