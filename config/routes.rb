@@ -17,6 +17,10 @@ Medilines::Application.routes.draw do
   get '/promotions'     => 'application#page',
       as: :promotions,      :page => 'promotions'
 
+  post '/contacts/send-mail'     => 'application#send_mail'
+  get '/contacts/mail-sent'      => 'application#page',
+                            :page => 'mail-sent'
+
   scope '/dental-units', :category => 'dental-units' do
     root :to                              => 'application#category',
         as: :dentals

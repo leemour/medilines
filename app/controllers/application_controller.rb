@@ -50,6 +50,16 @@ class ApplicationController < ActionController::Base
     render '/product'
   end
 
+  def send_mail
+    @message = ContactMessage.new(params[:message])
+    if @message.valid?
+      # send message
+      redirect_to '/contacts/mail-sent'
+    else
+      redirect_to '/contacts'
+    end
+  end
+
   # Handling Errors
   unless Rails.application.config.consider_all_requests_local
     rescue_from Exception, with: lambda { |exception| render_error 500, exception }

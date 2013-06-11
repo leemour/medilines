@@ -1,0 +1,20 @@
+= form_for @message do |f|
+  - if @message.errors.any?
+    #error_explanation
+      %h2= "Вы допустили ошибки при заполнении формы"
+      %ul
+        - @message.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label 'Имя', :name
+    = f.text_field :name
+  .field
+    = f.label 'Email', :email
+    = f.text_field :email
+  .field
+    = f.label 'Сообщение',  :content
+    = f.text_area :content
+
+  .actions
+    = f.submit 'Отправить'
