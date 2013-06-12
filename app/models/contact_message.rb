@@ -1,6 +1,9 @@
+# encoding: UTF-8
+
 class ContactMessage
   include ActiveModel::Validations
   include ActiveModel::Conversion
+  extend ActiveModel::Translation
   extend ActiveModel::Naming
 
   attr_accessor :name, :email, :content

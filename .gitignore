@@ -15,4 +15,4 @@
 /tmp
 
 # Ignore Environment variables
-/config/.env
+/config/env.rb

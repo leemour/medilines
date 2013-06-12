@@ -12,12 +12,13 @@ Medilines::Application.routes.draw do
   
   root :to              => 'application#page',
                             :page => 'home'
-  get '/contacts'       => 'application#page',
+  get '/contacts'       => 'application#contacts',
       as: :contacts,        :page => 'contacts'
   get '/promotions'     => 'application#page',
       as: :promotions,      :page => 'promotions'
 
-  post '/contacts/send-mail'     => 'application#send_mail'
+  post '/contacts'      => 'application#send_mail',
+      as: :send_mail
   get '/contacts/mail-sent'      => 'application#page',
                             :page => 'mail-sent'
 

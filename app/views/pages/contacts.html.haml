@@ -1,7 +1,12 @@
 %h1 Контакты
 
-%address.full-contacts
-  = @page.content.html_safe
+.contact-details
+  %address.full-contacts
+    = @page.content.html_safe
+
+  .contact-form
+    %h3 Свяжитесь с нами
+    = render '/messages/form'
   
 #ya-maps
 

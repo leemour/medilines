@@ -77,6 +77,16 @@ ru:
         image: Фото
         created_at: Создан
         updated_at: Изменен
+  activemodel:
+    models:
+      contact_message:
+        one: Форма связи
+        two: Формы связи
+    attributes:
+      contact_message:
+        name: Имя
+        email: Email
+        content: Сообщение
 
 
   date:

@@ -1,4 +1,4 @@
-= form_for @message do |f|
+= form_for @message, :url => send_mail_path do |f|
   - if @message.errors.any?
     #error_explanation
       %h2= "Вы допустили ошибки при заполнении формы"
@@ -7,14 +7,14 @@
           %li= msg
 
   .field
-    = f.label 'Имя', :name
-    = f.text_field :name
+    = f.label :name, 'Имя'
+    = f.text_field :name, :size => "28"
   .field
-    = f.label 'Email', :email
-    = f.text_field :email
+    = f.label :email
+    = f.text_field :email, :size => "28"
   .field
-    = f.label 'Сообщение',  :content
-    = f.text_area :content
+    = f.label :content, 'Сообщение'
+    = f.text_area :content, :size => "28x6"
 
   .actions
     = f.submit 'Отправить'

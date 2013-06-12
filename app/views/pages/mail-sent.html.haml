@@ -1,0 +1,8 @@
+- if @error
+  %h1 Ошибка отправки сообщения
+  %p Извините, произошла ошибка во время отправки сообщения. Попробуйте еще
+  раз или напишите нам на почту <a href="mailto:info@medilines
+  .ru">info@medilines.ru</a>
+
+- else
+  = @page.content.html_safe

@@ -4,8 +4,24 @@ class ApplicationController < ActionController::Base
 
   def page
     @page = Page.get_page(params[:page])
-
     render "/pages/#{params[:page]}"
+  end
+
+  def contacts
+    @message = ContactMessage.new
+    page()
+  end
+
+  def send_mail
+    @message = ContactMessage.new(params[:contact_message])
+    if @message.valid?
+      # send message
+      @error = ContactMailer.contact_message(@message).deliver
+      redirect_to '/contacts/mail-sent'
+    else
+      @page = Page.get_page('contacts')
+      render 'pages/contacts'
+    end
   end
   
   def category
@@ -46,18 +62,7 @@ class ApplicationController < ActionController::Base
   def product
     @product = Product.includes(:brand).find_by_slug!(params[:product])
     @page = Page.get_info(@product)
-
     render '/product'
-  end
-
-  def send_mail
-    @message = ContactMessage.new(params[:message])
-    if @message.valid?
-      # send message
-      redirect_to '/contacts/mail-sent'
-    else
-      redirect_to '/contacts'
-    end
   end
 
   # Handling Errors

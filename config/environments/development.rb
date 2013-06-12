@@ -1,3 +1,5 @@
+require_relative '../env'
+
 Medilines::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -18,17 +20,16 @@ Medilines::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.default_url_options = { :host => 'localhost:80' }
-  #config.action_mailer.smtp_settings = {
-  #  :address   => "smtp.mandrillapp.com",
-  #  :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
-  #  :enable_starttls_auto => true, # detects and uses STARTTLS
-  #  :user_name => MANDRILL_USERNAME,
-  #  :password  => MANDRILL_APIKEY, # SMTP password is any valid API key
-  #  :authentication => 'login', # Mandrill supports 'plain' or 'login'
-  #  :domain => 'www.medilines.ru', # your domain to identify your server
-  #  # when connecting
-  #}
+  config.action_mailer.default_url_options = { :host => 'www.medilines.ru' }
+  config.action_mailer.smtp_settings = {
+    :address        => "smtp.mandrillapp.com",
+    :port           => 587, # ports 587 and 2525 are also supported with STARTTLS
+    :domain         => 'www.medilines.ru', # your domain to identify your server
+    :user_name      => MANDRILL_USERNAME,
+    :password       => MANDRILL_APIKEY, # SMTP password is any valid API key
+    :authentication => 'login', # Mandrill supports 'plain' or 'login'
+    :enable_starttls_auto => true, # detects and uses STARTTLS when connecting
+  }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
