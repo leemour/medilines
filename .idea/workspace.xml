@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/env.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/messages/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/messages/_form.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contact_message.rb" afterPath="$PROJECT_DIR$/app/models/contact_message.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pages/contacts.html.haml" afterPath="$PROJECT_DIR$/app/views/pages/contacts.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/ru.yml" afterPath="$PROJECT_DIR$/config/locales/ru.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="medilines.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -145,18 +135,18 @@
     <splitter split-orientation="horizontal" split-proportion="0.4965474">
       <split-first>
         <leaf>
-          <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="30" column="0" selection-start="741" selection-end="741" vertical-scroll-proportion="0.50391936">
+                <state line="67" column="19" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.42613637">
                   <folding>
                     <element signature="e#96#188#0" expanded="true" />
                     <element signature="e#192#255#0" expanded="true" />
                     <element signature="e#259#572#0" expanded="true" />
+                    <element signature="e#578#947#0" expanded="true" />
                     <element signature="e#951#1336#0" expanded="true" />
                     <element signature="e#1342#1612#0" expanded="true" />
                     <element signature="e#1618#1765#0" expanded="true" />
-                    <element signature="e#2194#2466#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -303,10 +293,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="development.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="30" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.375817">
+                <state line="23" column="16" selection-start="990" selection-end="990" vertical-scroll-proportion="0.375817">
                   <folding />
                 </state>
               </provider>
@@ -324,7 +314,7 @@
           <file leaf-file-name="development.log" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/log/development.log">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="17576" column="0" selection-start="802810" selection-end="802810" vertical-scroll-proportion="0.0">
+                <state line="18903" column="0" selection-start="865900" selection-end="865900" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -358,7 +348,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
         <option value="$PROJECT_DIR$/app/views/pages/mail_sent.html.haml" />
         <option value="$PROJECT_DIR$/app/views/pages/mail-sent.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/brands.css.sass" />
         <option value="$PROJECT_DIR$/log/development.log" />
         <option value="$PROJECT_DIR$/app/mailers/contact_mailer.rb" />
@@ -366,6 +355,7 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -1296,7 +1286,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/log/development.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17576" column="0" selection-start="802810" selection-end="802810" vertical-scroll-proportion="0.0">
+        <state line="18903" column="0" selection-start="865900" selection-end="865900" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1322,25 +1312,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="16" selection-start="990" selection-end="990" vertical-scroll-proportion="0.375817">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="741" selection-end="741" vertical-scroll-proportion="0.50391936">
+        <state line="67" column="19" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.42613637">
           <folding>
             <element signature="e#96#188#0" expanded="true" />
             <element signature="e#192#255#0" expanded="true" />
             <element signature="e#259#572#0" expanded="true" />
+            <element signature="e#578#947#0" expanded="true" />
             <element signature="e#951#1336#0" expanded="true" />
             <element signature="e#1342#1612#0" expanded="true" />
             <element signature="e#1618#1765#0" expanded="true" />
-            <element signature="e#2194#2466#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="30" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.375817">
-          <folding />
         </state>
       </provider>
     </entry>
