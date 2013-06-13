@@ -2,9 +2,9 @@
 %html{lang: 'ru'}
   %head
     %title= page_title(@page) + 'Медилайн Сервис'
-    %meta{charset: 'utf8-'}/
-    %meta{name: 'description', content: @page.description}/
-    %meta{name: 'keywords', content: @page.keywords}/
+    %meta{ charset: 'utf8-' }/
+    %meta{ name: 'description', content: @page.description }/
+    %meta{ name: 'keywords', content: @page.keywords }/
     = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag    "application", :media => "all"
     = stylesheet_link_tag    "application", :media => "all"
@@ -29,20 +29,20 @@
         
         %nav#main-menu
           %ul.nav
-            %li
+            %li{ class: is_active?(dentals_path) }
               = link_to 'Установки', dentals_path
-            %li
+            %li{ class: is_active?(visuals_path) }
               =link_to 'Визуализация', visuals_path
-            %li
+            %li{ class: is_active?(components_path) }
               =link_to 'Комплектующие', components_path
             %li.inactive
               -#=link_to 'Запчасти', spares_path
               Запчасти
-            %li
+            %li{ class: is_active?(promotions_path) }
               =link_to 'Акции', promotions_path
             %li
               =link_to 'Скачать каталог', '/docs/MediLines_Catalog_2013.pdf'
-            %li
+            %li{ class: is_active?(contacts_path) }
               =link_to 'Контакты', contacts_path
     
     - if @page.intro
