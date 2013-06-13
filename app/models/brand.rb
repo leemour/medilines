@@ -10,6 +10,8 @@ class Brand < ActiveRecord::Base
                   :flag_cache, :image, :remove_image, :image_cache, :logo,
                   :name, :slogan, :slug
 
+  attr_accessor :category
+
   validates_presence_of :name, :slug
   validates_uniqueness_of :name, :slug
   validates_length_of :name, :minimum => 4, :message => "Слишком короткое название"

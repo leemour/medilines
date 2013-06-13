@@ -19,48 +19,48 @@ Medilines::Application.routes.draw do
 
   post '/contacts'      => 'application#send_mail',
       as: :send_mail
-  get '/contacts/mail-sent'      => 'application#page',
+  get '/contacts/mail-sent' => 'application#page',
                             :page => 'mail-sent'
 
   scope '/dental-units', :category => 'dental-units' do
-    root :to                              => 'application#category',
+    root :to                           => 'application#category',
         as: :dentals
-    get ':brand'                          => 'application#brand',
-        as: :dental_brand
-    get ':brand/:product'                 => 'application#product',
-        as: :dental_brand_product
+    get ':brand'                       => 'application#category_brand',
+        as: :dental_category_brand
+    get ':brand/:product'              => 'application#product',
+        as: :dental_category_brand_product
   end
 
   scope '/visual-systems', :category => 'visual-systems' do
-    root :to                              => 'application#category',
+    root :to                           => 'application#category',
         as: :visuals
-    get ':inner_category'                 => 'application#inner_category',
+    get ':subcategory'                 => 'application#subcategory',
         as: :visual_category
-    get ':inner_category/:brand'          => 'application#brand',
-        as: :visual_category_product
-    get ':inner_category/:brand/:product' => 'application#product',
+    get ':subcategory/:brand'          => 'application#subcategory_brand',
+        as: :visual_category_brand
+    get ':subcategory/:brand/:product' => 'application#product',
         as: :visual_category_brand_product
   end
 
   scope '/components', :category => 'components' do
-    root :to                              => 'application#category',
+    root :to                           => 'application#category',
          as: :components
-    get ':inner_category'                 => 'application#inner_category',
+    get ':subcategory'                 => 'application#subcategory',
         as: :components_category
-    get ':inner_category/:brand'          => 'application#brand',
-        as: :components_category_product
-    get ':inner_category/:brand/:product' => 'application#product',
+    get ':subcategory/:brand'          => 'application#subcategory_brand',
+        as: :components_category_brand
+    get ':subcategory/:brand/:product' => 'application#product',
         as: :components_category_brand_product
   end
 
   #scope '/spare-parts', :category => 'spare-parts' do
   #  root :to                              => 'application#category',
   #       as: :spares
-  #  get ':inner_category'                 => 'application#inner_category',
+  #  get ':subcategory'                 => 'application#subcategory',
   #      as: :spare_category
-  #  get ':inner_category/:brand'          => 'application#brand',
+  #  get ':subcategory/:brand'          => 'application#brand',
   #      as: :spare_category_product
-  #  get ':inner_category/:brand/:product' => 'application#product',
+  #  get ':subcategory/:brand/:product' => 'application#product',
   #      as: :spare_category_brand_product
   #end
 

@@ -38,13 +38,13 @@ describe ApplicationController do
 
     describe "inner-categories" do
       it "Tomografy routes to #category" do
-        get("/visual-systems/tomografy").should route_to("application#inner_category",
-           category: 'visual-systems', inner_category: 'tomografy')
+        get("/visual-systems/tomografy").should route_to("application#subcategory",
+           category: 'visual-systems', subcategory: 'tomografy')
       end
 
       it "Avtoklavy routes to #category" do
-        get("/components/avtoklavy").should route_to("application#inner_category",
-           category: 'components', inner_category: 'avtoklavy')
+        get("/components/avtoklavy").should route_to("application#subcategory",
+           category: 'components', subcategory: 'avtoklavy')
       end
     end
 
@@ -61,13 +61,13 @@ describe ApplicationController do
       it "Visual Systems routes to #category" do
         get("/visual-systems/tomografy/fedesa/testovyy-tomograf").
             should route_to("application#product", category: 'visual-systems',
-            inner_category: 'tomografy', brand: 'fedesa', product: 'testovyy-tomograf')
+            subcategory: 'tomografy', brand: 'fedesa', product: 'testovyy-tomograf')
       end
 
       it "Components routes to #category" do
         get("/components/avtoklavy/wandong/m11").
             should route_to("application#product", category: 'components',
-            inner_category: 'avtoklavy', brand: 'wandong', product: 'm11')
+            subcategory: 'avtoklavy', brand: 'wandong', product: 'm11')
       end
     end
 

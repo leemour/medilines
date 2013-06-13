@@ -3,7 +3,7 @@
     = image_tag(brand.image_url, :alt => "#{@category.name} - #{brand.name}")
 
     .brand-description
-      %h2= link_to brand.name, dental_brand_path(brand)
+      %h2= link_to brand.name, brand_url(brand, @category)
       = image_tag(brand.flag_url, :alt => "Флаг #{brand.country}")
       = brand.country
       %p= brand.description

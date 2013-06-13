@@ -45,7 +45,7 @@
             %li{ class: is_active?(contacts_path) }
               =link_to 'Контакты', contacts_path
     
-    - if @page.intro
+    - if @page.intro && @page.intro != ''
       %section.intro
         .container
           = @page.intro.html_safe
@@ -54,6 +54,12 @@
       .container
         -#%p.notice= notice
         -#%p.alert= alert
+        - breadcrumbs = get_breadcrumbs
+        - if breadcrumbs
+          %nav
+            %ul.nav.breadcrumbs
+              - breadcrumbs.each do |link|
+                %li= link.html_safe
 
 
         = yield

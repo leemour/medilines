@@ -2,6 +2,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  before_filter :category_brand_init, :only => [:category_brand, :subcategory_brand]
+
+  def category_brand_init
+    @brand    = Brand.find_by_slug!(params[:brand])
+    @page     = Page.get_info(@brand)
+  end
+
   def page
     @page = Page.get_page(params[:page])
     render "/pages/#{params[:page]}"
@@ -25,8 +32,8 @@ class ApplicationController < ActionController::Base
   end
   
   def category
-    @category = Category.find_by_slug!(params[:category])
-    @page = Page.get_info(@category)
+    @category      = Category.find_by_slug!(params[:category])
+    @page          = Page.get_info(@category)
     @subcategories = Category.find_children(@category)
 
     if @subcategories.empty?
@@ -37,9 +44,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def inner_category
-    @category = Category.find_by_slug!(params[:inner_category])
-    @page = Page.get_info(@category)
+  def subcategory
+    @category = Category.find_by_slug!(params[:subcategory])
+    @page     = Page.get_info(@category)
 
     if @category.products.count > 1
       @brands = Brand.find_all_in_category(@category)
@@ -50,11 +57,18 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def brand
-    @brand = Brand.find_by_slug!(params[:brand])
-    @page = Page.get_info(@brand)
+  def category_brand
+    @category = Category.find_by_slug(params[:category])
     @products = Product.joins(:brand).where(:brands => {:slug => params[:brand]}).
       joins(:category).where(categories: {slug: params[:category]})
+
+    render '/brand'
+  end
+
+  def subcategory_brand
+    @category = Category.find_by_slug(params[:subcategory])
+    @products = Product.joins(:brand).where(:brands => {:slug => params[:brand]}).
+      joins(:category).where(categories: {slug: params[:subcategory]})
 
     render '/brand'
   end

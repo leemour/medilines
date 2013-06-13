@@ -4,7 +4,7 @@
 
     .brand-description
       -#%h2= link_to product.name, "/#{@products.path}/#{product.slug}"
-      %h2= link_to product.name, url_for([root_cat(params[:category]), @category, product.brand, product])
+      %h2= link_to product.name, product_url(product)
       = product.price if product.price
       = product.brand.name
       %p= product.description1.html_safe if product.description1
