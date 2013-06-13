@@ -42,8 +42,8 @@ module ApplicationHelper
 
   # Breadcrumbs for all resources
   def get_breadcrumbs
-    crumbs = @product || @brand || @category || @page
-    make_breadcrumbs(crumbs)
+    current = @product || @brand || @category || @page
+    make_breadcrumbs(current)
   end
 
   def make_breadcrumbs(item = nil, output = [])
