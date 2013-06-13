@@ -14,6 +14,7 @@ gem 'mini_magick'
 gem 'activeadmin'
 gem 'meta_search'
 gem 'ckeditor'
+gem 'negative_captcha'
 
 group :production do
   gem 'pg'

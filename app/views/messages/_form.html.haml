@@ -1,20 +1,20 @@
-= form_for @message, :url => send_mail_path do |f|
+= form_tag send_mail_path do
   - if @message.errors.any?
     #error_explanation
       %h2= "Вы допустили ошибки при заполнении формы"
       %ul
-        - @message.errors.full_messages.each do |msg|
+        - @captcha.errors.full_messages.each do |msg|
           %li= msg
-
+  =h negative_captcha(@captcha)
   .field
-    = f.label :name, 'Имя'
-    = f.text_field :name, :size => "28"
+    = negative_label_tag(@captcha, :name, 'Имя')
+    = negative_text_field_tag(@captcha, :name)
   .field
-    = f.label :email
-    = f.text_field :email, :size => "28"
+    = negative_label_tag(@captcha, :email, 'Email')
+    = negative_text_field_tag(@captcha, :email, :size => "28")
   .field
-    = f.label :content, 'Сообщение'
-    = f.text_area :content, :size => "28x6"
+    = negative_label_tag(@captcha, :content, 'Сообщение')
+    = negative_text_area_tag(@captcha, :content, :size => "28x6")
 
   .actions
-    = f.submit 'Отправить'
+    = submit_tag 'Отправить'

@@ -2,6 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  before_filter :setup_negative_captcha, :only => [:contacts, :send_mail]
   before_filter :category_brand_init, :only => [:category_brand, :subcategory_brand]
 
   def category_brand_init
@@ -20,8 +21,9 @@ class ApplicationController < ActionController::Base
   end
 
   def send_mail
-    @message = ContactMessage.new(params[:contact_message])
-    if @message.valid?
+    #@message = ContactMessage.new(params[:contact_message])
+    @message = ContactMessage.new(@captcha.values) #Decrypted params
+    if @captcha.valid?
       # send message
       @error = ContactMailer.contact_message(@message).deliver
       redirect_to '/contacts/mail-sent'
@@ -95,4 +97,13 @@ class ApplicationController < ActionController::Base
   #    format.all { render nothing: true, status: status }
   #  end
   #end
+  private
+  def setup_negative_captcha
+    @captcha = NegativeCaptcha.new(
+        :secret => NEGATIVE_CAPTCHA_SECRET, #A secret key entered in environment.rb. 'rake secret' will give you a good one.
+        :spinner => request.remote_ip,
+        :fields => [:name, :email, :content], #Whatever fields are in your form
+        :params => params
+    )
+  end
 end
