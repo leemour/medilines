@@ -3,7 +3,7 @@
     #error_explanation
       %h2= "Вы допустили ошибки при заполнении формы"
       %ul
-        - @captcha.errors.full_messages.each do |msg|
+        - @message.errors.full_messages.each do |msg|
           %li= msg
   =h negative_captcha(@captcha)
   .field

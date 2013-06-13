@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   def send_mail
     #@message = ContactMessage.new(params[:contact_message])
     @message = ContactMessage.new(@captcha.values) #Decrypted params
-    if @captcha.valid?
+    if @captcha.valid? && @message.valid?
       # send message
       @error = ContactMailer.contact_message(@message).deliver
       redirect_to '/contacts/mail-sent'
