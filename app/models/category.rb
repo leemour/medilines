@@ -11,7 +11,7 @@ class Category < ActiveRecord::Base
 
   validates_presence_of :name, :slug
   validates_uniqueness_of :name, :slug
-  validates_length_of :name, :minimum => 4, :message => "Слишком короткое название"
+  validates_length_of :name, :minimum => 4
 
   scope :roots,      where("parent_id IS NULL")
   scope :join_parent, lambda { |slug|

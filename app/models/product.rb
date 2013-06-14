@@ -13,7 +13,7 @@ class Product < ActiveRecord::Base
   validates_presence_of :name, :slug, :brand_id, :category_id
   validates_presence_of :image, :message => "Добавьте фотографию товара"
   validates_uniqueness_of :name, :slug
-  validates_length_of :name, :minimum => 3, :message => "Слишком короткое название"
+  validates_length_of :name, :minimum => 3
 
   scope :recent, proc { |n| order("created_at desc").limit(n) }
   scope :join_categories_included, lambda { |slug|

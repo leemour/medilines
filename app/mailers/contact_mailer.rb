@@ -1,7 +1,5 @@
 # encoding: UTF-8
-
 class ContactMailer < ActionMailer::Base
-  default from: "contact_form@medilines.ru"
   default to:   CONTACT_MAIL_TO
 
   def contact_message(message)

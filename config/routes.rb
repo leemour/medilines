@@ -10,16 +10,16 @@ Medilines::Application.routes.draw do
   #resources :brands
   #resources :products
 
-  root :to              => 'main#page',
+  root :to              => 'page#page',
                             :page => 'home'
-  get '/contacts'       => 'main#contacts',
+  get '/contacts'       => 'page#contacts',
       as: :contacts,        :page => 'contacts'
-  get '/promotions'     => 'main#page',
+  get '/promotions'     => 'page#page',
       as: :promotions,      :page => 'promotions'
 
-  post '/contacts'      => 'main#send_mail',
+  post '/contacts'      => 'page#send_mail',
       as: :send_mail
-  get '/contacts/mail-sent' => 'main#page',
+  get '/contacts/mail-sent' => 'page#page',
                             :page => 'mail-sent'
 
   scope '/dental-units', :category => 'dental-units' do

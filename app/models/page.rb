@@ -8,7 +8,7 @@ class Page < ActiveRecord::Base
 
   validates_presence_of :title, :slug
   validates_uniqueness_of :title, :slug
-  validates_length_of :title, :minimum => 3, :message => "Слишком короткое название"
+  validates_length_of :title, :minimum => 3
 
   attr_accessor :path
 
@@ -51,8 +51,12 @@ class Page < ActiveRecord::Base
     class << item
       attr_accessor :description, :keywords
     end
-    item.keywords = 'стоматологические установки,Fedesa,Forest,автоклав,медицинское оборудование,визиограф,радиовизиограф,стоматологическое кресло,рентген,томограф'
-    item.description = 'Мы поставляем стоматологическое оборудование: стоматологические установки Forest, Fedesa, рентгены, системы визуализации. Продаем комплектующие и запчасти. Проводим техническое обслуживание, ремонт, обучение, консультации.'
+    item.keywords = 'стоматологические установки,Fedesa,Forest,автоклав,медицинское
+      оборудование,визиограф,радиовизиограф,стоматологическое кресло,рентген,томограф'
+    item.description = 'Мы поставляем стоматологическое оборудование:
+      стоматологические установки Forest, Fedesa, рентгены, системы визуализации.
+      Продаем комплектующие и запчасти. Проводим техническое обслуживание, ремонт,
+      обучение, консультации.'
     item
   end
 

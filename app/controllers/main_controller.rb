@@ -1,31 +1,7 @@
-#encoding: utf-8
+# encoding: UTF-8
 class MainController < ApplicationController
 
-  before_filter :setup_negative_captcha, :only => [:contacts, :send_mail]
   before_filter :category_brand_init, :only => [:category_brand, :subcategory_brand]
-
-  def page
-    @page = Page.get_page(params[:page])
-    render "/pages/#{params[:page]}"
-  end
-
-  def contacts
-    @message = ContactMessage.new
-    page()
-  end
-
-  def send_mail
-    #@message = ContactMessage.new(params[:contact_message])
-    @message = ContactMessage.new(@captcha.values) #Decrypted params
-    if @captcha.valid? && @message.valid?
-      # send message
-      @error = ContactMailer.contact_message(@message).deliver
-      redirect_to '/contacts/mail-sent'
-    else
-      @page = Page.get_page('contacts')
-      render 'pages/contacts'
-    end
-  end
 
   def category
     @category      = Category.find_by_slug!(params[:category])
@@ -81,15 +57,5 @@ class MainController < ApplicationController
   def category_brand_init
     @brand    = Brand.find_by_slug!(params[:brand])
     @page     = Page.get_info(@brand)
-  end
-
-  # Initialize contact form  captcha
-  def setup_negative_captcha
-    @captcha = NegativeCaptcha.new(
-        :secret => NEGATIVE_CAPTCHA_SECRET, #A secret key entered in environment.rb. 'rake secret' will give you a good one.
-        :spinner => request.remote_ip,
-        :fields => [:name, :email, :content], #Whatever fields are in your form
-        :params => params
-    )
   end
 end
