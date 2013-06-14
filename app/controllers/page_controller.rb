@@ -28,7 +28,7 @@ class PageController < ApplicationController
   # Initialize contact form  captcha
   def setup_negative_captcha
     @captcha = NegativeCaptcha.new(
-        :secret => NEGATIVE_CAPTCHA_SECRET, #A secret key entered in environment.rb. 'rake secret' will give you a good one.
+        :secret => ENV['NEGATIVE_CAPTCHA_SECRET'], #A secret from environment.rb
         :spinner => request.remote_ip,
         :fields => [:name, :email, :content], #Whatever fields are in your form
         :params => params
