@@ -1,2 +1,10 @@
-%h1 Errors#error_404
-%p Find me in app/views/errors/error_404.html.haml
+%h1 Ошибка 404 - Страница не найдена.
+
+= image_tag("404.png", size:"238x106", alt: "Медилиайн Сервис", class: "error-image")
+
+%p
+  Страницы по адресу <strong>'#{@not_found_path}'</strong> не существует или
+  она перенесена. Проверьте адрес, возможно вы ошиблись.
+%p
+  Попробуйте воспользоваться меню, чтобы найти то, что вы ищете или напишите
+  нам на <a href="mailto:support@medilines.ru">support@medilines.ru</a>

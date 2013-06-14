@@ -9,58 +9,58 @@ Medilines::Application.routes.draw do
   #resources :categories
   #resources :brands
   #resources :products
-  
-  root :to              => 'application#page',
+
+  root :to              => 'main#page',
                             :page => 'home'
-  get '/contacts'       => 'application#contacts',
+  get '/contacts'       => 'main#contacts',
       as: :contacts,        :page => 'contacts'
-  get '/promotions'     => 'application#page',
+  get '/promotions'     => 'main#page',
       as: :promotions,      :page => 'promotions'
 
-  post '/contacts'      => 'application#send_mail',
+  post '/contacts'      => 'main#send_mail',
       as: :send_mail
-  get '/contacts/mail-sent' => 'application#page',
+  get '/contacts/mail-sent' => 'main#page',
                             :page => 'mail-sent'
 
   scope '/dental-units', :category => 'dental-units' do
-    root :to                           => 'application#category',
+    root :to                           => 'main#category',
         as: :dentals
-    get ':brand'                       => 'application#category_brand',
+    get ':brand'                       => 'main#category_brand',
         as: :dental_category_brand
-    get ':brand/:product'              => 'application#product',
+    get ':brand/:product'              => 'main#product',
         as: :dental_category_brand_product
   end
 
   scope '/visual-systems', :category => 'visual-systems' do
-    root :to                           => 'application#category',
+    root :to                           => 'main#category',
         as: :visuals
-    get ':subcategory'                 => 'application#subcategory',
+    get ':subcategory'                 => 'main#subcategory',
         as: :visual_category
-    get ':subcategory/:brand'          => 'application#subcategory_brand',
+    get ':subcategory/:brand'          => 'main#subcategory_brand',
         as: :visual_category_brand
-    get ':subcategory/:brand/:product' => 'application#product',
+    get ':subcategory/:brand/:product' => 'main#product',
         as: :visual_category_brand_product
   end
 
   scope '/components', :category => 'components' do
-    root :to                           => 'application#category',
+    root :to                           => 'main#category',
          as: :components
-    get ':subcategory'                 => 'application#subcategory',
+    get ':subcategory'                 => 'main#subcategory',
         as: :components_category
-    get ':subcategory/:brand'          => 'application#subcategory_brand',
+    get ':subcategory/:brand'          => 'main#subcategory_brand',
         as: :components_category_brand
-    get ':subcategory/:brand/:product' => 'application#product',
+    get ':subcategory/:brand/:product' => 'main#product',
         as: :components_category_brand_product
   end
 
   #scope '/spare-parts', :category => 'spare-parts' do
-  #  root :to                              => 'application#category',
+  #  root :to                              => 'main#category',
   #       as: :spares
-  #  get ':subcategory'                 => 'application#subcategory',
+  #  get ':subcategory'                 => 'main#subcategory',
   #      as: :spare_category
-  #  get ':subcategory/:brand'          => 'application#brand',
+  #  get ':subcategory/:brand'          => 'main#brand',
   #      as: :spare_category_product
-  #  get ':subcategory/:brand/:product' => 'application#product',
+  #  get ':subcategory/:brand/:product' => 'main#product',
   #      as: :spare_category_brand_product
   #end
 

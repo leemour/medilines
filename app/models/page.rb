@@ -33,6 +33,7 @@ class Page < ActiveRecord::Base
       end
     end
     title ||= ''
+    intro ||= ''
     struct = Struct.new :title, :intro, :content
     @page = struct.new
     @page.title = title
