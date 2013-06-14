@@ -1,6 +1,6 @@
 # encoding: UTF-8
 class ContactMailer < ActionMailer::Base
-  default to:   CONTACT_MAIL_TO
+  default to:   ENV['BUNDLE_GEMFILE']
 
   def contact_message(message)
     mail(from: "#{message.name} <#{message.email}>",
