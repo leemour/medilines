@@ -2,7 +2,7 @@
 
 class ContactMailer < ActionMailer::Base
   default from: "contact_form@medilines.ru"
-  default to:   "Администратор Medilines <leemour@gmail.com>"
+  default to:   CONTACT_MAIL_TO
 
   def contact_message(message)
     mail(from: "#{message.name} <#{message.email}>",
