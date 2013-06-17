@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
   #def render_error(status, exception)
   #  @page = Page.get_info(nil)
   #  @page.title = "Ошибка #{status}"
+  #  @not_found_path = request.fullpath
   #  #@exception = exception
   #  respond_to do |format|
   #    format.html { render template: "errors/error_#{status}",

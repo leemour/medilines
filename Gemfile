@@ -22,6 +22,13 @@ group :production do
   gem 'newrelic_rpm'
 end
 
+group :development do
+  gem 'irbtools'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem "quiet_assets"
+end
+
 group :development, :test do
   gem 'sqlite3'
   gem 'haml-rails', '>= 0.3.4'
