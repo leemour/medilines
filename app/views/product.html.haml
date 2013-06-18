@@ -1,5 +1,5 @@
 %tr
-  %td= image_tag(@product.image_url(:thumb)) if @product.image_url
+  %td= image_tag(@product.image_url(:small)) if @product.image_url
   %td= @product.slug
   %td= @product.name
   %td= @product.price
