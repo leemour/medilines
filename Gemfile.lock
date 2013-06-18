@@ -196,7 +196,7 @@ GEM
     multi_json (1.7.2)
     negative_captcha (0.3.2)
       actionpack (~> 3.2)
-    newrelic_rpm (3.6.0.83)
+    newrelic_rpm (3.6.3.111)
     nokogiri (1.5.9)
     ori (0.1.0)
     orm_adapter (0.4.0)
