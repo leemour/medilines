@@ -1,13 +1,11 @@
 # encoding: UTF-8
 class MainController < ApplicationController
 
-  before_filter :category_brand_init, :only => [:category_brand, :subcategory_brand]
+  before_filter :category_init,       :only => [:category, :subcategory]
+  before_filter :category_brand_init, :only => [:category_brand]
 
   def category
-    @category      = Category.find_by_slug!(params[:category])
-    @page          = Page.get_info(@category)
     @subcategories = Category.find_children(@category)
-
     if @subcategories.empty?
       @brands = Brand.find_all_in_category(@category)
       render "/categories/category_with_brands"
@@ -17,9 +15,6 @@ class MainController < ApplicationController
   end
 
   def subcategory
-    @category = Category.find_by_slug!(params[:subcategory])
-    @page     = Page.get_info(@category)
-
     if @category.products.count > 1
       @brands = Brand.find_all_in_category(@category)
       render "/categories/category_with_brands"
@@ -30,31 +25,32 @@ class MainController < ApplicationController
   end
 
   def category_brand
-    @category = Category.find_by_slug(params[:category])
-    @products = Product.joins(:brand).where(:brands => {:slug => params[:brand]}).
-        joins(:category).where(categories: {slug: params[:category]})
-
-    render '/brand'
-  end
-
-  def subcategory_brand
-    @category = Category.find_by_slug(params[:subcategory])
-    @products = Product.joins(:brand).where(:brands => {:slug => params[:brand]}).
-        joins(:category).where(categories: {slug: params[:subcategory]})
-
+    @products = Product.with_brand_in_category(@brand, @category)
     render '/brand'
   end
 
   def product
-    @product = Product.includes(:brand).find_by_slug!(params[:product])
-    @page = Page.get_info(@product)
+    @product = Product.including_brand(params[:product])
+    @page    = Page.get_info(@product)
     render '/product'
   end
 
 
   private
+  # Get category depending on url
+  def get_category
+    category = params[:subcategory] || params[:category]
+    @category = Category.find_by_slug!(category)
+  end
+
+  def category_init
+    get_category
+    @page     = Page.get_info(@category)
+  end
+
   # Initialize vars before brand actions
   def category_brand_init
+    get_category
     @brand    = Brand.find_by_slug!(params[:brand])
     @page     = Page.get_info(@brand)
   end

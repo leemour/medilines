@@ -2,27 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/1/Coral_AIR_big.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/coral-air/Coral_AIR_big.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/1/small_Coral_AIR_big.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/coral-air/small_Coral_AIR_big.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/1/thumb_Coral_AIR_big.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/coral-air/thumb_Coral_AIR_big.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/2/dental_chair_modern.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/combination-blue/dental_chair_modern.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/2/small_dental_chair_modern.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/combination-blue/small_dental_chair_modern.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/2/thumb_dental_chair_modern.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/combination-blue/thumb_dental_chair_modern.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/5/M11.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/m11/M11.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/5/small_M11.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/m11/small_M11.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/product/5/thumb_M11.jpg" afterPath="$PROJECT_DIR$/public/uploads/product/m11/thumb_M11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/brand.html.haml" afterPath="$PROJECT_DIR$/app/views/brand.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/product.html.haml" afterPath="$PROJECT_DIR$/app/views/product.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/uploaders/product_main_image_uploader.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/combination-blue/dental_chair_modern.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/combination-blue/small_dental_chair_modern.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/combination-blue/thumb_dental_chair_modern.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/coral-air/Coral_AIR_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/coral-air/small_Coral_AIR_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/coral-air/thumb_Coral_AIR_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/m11/M11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/m11/small_M11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/product/m11/thumb_M11.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/medilines.iml" afterPath="$PROJECT_DIR$/.idea/medilines.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploaders/product_image_uploader.rb" afterPath="$PROJECT_DIR$/app/uploaders/product_image_uploader.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/products.rb" afterPath="$PROJECT_DIR$/app/admin/products.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="medilines.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371544483446" ignored="false" />
-    <file path="/Gemfile" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371481508561" ignored="false" />
-    <file path="/a.rxml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370599656361" ignored="false" />
+    <file path="/Dummy.txt" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371825367101" ignored="false" />
+    <file path="/Gemfile" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371762652027" ignored="false" />
+    <file path="/a.rxml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371743044486" ignored="false" />
     <file path="/application.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371051821393" ignored="false" />
     <file path="/unicorn.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369327331746" ignored="false" />
-    <file path="/a.dummy" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371212465750" ignored="false" />
+    <file path="/a.dummy" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371834705440" ignored="false" />
     <file path="/config.ru" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369329125787" ignored="false" />
     <file path="/brand.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371118166588" ignored="false" />
     <file path="/category.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370349957471" ignored="false" />
@@ -43,9 +48,9 @@
     <file path="/20130524130814_add_slug_to_brand.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369400941078" ignored="false" />
     <file path="/.gitignore" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371052420202" ignored="false" />
     <file path="/brand.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371551881897" ignored="false" />
-    <file path="/product.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370448744376" ignored="false" />
+    <file path="/product.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371834874505" ignored="false" />
     <file path="/products_controller.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369418297317" ignored="false" />
-    <file path="/product_image_uploader.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371497465876" ignored="false" />
+    <file path="/product_image_uploader.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371835011140" ignored="false" />
     <file path="/20130524175358_add_category_id_to_products.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369418883348" ignored="false" />
     <file path="/.env" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371051196237" ignored="false" />
     <file path="/development.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371213789842" ignored="false" />
@@ -57,11 +62,11 @@
     <file path="/README.rdoc" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369586445660" ignored="false" />
     <file path="/dashboard.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369981506245" ignored="false" />
     <file path="/active_admin.css.sass" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370343736249" ignored="false" />
-    <file path="/products.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370279991499" ignored="false" />
+    <file path="/products.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371833894239" ignored="false" />
     <file path="/categories.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370336407972" ignored="false" />
     <file path="/schema.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369663071921" ignored="false" />
     <file path="/schema_statements.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369663347013" ignored="false" />
-    <file path="/a.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369678757235" ignored="false" />
+    <file path="/a.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371742844490" ignored="false" />
     <file path="/brands.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369986445156" ignored="false" />
     <file path="/views_helper.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1370248426957" ignored="false" />
     <file path="/category_visual-systems.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1369929384004" ignored="false" />
@@ -128,7 +133,7 @@
     <file path="/error_404.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371218817834" ignored="false" />
     <file path="/errors_controller.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371195545431" ignored="false" />
     <file path="/error_500.html.haml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371194326112" ignored="false" />
-    <file path="/main_controller.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371204331561" ignored="false" />
+    <file path="/main_controller.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371833789776" ignored="false" />
     <file path="/page_controller.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371213854888" ignored="false" />
     <file path="/page_routing_spec.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371208964209" ignored="false" />
     <file path="/main_routing_spec.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371209063010" ignored="false" />
@@ -149,6 +154,20 @@
     <file path="$PROJECT_DIR$/../rails_ckeditor/app/assets/javascripts/application.js" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371481866453" ignored="false" />
     <file path="/ckeditor_attachment_file_uploader.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371497530974" ignored="false" />
     <file path="/newrelic2.yml" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371544580837" ignored="false" />
+    <file path="$PROJECT_DIR$/../gems/hola/lib/hola.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371762287518" ignored="false" />
+    <file path="$PROJECT_DIR$/../gems/hola/hola.gemspec" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371765418611" ignored="false" />
+    <file path="/hola.gemspec" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371763080836" ignored="false" />
+    <file path="/hola.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371762287518" ignored="false" />
+    <file path="$PROJECT_DIR$/../gems/hola/lib/hola/translator.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371742939904" ignored="false" />
+    <file path="/hola" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371743728051" ignored="false" />
+    <file path="$PROJECT_DIR$/../gems/hola/bin/hola" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371744333609" ignored="false" />
+    <file path="$PROJECT_DIR$/../gems/hola/Rakefile" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371745014387" ignored="false" />
+    <file path="/Rakefile" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371745014001" ignored="false" />
+    <file path="$PROJECT_DIR$/../gems/hola/test/test_hola.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371765866821" ignored="false" />
+    <file path="/test_hola.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371765849729" ignored="false" />
+    <file path="$PROJECT_DIR$/../gems/hola/Gemfile" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371765742571" ignored="false" />
+    <file path="$PROJECT_DIR$/../gems/hola/Gemfile.lock" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371765768510" ignored="false" />
+    <file path="/product_main_image_uploader.rb" changelist="bbcd3e2b-a4e1-498f-89a4-f12dde649ffd" time="1371834763139" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,19 +189,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.4965474">
       <split-first>
         <leaf>
-          <file leaf-file-name="page.rb" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/models/page.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="26" selection-start="585" selection-end="585" vertical-scroll-proportion="0.14917128">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="31" selection-start="535" selection-end="538" vertical-scroll-proportion="0.0">
+                <state line="30" column="57" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -200,7 +210,7 @@
           <file leaf-file-name="ckeditor.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/ckeditor-4.0.4/lib/ckeditor.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="68" column="5" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.0">
+                <state line="86" column="0" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -215,30 +225,53 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/ckeditor-4.0.4/app/assets/javascripts/ckeditor/config.js">
+          <file leaf-file-name="boot.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/boot.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="46" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="contact_mailer.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/mailers/contact_mailer.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
+                <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="boot.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/boot.rb">
+          <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+                <state line="12" column="51" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#482#762#0" expanded="true" />
+                    <element signature="e#766#876#0" expanded="true" />
+                    <element signature="e#880#1015#0" expanded="true" />
+                    <element signature="e#1064#1192#0" expanded="true" />
+                    <element signature="e#1196#1277#0" expanded="true" />
+                    <element signature="e#1322#1458#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="products.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/admin/products.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="19" column="58" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="product.rb" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="22" column="3" selection-start="859" selection-end="859" vertical-scroll-proportion="0.45020464">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.115384616">
                   <folding />
                 </state>
               </provider>
@@ -251,16 +284,7 @@
           <file leaf-file-name="ckeditor.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/initializers/ckeditor.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="5" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Gemfile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="3" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
+                <state line="18" column="35" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -275,19 +299,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="unicorn.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
+          <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/routes.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="3" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="picture.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/ckeditor/picture.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+                <state line="45" column="27" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -305,16 +320,16 @@
           <file leaf-file-name="activerecord.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/carrierwave-0.8.0/lib/carrierwave/orm/activerecord.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="23" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+                <state line="13" column="8" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="product.html.haml" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="product.html.haml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/product.html.haml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="60" selection-start="307" selection-end="307" vertical-scroll-proportion="0.13452914">
+                <state line="8" column="63" selection-start="310" selection-end="310" vertical-scroll-proportion="-4.6153846">
                   <folding />
                 </state>
               </provider>
@@ -323,8 +338,46 @@
           <file leaf-file-name="development.log" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/log/development.log">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="59135" column="13" selection-start="2821930" selection-end="2821930" vertical-scroll-proportion="0.0">
+                <state line="60404" column="0" selection-start="2906771" selection-end="2906771" vertical-scroll-proportion="0.0">
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="product_image_uploader.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/uploaders/product_image_uploader.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="29" column="26" selection-start="995" selection-end="995" vertical-scroll-proportion="0.42372882">
+                  <folding>
+                    <element signature="e#660#738#0" expanded="true" />
+                    <element signature="e#819#1049#0" expanded="true" />
+                    <element signature="e#1565#1621#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="product_main_image_uploader.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/uploaders/product_main_image_uploader.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="55" column="26" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#1638#1694#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="image_uploader.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="46" column="45" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#653#789#0" expanded="true" />
+                    <element signature="e#870#1100#0" expanded="true" />
+                    <element signature="e#870#1100#0" expanded="true" />
+                    <element signature="e#1480#1536#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -349,15 +402,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/errors/error_404.html.haml" />
-        <option value="$PROJECT_DIR$/config/boot.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/public/assets/ckeditor/filebrowser/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js" />
         <option value="$PROJECT_DIR$/app/uploaders/ckeditor_picture_uploader.rb" />
-        <option value="$PROJECT_DIR$/log/development.log" />
-        <option value="$PROJECT_DIR$/app/uploaders/product_image_uploader.rb" />
         <option value="$PROJECT_DIR$/app/uploaders/ckeditor_attachment_file_uploader.rb" />
         <option value="$PROJECT_DIR$/app/models/page.rb" />
         <option value="$PROJECT_DIR$/config/newrelic2.yml" />
@@ -365,6 +411,13 @@
         <option value="$PROJECT_DIR$/config/env.rb" />
         <option value="$PROJECT_DIR$/app/views/brand.html.haml" />
         <option value="$PROJECT_DIR$/app/views/product.html.haml" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
+        <option value="$PROJECT_DIR$/app/admin/products.rb" />
+        <option value="$PROJECT_DIR$/log/development.log" />
+        <option value="$PROJECT_DIR$/app/uploaders/product_main_image_uploader.rb" />
+        <option value="$PROJECT_DIR$/app/uploaders/product_image_uploader.rb" />
+        <option value="$PROJECT_DIR$/app/models/product.rb" />
       </list>
     </option>
   </component>
@@ -772,54 +825,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="combination-blue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ckeditor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -924,6 +929,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="medilines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="uploaders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -941,46 +968,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1018,7 +1005,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1040,29 +1027,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="medilines" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="fallback" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1075,8 +1044,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.CSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rails_ckeditor" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gems/hello_world" />
     <property name="last.edited.regexp" value="Sample Text" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1084,10 +1053,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/uploaders" />
+      <recent name="$PROJECT_DIR$/app/assets/images/fallback" />
       <recent name="$PROJECT_DIR$/spec/routing" />
       <recent name="$PROJECT_DIR$/app/views/pages" />
       <recent name="$PROJECT_DIR$/app/views" />
-      <recent name="$PROJECT_DIR$/app/assets/stylesheets/ckeditor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/assets/images/fallback" />
@@ -1426,9 +1396,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32838982" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1901336" sideWeight="0.49972692" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2200983" sideWeight="0.7644033" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13435282" sideWeight="0.80986637" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.50027305" order="7" side_tool="true" content_ui="tabs" />
@@ -1436,7 +1407,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2355967" sideWeight="0.49972692" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286638" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1507,9 +1477,58 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="45" column="27" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="51" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#482#762#0" expanded="true" />
+            <element signature="e#766#876#0" expanded="true" />
+            <element signature="e#880#1015#0" expanded="true" />
+            <element signature="e#1064#1192#0" expanded="true" />
+            <element signature="e#1196#1277#0" expanded="true" />
+            <element signature="e#1322#1458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/contact_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/products.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="58" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/product.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="63" selection-start="310" selection-end="310" vertical-scroll-proportion="-4.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/contents.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="1" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/page.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="414" selection-end="967" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1521,47 +1540,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+    <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="30" selection-start="5509" selection-end="5509" vertical-scroll-proportion="0.74509805">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/ckeditor-4.0.4/app/assets/javascripts/ckeditor/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
+        <state line="46" column="45" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#653#789#0" expanded="true" />
+            <element signature="e#870#1100#0" expanded="true" />
+            <element signature="e#870#1100#0" expanded="true" />
+            <element signature="e#1480#1536#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/contents.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="42" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="21" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.49723756">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1572,50 +1559,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/newrelic.yml">
+    <entry file="file://$PROJECT_DIR$/app/uploaders/product_main_image_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="44" selection-start="371" selection-end="371" vertical-scroll-proportion="-0.6320442">
-          <folding />
+        <state line="55" column="26" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1638#1694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/env.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ckeditor/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="33" selection-start="329" selection-end="329" vertical-scroll-proportion="0.09944751">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/product/combination-blue/small_dental_chair_modern.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/brand.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="45" selection-start="100" selection-end="100" vertical-scroll-proportion="0.05044843">
+        <state line="30" column="57" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p392/gems/carrierwave-0.8.0/lib/carrierwave/orm/activerecord.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+        <state line="13" column="8" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/product.html.haml">
+    <entry file="file://$PROJECT_DIR$/log/development.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="60" selection-start="307" selection-end="307" vertical-scroll-proportion="0.13452914">
+        <state line="60404" column="0" selection-start="2906771" selection-end="2906771" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/page.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="26" selection-start="585" selection-end="585" vertical-scroll-proportion="0.14917128">
+        <state line="22" column="3" selection-start="859" selection-end="859" vertical-scroll-proportion="0.45020464">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/product_image_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="26" selection-start="995" selection-end="995" vertical-scroll-proportion="0.42372882">
+          <folding>
+            <element signature="e#660#738#0" expanded="true" />
+            <element signature="e#819#1049#0" expanded="true" />
+            <element signature="e#1565#1621#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

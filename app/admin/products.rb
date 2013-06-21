@@ -24,7 +24,7 @@ ActiveAdmin.register Product do
        image_tag(product.image_url(:thumb).to_s) if product.image_url
     end
     column :description1 do |product|
-      product.description1[0..60]
+      product.description1[0..60].html_safe
     end
     column :price do |product|
       number_to_currency product.price, :unit => "р", :precision => 0

@@ -36,7 +36,7 @@ Medilines::Application.routes.draw do
         as: :visuals
     get ':subcategory'                 => 'main#subcategory',
         as: :visual_category
-    get ':subcategory/:brand'          => 'main#subcategory_brand',
+    get ':subcategory/:brand'          => 'main#category_brand',
         as: :visual_category_brand
     get ':subcategory/:brand/:product' => 'main#product',
         as: :visual_category_brand_product
@@ -47,7 +47,7 @@ Medilines::Application.routes.draw do
          as: :components
     get ':subcategory'                 => 'main#subcategory',
         as: :components_category
-    get ':subcategory/:brand'          => 'main#subcategory_brand',
+    get ':subcategory/:brand'          => 'main#category_brand',
         as: :components_category_brand
     get ':subcategory/:brand/:product' => 'main#product',
         as: :components_category_brand_product

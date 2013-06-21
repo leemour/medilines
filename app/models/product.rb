@@ -26,5 +26,18 @@ class Product < ActiveRecord::Base
   scope :components, join_categories_included('components')
   scope :spares,     join_categories_included('spare-parts')
 
-  mount_uploader :image, ProductImageUploader
+  mount_uploader :image, ProductMainImageUploader
+  #mount_uploader :photo1, ProductImageUploader
+  #mount_uploader :photo2, ProductImageUploader
+  #mount_uploader :photo3, ProductImageUploader
+  #mount_uploader :photo4, ProductImageUploader
+
+  def self.including_brand(slug)
+    Product.includes(:brand).find_by_slug!(slug)
+  end
+
+  def self.with_brand_in_category(brand, category)
+    Product.joins(:brand).where(:brands => {:slug => brand.slug}).
+        joins(:category).where(categories: {slug: category.slug})
+  end
 end

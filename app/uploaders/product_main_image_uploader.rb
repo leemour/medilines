@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class ProductImageUploader < CarrierWave::Uploader::Base
+class ProductMainImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -38,8 +38,11 @@ class ProductImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
+  version :thumb do
+     process :resize_to_fill => [50, 50]
+  end
   version :small do
-    process :resize_to_fill => [85, 100]
+     process :resize_to_fill => [175, 130]
   end
   version :large do
     process :resize_to_fill => [400, 300]
