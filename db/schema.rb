@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604103625) do
+ActiveRecord::Schema.define(:version => 20130621172440) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(:version => 20130604103625) do
   create_table "pages", :force => true do |t|
     t.string   "slug"
     t.string   "title"
-    t.string   "intro"
+    t.text     "intro"
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -119,6 +119,11 @@ ActiveRecord::Schema.define(:version => 20130604103625) do
     t.string   "image"
     t.integer  "category_id"
     t.text     "description2"
+    t.string   "photo1"
+    t.string   "photo2"
+    t.string   "photo3"
+    t.string   "photo4"
+    t.string   "photo5"
   end
 
   add_index "products", ["brand_id"], :name => "index_products_on_brand_id"

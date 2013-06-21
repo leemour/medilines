@@ -63,6 +63,12 @@ ActiveAdmin.register Product do
         row :description2 do
           product.description2.html_safe if product.description2
         end
+        5.times do |i|
+          photo = "photo#{i+1}"
+          row photo.to_sym do
+            image_tag(product.send(photo.to_sym).url) if product.send(photo.to_sym)
+          end
+        end
         row :created_at
         row :updated_at
       end
@@ -77,13 +83,19 @@ ActiveAdmin.register Product do
       f.input :name, :required => true
       f.input :brand
       f.input :category
-      f.input :image, :hint => img_with_url(f, :image)
-      f.input :image_cache, :as => :hidden
-      f.input :price
+      #f.input :image, :hint => img_with_url(f, :image)
+      f.input :image, :hint => img_with_url(f, :image), :as => 'uploader',
+              :removable => true
       f.input :slogan
       f.input :features,     :as =>:ckeditor
       f.input :description1, :as =>:ckeditor
-      f.input :description2, :as => :ckeditor, :input_html => { :ckeditor => { :height => 200 }}
+      f.input :description2, :as => :ckeditor,
+              :input_html => { :ckeditor => { :height => 200 }}
+      5.times do |i|
+        photo = "photo#{i+1}"
+        f.input photo.to_sym, :hint => img_with_url(f, photo.to_sym),
+                :as => :uploader, :removable => true
+      end
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
       f.input :updated_at, :wrapper_html => { :class => 'inline-list' }
 

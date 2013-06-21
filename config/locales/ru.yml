@@ -75,6 +75,11 @@ ru:
         design: Дизайн
         slogan: Слоган
         image: Фото
+        photo1: Фото1
+        photo2: Фото2
+        photo3: Фото3
+        photo4: Фото4
+        photo5: Фото5
         created_at: Создан
         updated_at: Изменен
   activemodel:

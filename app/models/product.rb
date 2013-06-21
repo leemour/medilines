@@ -7,8 +7,13 @@ class Product < ActiveRecord::Base
   belongs_to :brand
   belongs_to :category
   attr_accessible :description1, :description2, :features, :name, :price,
-                  :slogan, :slug, :brand_id, :category_id, :image,
-                  :remove_image, :image_cache
+                  :slogan, :slug, :brand_id, :category_id,
+                  :image, :remove_image, :image_cache,
+                  :photo1, :remove_photo1, :photo1_cache,
+                  :photo2, :remove_photo2, :photo2_cache,
+                  :photo3, :remove_photo3, :photo3_cache,
+                  :photo4, :remove_photo4, :photo4_cache,
+                  :photo5, :remove_photo5, :photo5_cache
 
   validates_presence_of :name, :slug, :brand_id, :category_id
   validates_presence_of :image, :message => "Добавьте фотографию товара"
@@ -26,11 +31,12 @@ class Product < ActiveRecord::Base
   scope :components, join_categories_included('components')
   scope :spares,     join_categories_included('spare-parts')
 
-  mount_uploader :image, ProductMainImageUploader
-  #mount_uploader :photo1, ProductImageUploader
-  #mount_uploader :photo2, ProductImageUploader
-  #mount_uploader :photo3, ProductImageUploader
-  #mount_uploader :photo4, ProductImageUploader
+  mount_uploader :image,  ProductMainImageUploader
+  mount_uploader :photo1, ProductImageUploader
+  mount_uploader :photo2, ProductImageUploader
+  mount_uploader :photo3, ProductImageUploader
+  mount_uploader :photo4, ProductImageUploader
+  mount_uploader :photo5, ProductImageUploader
 
   def self.including_brand(slug)
     Product.includes(:brand).find_by_slug!(slug)
