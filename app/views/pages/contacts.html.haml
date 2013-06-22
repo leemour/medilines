@@ -1,8 +1,28 @@
 %h1 Контакты
 
-.contact-details
+.contact-details{ itemscope: true, itemtype: "http://schema.org/Organization" }
   %address.full-contacts
-    = @page.content.html_safe
+    -#= @page.content.html_safe
+    %h3 Приходите по адресу:
+
+    %p{ itemscope: true, itemprop: "address",
+        itemtype: "http://schema.org/PostalAddress" }
+      %span{ itemprop: "addressLocality" } Санкт-Петербург
+      %span{ itemprop: "streetAddress" } ул. Коллонтай, д. 41<br />лит. Д, оф. 205
+
+    %h3 Звоните:
+
+    %p{ itemprop: "telephone" } (812) 983-49-96
+
+    %p{ itemprop: "telephone" } 8 921 375-74-61
+
+    %p{ itemprop: "telephone" } 8 905 287-72-47
+
+    %h3 Пишите нам:
+
+    %p{ itemprop: "email" }
+      = link_to "info@medilines.ru", "mailto:info@medilines.ru"
+
 
   .contact-form
     %h3 Свяжитесь с нами
