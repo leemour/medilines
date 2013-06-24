@@ -36,17 +36,26 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'railroady'
-  
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels'
-  gem 'factory_girl'
+
+  gem 'guard-livereload'
+  gem 'rack-livereload'
 end
 
 group :test do
-  #gem 'spork-rails'
+  gem 'rspec-rails'
+  gem 'spork-rails'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'guard-cucumber'
   #gem 'simplecov'
+  gem 'capybara'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'factory_girl_rails'
+  #system-dependent notifications (uncomment for a team)
+  gem 'rb-inotify', :require => false
+  #gem 'rb-fsevent', :require => false
+  #gem 'rb-fchange', :require => false
 end
 
 group :assets do

@@ -284,13 +284,63 @@ body.active_admin
     max-width: 200px
     text-align: left
 
-// CKEditor
-.cke_chrome
-  width: 76% !important
-  overflow: hidden
+  // CKEditor
+  .cke_chrome
+    width: 76% !important
+    overflow: hidden
 
-.cke_combo__fontsize .cke_combo_text
-  width: 50px !important
+  .cke_combo__fontsize .cke_combo_text
+    width: 50px !important
 
-.cke_combopanel
-  width: 170px !important
+  .cke_combopanel
+    width: 170px !important
+
+  table.cke_dialog
+    max-width: 600px
+
+    th, td, caption
+      padding: 0
+
+    .cke_dialog_ui_vbox_child
+      padding: 8px 10px
+
+      table
+        margin: 0
+
+    .cke_dialog_ui_hbox_last
+      padding: 4px 10px
+
+    .cke_dialog_ui_button
+      padding: 4px 10px
+
+      &.cke_dialog_ui_button_ok
+        color: #ffffff
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+        background-color: #5bb75b
+        background-image: -moz-linear-gradient(top, #62c462, #51a351)
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351))
+        background-image: -webkit-linear-gradient(top, #62c462, #51a351)
+        background-image: -o-linear-gradient(top, #62c462, #51a351)
+        background-image: linear-gradient(to bottom, #62c462, #51a351)
+        background-repeat: repeat-x
+        border-color: #51a351 #51a351 #387038
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0)
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+      &.cke_dialog_ui_button_cancel
+        color: #ffffff
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+        background-color: #da4f49
+        *background-color: #bd362f
+        background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f)
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f))
+        background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f)
+        background-image: -o-linear-gradient(top, #ee5f5b, #bd362f)
+        background-image: linear-gradient(to bottom, #ee5f5b, #bd362f)
+        background-repeat: repeat-x
+        border-color: #bd362f #bd362f #802420
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0)
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+        span
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)

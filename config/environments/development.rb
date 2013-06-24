@@ -12,7 +12,7 @@ Medilines::Application.configure do
   config.whiny_nils = true
 
   # Show full error reports and disable caching
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
@@ -43,4 +43,11 @@ Medilines::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # LiveReload
+  config.middleware.insert_before(
+      Rack::Lock, Rack::LiveReload,
+      :min_delay => 500,
+      :max_delay => 3000
+  )
 end

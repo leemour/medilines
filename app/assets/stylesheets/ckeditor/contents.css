@@ -7,3 +7,6 @@ body p {
   font-family: Arial, Verdana, sans-serif !important;
   font-size: 12px !important;
 }
+body.active_admin table.cke_dialog {
+  max-width: 600px;
+}
