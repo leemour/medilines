@@ -28,8 +28,8 @@ class Page < ActiveRecord::Base
 
       if item.has_attribute? :description
         intro = item.description
-      elsif item.has_attribute? :description1
-        intro = item.description1
+      elsif item.has_attribute? :features
+        intro = item.features
       end
     end
     title ||= ''

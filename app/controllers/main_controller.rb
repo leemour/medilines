@@ -8,31 +8,31 @@ class MainController < ApplicationController
     @subcategories = Category.find_children(@category)
     if @subcategories.empty?
       @brands = Brand.find_all_in_category(@category)
-      render "/categories/category_with_brands"
+      render "/categories/brands"
     else
-      render "/categories/category_with_categories"
+      render "/categories/index"
     end
   end
 
   def subcategory
     if @category.products.count > 1
       @brands = Brand.find_all_in_category(@category)
-      render "/categories/category_with_brands"
+      render "/categories/brands"
     else
       @products = @category.products.includes(:brand)
-      render "/categories/category_with_products"
+      render "/products/index"
     end
   end
 
   def category_brand
     @products = Product.with_brand_in_category(@brand, @category)
-    render '/brand'
+    render '/products/index'
   end
 
   def product
     @product = Product.including_brand(params[:product])
     @page    = Page.get_info(@product)
-    render '/product'
+    render '/products/show'
   end
 
 

@@ -1,0 +1,5 @@
+- if @products
+  - @products.each do |product|
+    = render '/products/show', :product => product
+- else
+  %p В данной категории товаров нет.

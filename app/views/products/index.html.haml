@@ -1,0 +1,5 @@
+- if @products
+  - @products.each_with_index do |product, count|
+    = render '/products/product', :product => product, :count => count
+- else
+  %p В данной категории нет товаров

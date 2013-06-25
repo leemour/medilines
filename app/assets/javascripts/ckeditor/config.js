@@ -18,7 +18,7 @@ CKEDITOR.editorConfig = function( config )
         { name: 'styles', items : [ 'Format','FontSize' ] },
         { name: 'insert', items : [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ] },
         { name: 'colors', items : [ 'TextColor','BGColor' ] },
-        { name: 'tools', items : [ 'Maximize', 'ShowBlocks','-','About' ] }
+        { name: 'tools', items : [ 'Maximize', 'ShowBlocks'] }
       ];
 
   /* Filebrowser routes */

@@ -301,32 +301,47 @@ body.active_admin
     th, td, caption
       padding: 0
 
+    .cke_dialog_footer_buttons
+      width: 90%
+
     .cke_dialog_ui_vbox_child
       padding: 8px 10px
 
       table
         margin: 0
 
+    .cke_dialog_ui_hbox_first,
     .cke_dialog_ui_hbox_last
       padding: 4px 10px
 
     .cke_dialog_ui_button
       padding: 4px 10px
+      text-decoration: none
 
       &.cke_dialog_ui_button_ok
         color: #ffffff
         text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
-        background-color: #5bb75b
-        background-image: -moz-linear-gradient(top, #62c462, #51a351)
+        background-color: #69d169
+        background-image: -moz-linear-gradient(top, #69d169, #4b884a)
         background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351))
-        background-image: -webkit-linear-gradient(top, #62c462, #51a351)
-        background-image: -o-linear-gradient(top, #62c462, #51a351)
-        background-image: linear-gradient(to bottom, #62c462, #51a351)
+        background-image: -webkit-linear-gradient(top, #66cb66, #5aa359)
+        background-image: -o-linear-gradient(top, #66cb66, #5aa359)
+        background-image: linear-gradient(to bottom, #66cb66, #5aa359)
         background-repeat: repeat-x
         border-color: #51a351 #51a351 #387038
         border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0)
         filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+        &:hover
+          background-color: #60ae5f
+          background-image: none
+        &:active
+          border-color: #969696
+          outline: 0
+          -moz-box-shadow: 0 0 6px rgba(0,0,0,.4) inset
+          -webkit-box-shadow: 0 0 6px rgba(0,0,0,.4) inset
+          box-shadow: 0 0 6px rgba(0,0,0,.4) inset
+
       &.cke_dialog_ui_button_cancel
         color: #ffffff
         text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
@@ -342,5 +357,20 @@ body.active_admin
         border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0)
         filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+        &:hover
+          background-color: #bd362f
+          background-image: none
+        &:active
+          border-color: #969696
+          outline: 0
+          -moz-box-shadow: 0 0 6px rgba(0,0,0,.4) inset
+          -webkit-box-shadow: 0 0 6px rgba(0,0,0,.4) inset
+          box-shadow: 0 0 6px rgba(0,0,0,.4) inset
         span
           text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+
+    a.cke_dialog_ui_button_ok:focus,
+    a.cke_dialog_ui_button_ok:active,
+    a.cke_dialog_ui_button_cancel:focus,
+    a.cke_dialog_ui_button_cancel:active
+      border-width: 0

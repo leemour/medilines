@@ -39,10 +39,10 @@ class ProductImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :small do
-    process :resize_to_fill => [85, 100]
+    process :resize_to_fill => [75, 100]
   end
-  version :large do
-    process :resize_to_fill => [400, 300]
+  version :medium do
+    process :resize_to_fill => [105, 135]
   end
   version :full do
     process :resize_to_fill => [800, 600]

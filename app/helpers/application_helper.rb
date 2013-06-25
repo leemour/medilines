@@ -40,6 +40,15 @@ module ApplicationHelper
     url_for([root_cat(params[:category]), cat])
   end
 
+  def short_text(text, length)
+    text = strip_tags text
+    if text.length > length
+      "#{text[0, length]} &hellip;".html_safe
+    else
+      text
+    end
+  end
+
   # Breadcrumbs for all resources
   def get_breadcrumbs
     current = @product || @brand || @category || @page
