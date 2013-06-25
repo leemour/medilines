@@ -1,0 +1,21 @@
+.product{class: (count == 0 ? 'first' : '')}
+  %h3
+    = product.brand.name
+    = link_to product.name, product_url(product)
+
+  %p.price= "#{product.price} руб." if product.price
+
+  .details
+    = link_to image_tag(product.image_url(:small), :size => "",
+        :alt => product.name), product_url(product)
+
+    .images
+      = image_tag(product.photo1_url(:small))
+      = image_tag(product.photo2_url(:small))
+      = image_tag(product.photo3_url(:small))
+      = image_tag(product.photo4_url(:small))
+      = image_tag(product.photo5_url(:small), class: 'last')
+
+    .info
+      %p.slogan= link_to product.slogan, product_url(product)
+      %p= short_text(product.features, 200)
