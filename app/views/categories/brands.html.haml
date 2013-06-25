@@ -1,14 +1,22 @@
 - @brands.each do |brand|
   %div{class: "brand #{brand.slug}"}
-    = image_tag(brand.image_url, :alt => "#{@category.name} - #{brand.name}")
+    = image_tag(brand.image_url, :size => '157x153',
+      :alt => "#{@category.name} - #{brand.name}")
 
     .brand-description
       %h2= link_to brand.name, brand_url(brand, @category)
       = image_tag(brand.flag_url, :alt => "Флаг #{brand.country}")
       = brand.country
-      %p= brand.description
+      %p= short_text(brand.description, 150)
 
     .details
-      = brand.details.html_safe
+      -if not brand.details.empty?
+        = short_text(brand.details.html_safe, 300)
+      - else
+        - brand.products.each do |product|
+          .product
+            = link_to image_tag(product.image_url(:thumb),
+              :alt => "Товар #{brand.name}"), product_url(product)
+            %span= link_to product.name, product_url(product)
 
 

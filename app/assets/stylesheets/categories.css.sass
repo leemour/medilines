@@ -20,7 +20,7 @@ body #main
         color: #c29229
 
     .brands
-      float: left
+      //float: left
       .brand
         color: #DE872B
         clear: none
@@ -36,3 +36,60 @@ body #main
             margin: 0
         span a
           padding-top: 10px
+
+  .brand
+    clear: both
+    overflow: hidden
+    margin-bottom: 20px
+    img
+      float: left
+      margin-right: 20px
+    .brand-description
+      background-color: #fafaea
+      border-left: 3px solid #BA4712
+      float: left
+      margin-right: 30px
+      max-width: 300px
+      overflow: hidden
+      padding: 0 20px 20px
+      img
+        margin-right: 4px
+      p
+        margin: 5px 0 0
+    .details
+      background-color: #faf7f1
+      //float: left
+      overflow: hidden
+      padding: 15px
+      h4
+        font-size: 18px
+        font-weight: normal
+        color: #6248A0
+        margin-top: 5px
+      ul
+        list-style-type: square
+        list-style-position: inside
+      .product
+        background-color: transparent
+        background-image: none
+        padding: 0
+
+    &.forest
+      .brand-description
+        border-left: 3px solid #a9bf4a
+        margin-left: 7px
+        h2
+          color: #a9bf4a
+        img
+          margin-top: 2px
+      h4
+        color: #a9bf4a
+    &.fedesa
+      .brand-description
+        border-left: 3px solid #ba4712
+        h2
+          color: #ba4712
+        img
+          margin-top: 2px
+      h4
+        color: #ba4712
