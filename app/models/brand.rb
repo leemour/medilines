@@ -17,8 +17,8 @@ class Brand < ActiveRecord::Base
   validates_length_of :name, :minimum => 4, :message => "Слишком короткое название"
 
   mount_uploader :image, ImageUploader
-  mount_uploader :flag, ImageUploader
-  mount_uploader :logo, ImageUploader
+  mount_uploader :flag,  ImageUploader
+  mount_uploader :logo,  LogoUploader
 
   def remove_image=(val)
     image_will_change! if val
@@ -30,7 +30,10 @@ class Brand < ActiveRecord::Base
   end
 
   def self.find_all_in_category(category)
-    products = Product.includes(:brand).find_all_by_category_id(category.id)
-    products.map { |product| product.brand }
+    #products = Product.includes(:brand).find_all_by_category_id(category.id)
+    #products.map { |product| product.brand }.uniq
+    brands = Brand.joins(:products).
+              where('products.category_id = ?', category.id).uniq
+    brands
   end
 end

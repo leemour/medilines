@@ -6,12 +6,15 @@ class Category < ActiveRecord::Base
 
   belongs_to :parent, :class_name => 'Category', :foreign_key => 'parent_id'
   has_many :products
+  has_many :brands, :through => :products
 
   attr_accessible :description, :name, :slug, :parent, :logo, :parent_id
 
   validates_presence_of :name, :slug
   validates_uniqueness_of :name, :slug
   validates_length_of :name, :minimum => 4
+
+  mount_uploader :logo, CategoryImageUploader
 
   scope :roots,      where("parent_id IS NULL")
   scope :join_parent, lambda { |slug|
@@ -24,7 +27,7 @@ class Category < ActiveRecord::Base
   scope :spares,     join_parent('spare-parts')
 
   def self.find_children(cat)
-    Category.find_all_by_parent_id(cat.id)
+    Category.includes(:brands).find_all_by_parent_id(cat.id)
   end
 
   def self.get_info(category)
@@ -40,6 +43,4 @@ class Category < ActiveRecord::Base
   def should_generate_new_friendly_id?
     new_record?
   end
-
-  mount_uploader :logo, ImageUploader
 end

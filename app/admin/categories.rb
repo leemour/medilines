@@ -19,7 +19,9 @@ ActiveAdmin.register Category do
     column :parent_id, :sortabe => :parent_id do |cat|
       link_to cat.parent.name, admin_category_path(cat.parent) if cat.parent
     end
-    column :logo
+    column :logo do |cat|
+      image_tag(cat.logo_url(:thumb))
+    end
     column :description
 
     default_actions
@@ -43,7 +45,7 @@ ActiveAdmin.register Category do
           parent_category(cat)
         end
         row :logo do
-          image_tag(cat.logo.url) if cat.logo.url
+          image_tag(cat.logo_url) if cat.logo.url
         end
         row :description
         row :created_at
