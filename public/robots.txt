@@ -8,4 +8,4 @@ User-agent: *
 Disallow: /admin
 
 Host: www.medilines.ru
-#Sitemap: http://www.medilines.ru/sitemap.xml
+Sitemap: http://www.medilines.ru/sitemap.xml.gz
