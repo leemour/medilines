@@ -15,6 +15,7 @@ gem 'activeadmin'
 gem 'meta_search'
 gem 'ckeditor'
 gem 'negative_captcha'
+gem 'sitemap_generator'
 
 group :production do
   gem 'pg'

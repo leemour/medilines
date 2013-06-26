@@ -5,7 +5,7 @@ class Brand < ActiveRecord::Base
   friendly_id :name, :use => :slugged
 
   has_many :products
-  has_and_belongs_to_many :categories
+  has_many :categories, :through => :products
   attr_accessible :country, :description, :details, :flag, :remove_flag,
                   :flag_cache, :image, :remove_image, :image_cache, :logo,
                   :name, :slogan, :slug

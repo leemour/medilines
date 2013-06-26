@@ -40,6 +40,10 @@ class Category < ActiveRecord::Base
     @page
   end
 
+  def is_root?
+    parent_id.nil?
+  end
+
   def should_generate_new_friendly_id?
     new_record?
   end

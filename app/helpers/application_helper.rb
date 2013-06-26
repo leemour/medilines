@@ -16,28 +16,9 @@ module ApplicationHelper
     "active" if params[:page] == slug || params[:category] == slug
   end
 
-
   # Defining root category for link_to url_for
   def root_cat(cat)
     cat.split('-')[0]
-  end
-
-  def product_url(product)
-    if product.category.slug == params[:category]
-      category = 'category'
-    else
-      category = product.category
-    end
-    url_for([root_cat(params[:category]), category, product.brand, product])
-  end
-
-  def brand_url(brand, category)
-    category = 'category' if category.slug == params[:category]
-    url_for([root_cat(params[:category]), category, brand])
-  end
-
-  def subcategory_url(cat)
-    url_for([root_cat(params[:category]), cat])
   end
 
   def short_text(text, length)
