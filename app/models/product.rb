@@ -14,6 +14,8 @@ class Product < ActiveRecord::Base
                   :photo3, :remove_photo3, :photo3_cache,
                   :photo4, :remove_photo4, :photo4_cache,
                   :photo5, :remove_photo5, :photo5_cache
+  
+  attr_accessor :photo1, :photo2, :photo3, :photo4, :photo5
 
   validates_presence_of :name, :slug, :brand_id, :category_id
   validates_presence_of :image, :message => "Добавьте фотографию товара"
