@@ -16,3 +16,6 @@
 
 # Ignore Environment variables
 /config/env.rb
+
+# Ignore DB credentials
+/config/database.yml
