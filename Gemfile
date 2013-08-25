@@ -1,4 +1,4 @@
-ruby '1.9.3'
+# ruby '1.9.3'
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
@@ -17,9 +17,11 @@ gem 'ckeditor'
 gem 'negative_captcha'
 gem 'sitemap_generator'
 
+gem 'unicorn'
+gem 'capistrano'
+
 group :production do
   gem 'pg'
-  gem 'unicorn' # server
   gem 'newrelic_rpm'
 end
 
@@ -60,6 +62,7 @@ group :test do
 end
 
 group :assets do
+  gem 'turbo-sprockets-rails3'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass'
@@ -74,12 +77,3 @@ end
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'

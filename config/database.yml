@@ -23,5 +23,6 @@ production:
   encoding: utf8
   database: medilines_production
   pool: 5
+  host: localhost
   username: medilines
   password: T9AqavuttA

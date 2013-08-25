@@ -23,5 +23,6 @@ production:
   encoding: utf8
   database:
   pool: 5
+  host: localhost
   username:
   password:
