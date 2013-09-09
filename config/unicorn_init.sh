@@ -12,7 +12,7 @@ CMD="$MEDI_ROOT/bin/unicorn -D -c $MEDI_ROOT/config/unicorn.rb"
 action="$1"
 set -u
 
-test -f "$INIT_CONF" && . $INIT_CONF
+# test -f "$INIT_CONF" && . $INIT_CONF
 
 old_pid="$PID.oldbin"
 
