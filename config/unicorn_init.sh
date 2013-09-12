@@ -7,7 +7,7 @@ set -e
 TIMEOUT=${TIMEOUT-60}
 MEDI_ROOT=/srv/www/medilines/current
 PID=/srv/www/medilines/shared/pids/unicorn.pid
-CMD="$MEDI_ROOT/bin/unicorn -D -c $MEDI_ROOT/config/unicorn.rb"
+CMD="$MEDI_ROOT/bin/unicorn -D -c $MEDI_ROOT/config/unicorn.rb -E production"
 # INIT_CONF=$MEDI_ROOT/config/init.conf
 action="$1"
 set -u
@@ -29,7 +29,8 @@ oldsig () {
 case $action in
 start)
   sig 0 && echo >&2 "Already running" && exit 0
-  su -c "$CMD" - nginx
+  echo "Starting"
+  $CMD
   ;;
 stop)
   sig QUIT && exit 0
@@ -42,7 +43,7 @@ force-stop)
 restart|reload)
   sig HUP && echo reloaded OK && exit 0
   echo >&2 "Couldn't reload, starting '$CMD' instead"
-  su -c "$CMD" - nginx
+  $CMD
   ;;
 upgrade)
   if sig USR2 && sleep 2 && sig 0 && oldsig QUIT
@@ -62,7 +63,7 @@ upgrade)
     exit 0
   fi
   echo >&2 "Couldn't upgrade, starting '$CMD' instead"
-  su -c "$CMD" - nginx
+  $CMD
   ;;
 reopen-logs)
   sig USR1
