@@ -1,0 +1,6 @@
+- breadcrumbs = get_breadcrumbs
+- if breadcrumbs
+  %nav
+    %ul.nav.breadcrumbs
+      - breadcrumbs.each do |link|
+        %li= link.html_safe

@@ -27,8 +27,8 @@
   .contact-form
     %h3 Свяжитесь с нами
     = render '/messages/form'
-  
-#ya-maps
 
-:javascript 
-  $(function(){ initMap(); });
+#ya-map
+
+:javascript
+  ymaps.ready(initYMap);

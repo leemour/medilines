@@ -43,6 +43,9 @@ class ProductImageUploader < CarrierWave::Uploader::Base
   version :medium do
     process :resize_to_fill => [93, 135]
   end
+  version :large do
+    process :resize_to_fill => [400, 300]
+  end
   version :full do
     process :resize_to_fill => [800, 600]
   end

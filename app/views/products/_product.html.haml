@@ -10,11 +10,8 @@
         :alt => product.name), product_url(product)
 
     .images
-      = image_tag(product.photo1_url(:small))
-      = image_tag(product.photo2_url(:small))
-      = image_tag(product.photo3_url(:small))
-      = image_tag(product.photo4_url(:small))
-      = image_tag(product.photo5_url(:small), class: 'last')
+      - 1.upto 5 do |n|
+        = product_img_link(product, n, :small)
 
     .info
       %p.slogan= link_to product.slogan, product_url(product)

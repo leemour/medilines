@@ -14,11 +14,13 @@
       %p= short_text(@product.features, 300)
 
     .images
-      = image_tag(@product.photo1_url(:medium))
-      = image_tag(@product.photo2_url(:medium))
-      = image_tag(@product.photo3_url(:medium))
-      = image_tag(@product.photo4_url(:medium))
-      = image_tag(@product.photo5_url(:medium), class: 'last')
+      - 1.upto 5 do |n|
+        = product_img_link(@product, n, :medium)
 
 %section.content
   = @product.description1.html_safe if @product.description1
+
+:javascript
+  $(function() {
+    $(".fancybox").fancybox();
+  });

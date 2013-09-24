@@ -14,7 +14,7 @@ class Product < ActiveRecord::Base
                   :photo3, :remove_photo3, :photo3_cache,
                   :photo4, :remove_photo4, :photo4_cache,
                   :photo5, :remove_photo5, :photo5_cache
-  
+
   attr_accessor :photo1, :photo2, :photo3, :photo4, :photo5
 
   validates_presence_of :name, :slug, :brand_id, :category_id
@@ -39,6 +39,10 @@ class Product < ActiveRecord::Base
   mount_uploader :photo3, ProductImageUploader
   mount_uploader :photo4, ProductImageUploader
   mount_uploader :photo5, ProductImageUploader
+
+  def img(n, size = :small)
+    send("photo#{n}_url", size)
+  end
 
   def self.including_brand(slug)
     Product.includes(:brand).find_by_slug!(slug)

@@ -131,6 +131,8 @@ GEM
     fancy_irb (0.7.3)
       paint (>= 0.8.1)
       unicode-display_width (>= 0.1.1)
+    fancybox2-rails (0.2.4)
+      railties (>= 3.1.0)
     fastercsv (1.5.5)
     ffi (1.7.0)
     formatador (0.2.4)
@@ -373,6 +375,7 @@ DEPENDENCIES
   cucumber-rails-training-wheels
   database_cleaner
   factory_girl_rails
+  fancybox2-rails
   friendly_id
   guard-cucumber
   guard-livereload

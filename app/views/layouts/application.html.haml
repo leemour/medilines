@@ -1,16 +1,16 @@
 !!!
 %html{lang: 'ru'}
   %head
-    %title= page_title(@page) + 'Медилайн Сервис'
     %meta{ charset: 'utf8-' }/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= page_title(@page)
     %meta{ name: 'description', content: @page.description }/
     %meta{ name: 'keywords', content: @page.keywords }/
     = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
-    -#= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"
-    = javascript_include_tag "http://api-maps.yandex.ru/1.1/index.xml?key=AHmYPk4BAAAA4fPMKgIAreYWA9M7VyWe2kPO7v_Fm8D1FkIAAAAAAAAAAACgkdIcRaAFjXx19j3-CWk_wRyafA==~AEUcQE4BAAAA1RrrawIANcs4c1C_SkGCiOQuhZYQOgDcI6wAAAAAAAAAAADevNxdiWRwyYnpe3RpZirPWhouOg=="
+    / = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"
+    = javascript_include_tag "//api-maps.yandex.ru/2.0-stable/?load=package.standard,package.traffic&lang=ru-RU&"
     = csrf_meta_tags
     /[if lt IE 9]
       %script{ :src => '//html5shiv.googlecode.com/svn/trunk/html5.js' }
@@ -18,69 +18,26 @@
   %body{:class => "#{controller_name} #{action_name}"}
     %header
       .container
-        = link_to image_tag("logo.png", :size => "277x56", :alt => "Медилиайн Сервис"), root_path
-        
-        %address.contacts
-          .main
-            %p.tel (812) 983-49-96
-            %p.email= mail_to 'info@medilines.ru'
-          .alternative
-            %p.tel 8 921 375-74-61
-            %p.tel 8 905 287-72-47
-        
-        %nav#main-menu
-          %ul.nav
-            %li{ class: is_active?(dentals_path) }
-              = link_to 'Установки', dentals_path
-            %li{ class: is_active?(visuals_path) }
-              =link_to 'Визуализация', visuals_path
-            %li{ class: is_active?(components_path) }
-              =link_to 'Комплектующие', components_path
-            %li.inactive
-              -#=link_to 'Запчасти', spares_path
-              Запчасти
-            %li{ class: is_active?(promotions_path) }
-              =link_to 'Акции', promotions_path
-            %li
-              =link_to 'Скачать каталог', '/docs/MediLines_Catalog_2013.pdf'
-            %li{ class: is_active?(contacts_path) }
-              =link_to 'Контакты', contacts_path
-    
+        = render 'layouts/header'
+
     - if @page.intro && @page.intro != ''
       %section.intro
         .container
           = @page.intro.html_safe
-          
+
     %section#main
       .container
         -#%p.notice= notice
         -#%p.alert= alert
-        - breadcrumbs = get_breadcrumbs
-        - if breadcrumbs
-          %nav
-            %ul.nav.breadcrumbs
-              - breadcrumbs.each do |link|
-                %li= link.html_safe
+        = render 'layouts/breadcrumbs'
 
 
         = yield
-        
+
 
     %footer
       .container
-        %address.address
-          %p.address Санкт-Петербург, ул. Коллонтай, д. 41 лит. Д, оф. 205
-          %ul.tel
-            %li
-              %strong (812) 983-49-96,
-            %li 8 921 375-74-61,
-            %li 8 921 375-74-61,
-            %li (812) 587-97-05 - факс
-          
-        %address.details
-          %p © 2011, ООО «Медилайн Сервис»
-          %p= link_to 'Контакты', contacts_path
-          
-          
-          
-          
+        = render 'layouts/footer'
+
+
+

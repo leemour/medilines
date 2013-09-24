@@ -1,4 +1,4 @@
-# ruby '1.9.3'
+ruby '2.0.0'
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 gem 'haml', '>= 3.1.6'
 gem 'bootstrap-sass', '>= 2.0.4.0'
 gem 'jquery-rails'
+gem 'fancybox2-rails'
 gem 'friendly_id'
 gem 'russian'
 gem 'carrierwave'

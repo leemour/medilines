@@ -1,0 +1,27 @@
+= link_to image_tag("logo.png", :size => "277x56", :alt => "Медилиайн Сервис"), root_path
+
+%address.contacts
+  .main
+    %p.tel (812) 983-49-96
+    %p.email= mail_to 'info@medilines.ru'
+  .alternative
+    %p.tel 8 921 375-74-61
+    %p.tel 8 905 287-72-47
+
+%nav#main-menu
+  %ul.nav
+    %li{ class: is_active?(dentals_path) }
+      = link_to 'Установки', dentals_path
+    %li{ class: is_active?(visuals_path) }
+      =link_to 'Визуализация', visuals_path
+    %li{ class: is_active?(components_path) }
+      =link_to 'Комплектующие', components_path
+    %li.inactive
+      -#=link_to 'Запчасти', spares_path
+      Запчасти
+    %li{ class: is_active?(promotions_path) }
+      =link_to 'Акции', promotions_path
+    %li
+      =link_to 'Скачать каталог', '/docs/MediLines_Catalog_2013.pdf'
+    %li{ class: is_active?(contacts_path) }
+      =link_to 'Контакты', contacts_path

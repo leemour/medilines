@@ -3,3 +3,9 @@
     = render '/products/product', :product => product, :count => count
 - else
   %p В данной категории нет товаров
+
+
+:javascript
+  $(function() {
+    $(".fancybox").fancybox();
+  });

@@ -1,13 +1,11 @@
 # encoding: UTF-8
 
 module ApplicationHelper
+  # require 'breadcrumbs'
   # Generating page title if title exists
   def page_title(page)
-    if page.title
-      page.title + ' - '
-    else
-      ''
-    end
+    appname = 'Медилайн Сервис'
+    page.title ? "#{page.title} - #{appname}" :  appname
   end
 
   # Defining active menu class
@@ -30,10 +28,16 @@ module ApplicationHelper
     end
   end
 
+  def product_img_link(product, n, size)
+    link_to image_tag(product.img(n, size)),
+      product.img(n, :large), class: 'fancybox', rel: 'group'
+  end
+
   # Breadcrumbs for all resources
   def get_breadcrumbs
     current = @product || @brand || @category || @page
-    make_breadcrumbs(current)
+    # BreadcrumbsMaker.build current, params
+    make_breadcrumbs current
   end
 
   def make_breadcrumbs(item = nil, output = [])
@@ -44,31 +48,28 @@ module ApplicationHelper
       output[1..-1].each { |link| link.concat("&#160;>&#160;".html_safe) }
       return output.reverse
     end
+    url, cons = case
+      when params[:page] && params[:page] != 'home'
+        [params[:page], nil]
 
-    if params[:page]
-      unless params[:page] == 'home'
-        output << link_to(item.title, params[:page])
-        make_breadcrumbs(nil, output)
-      end
+      when params[:product] && params[:product] == item.slug
+        item.brand.category = item.category
+        [product_url(item), item.brand]
 
-    elsif params[:product] && params[:product] == item.slug
-      output << link_to(item.name, product_url(item))
-      item.brand.category = item.category
-      make_breadcrumbs(item.brand, output)
+      when params[:brand] && params[:brand] == item.slug
+        category = @category || item.category
+        [brand_url(item, category), category]
 
-    elsif params[:brand] && params[:brand] == item.slug
-      category = @category || item.category
-      output << link_to(item.name, brand_url(item, category))
-      make_breadcrumbs(category, output)
+      when params[:subcategory] && params[:subcategory] == item.slug
+        [subcategory_url(item), item.parent]
 
-    elsif params[:subcategory] && params[:subcategory] == item.slug
-      output << link_to(item.name, subcategory_url(item))
-      make_breadcrumbs(item.parent, output)
-
-    elsif params[:category] && params[:category] == item.slug
-      output << link_to(item.name, '/' + params[:category])
-      make_breadcrumbs(nil, output)
-
+      when params[:category] && params[:category] == item.slug
+        ["/#{params[:category]}", nil]
+      else
+        return
     end
+    name = defined?(item.name) ? item.name : item.title
+    output << link_to(name, url)
+    make_breadcrumbs(cons, output)
   end
 end
