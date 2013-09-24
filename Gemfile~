@@ -21,7 +21,6 @@ gem 'unicorn'
 gem 'capistrano'
 
 group :production do
-  gem 'sqlite3'
   gem 'pg'
   gem 'newrelic_rpm'
 end
