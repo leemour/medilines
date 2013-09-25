@@ -25,6 +25,43 @@ body.product #main
         img
           margin-right: 8px
 
+  .content
+    .row
+      overflow: hidden
+
+    section
+      float: left
+      width: 50%
+
+      header
+        height: 105px
+        padding: 10px
+
+        &:before
+          background-image: url(dental_unit_modules.jpg)
+          content: ''
+          float: left
+          height: 105px
+          margin-right: 15px
+          width: 140px
+        h3
+          font-size: 18px
+          margin: 0
+
+        p
+          font-size: 14px
+
+      &.controls header:before
+        background-position: 140px 0
+
+      &.assistant header:before
+        background-position: 0 105px
+
+      &.lamp header:before
+        background-position: 140px 105px
+
+
+
 body #main
   .product
     color: #fcf6ef

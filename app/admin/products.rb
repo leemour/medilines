@@ -50,7 +50,7 @@ ActiveAdmin.register Product do
         row :brand
         row :category
         row :image do
-          image_tag(product.image.url) if product.image.url
+          image_tag(product.image_url(:large)) if product.image_url
         end
         row :price
         row :slogan
@@ -63,10 +63,9 @@ ActiveAdmin.register Product do
         row :description2 do
           product.description2.html_safe if product.description2
         end
-        5.times do |i|
-          photo = "photo#{i+1}"
-          row photo.to_sym do
-            image_tag(product.send(photo.to_sym).url) if product.send(photo.to_sym)
+        1.upto 5 do |i|
+          row :"photo#{i}" do
+            image_tag(product.img(i, :medium)) if product.img(i)
           end
         end
         row :created_at
@@ -84,16 +83,15 @@ ActiveAdmin.register Product do
       f.input :brand
       f.input :category
       #f.input :image, :hint => img_with_url(f, :image)
-      f.input :image, :hint => img_with_url(f, :image), :as => 'uploader',
+      f.input :image, :hint => img_with_url(f), :as => 'uploader',
               :removable => true
       f.input :slogan
       f.input :features,     :as =>:ckeditor
       f.input :description1, :as =>:ckeditor
       f.input :description2, :as => :ckeditor,
               :input_html => { :ckeditor => { :height => 200 }}
-      5.times do |i|
-        photo = "photo#{i+1}"
-        f.input photo.to_sym, :hint => img_with_url(f, photo.to_sym),
+      1.upto 5 do |i|
+        f.input :"photo#{i}", :hint => img_with_url(f, i),
                 :as => :uploader, :removable => true
       end
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }

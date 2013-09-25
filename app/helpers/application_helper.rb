@@ -14,11 +14,6 @@ module ApplicationHelper
     "active" if params[:page] == slug || params[:category] == slug
   end
 
-  # Defining root category for link_to url_for
-  def root_cat(cat)
-    cat.split('-')[0]
-  end
-
   def short_text(text, length)
     text = strip_tags text
     if text.length > length
@@ -28,9 +23,9 @@ module ApplicationHelper
     end
   end
 
-  def product_img_link(product, n, size)
-    link_to image_tag(product.img(n, size)),
-      product.img(n, :large), class: 'fancybox', rel: 'group'
+  def product_img_link(product, display_size, n=nil, link_size=:large)
+    link_to image_tag(product.img(n, display_size)),
+      product.img(n, link_size), class: 'fancybox', :'data-fancybox-group' => product.name
   end
 
   # Breadcrumbs for all resources
@@ -66,7 +61,7 @@ module ApplicationHelper
       when params[:category] && params[:category] == item.slug
         ["/#{params[:category]}", nil]
       else
-        return
+        return []
     end
     name = defined?(item.name) ? item.name : item.title
     output << link_to(name, url)

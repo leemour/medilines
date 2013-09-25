@@ -1,9 +1,11 @@
 module ActiveAdmin::ViewsHelper #camelized file name
 
-  def img_with_url(form, name)
-    if form.object.send(name).url
-      "<span class='img-url'>#{form.object.send(name).url}</span>
-      #{form.template.image_tag(form.object.send(name).url)}".html_safe
+  def img_with_url(form, n = nil)
+    if form.object.img(n)
+      image = form.template.image_tag(form.object.img n)
+      html  = content_tag :span, form.object.img(n), class: 'img-url'
+      html += link_to image, form.object.img(n)
+      html
     end
   end
 

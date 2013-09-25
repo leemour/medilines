@@ -11,7 +11,7 @@
 
     .images
       - 1.upto 5 do |n|
-        = product_img_link(product, n, :small)
+        = product_img_link(product, :small, n)
 
     .info
       %p.slogan= link_to product.slogan, product_url(product)

@@ -40,8 +40,28 @@ class Product < ActiveRecord::Base
   mount_uploader :photo4, ProductImageUploader
   mount_uploader :photo5, ProductImageUploader
 
-  def img(n, size = :small)
-    send("photo#{n}_url", size)
+  def dental?
+    category.slug == 'dental-units'
+  end
+
+  def img(n = nil, size = :small)
+    n ? send("photo#{n}_url", size) : image_url(size)
+  end
+
+  def chair_text
+    description1.split(text_separator)[0] || ''
+  end
+
+  def controls_text
+    description1.split(text_separator)[1] || ''
+  end
+
+  def assistant_text
+    description2.split(text_separator)[0] || ''
+  end
+
+  def lamp_text
+    description2.split(text_separator)[1] || ''
   end
 
   def self.including_brand(slug)
@@ -51,5 +71,11 @@ class Product < ActiveRecord::Base
   def self.with_brand_in_category(brand, category)
     Product.joins(:brand).where(:brands => {:slug => brand.slug}).
         joins(:category).where(categories: {slug: category.slug})
+  end
+
+  private
+
+  def text_separator
+    "\n\n\n\n"
   end
 end

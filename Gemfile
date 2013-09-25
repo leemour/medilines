@@ -38,6 +38,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'haml-rails', '>= 0.3.4'
   # gem 'debugger'
+  gem 'byebug'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'railroady'

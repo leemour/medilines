@@ -1,5 +1,10 @@
 module UrlHelper
 
+  # Defining root category for link_to url_for
+  def root_cat(cat)
+    cat.split('-')[0]
+  end
+
   def product_url(product)
     if product.category.slug == params[:category]
       category = 'category'
@@ -23,7 +28,7 @@ module UrlHelper
     if Rails.env.production?
       { :host => "www.medilines.ru" }
     else
-      { :host => "www.medilines.ru" }
+      { :host => "medilines.dev" }
     end
   end
 
