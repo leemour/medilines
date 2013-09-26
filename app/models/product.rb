@@ -48,6 +48,10 @@ class Product < ActiveRecord::Base
     n ? send("photo#{n}_url", size) : image_url(size)
   end
 
+  def photos
+    a = 1.upto(5).map {|n| send("photo#{n}")}
+  end
+
   def chair_text
     description1.split(text_separator)[0] || ''
   end
@@ -76,6 +80,6 @@ class Product < ActiveRecord::Base
   private
 
   def text_separator
-    "\n\n\n\n"
+    "<p>&nbsp;</p>"
   end
 end

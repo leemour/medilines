@@ -50,7 +50,7 @@ ActiveAdmin.register Product do
         row :brand
         row :category
         row :image do
-          image_tag(product.image_url(:large)) if product.image_url
+          img_link(product.image, :large, :full) if product.image
         end
         row :price
         row :slogan
@@ -63,13 +63,14 @@ ActiveAdmin.register Product do
         row :description2 do
           product.description2.html_safe if product.description2
         end
-        1.upto 5 do |i|
+        product.photos.each.with_index(1) do |photo, i|
           row :"photo#{i}" do
-            image_tag(product.img(i, :medium)) if product.img(i)
+            img_link(photo, :medium, :large) if photo
           end
         end
         row :created_at
         row :updated_at
+        render partial: 'fancybox'
       end
     end
 
@@ -82,16 +83,16 @@ ActiveAdmin.register Product do
       f.input :name, :required => true
       f.input :brand
       f.input :category
-      #f.input :image, :hint => img_with_url(f, :image)
-      f.input :image, :hint => img_with_url(f), :as => 'uploader',
+      f.input :image, :hint => img_with_url(f.object.image, :large), :as => 'uploader',
               :removable => true
       f.input :slogan
       f.input :features,     :as =>:ckeditor
       f.input :description1, :as =>:ckeditor
       f.input :description2, :as => :ckeditor,
               :input_html => { :ckeditor => { :height => 200 }}
-      1.upto 5 do |i|
-        f.input :"photo#{i}", :hint => img_with_url(f, i),
+
+      f.object.photos.each.with_index(1) do |photo, i|
+        f.input :"photo#{i}", :hint => img_with_url(photo, :medium),
                 :as => :uploader, :removable => true
       end
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
@@ -99,5 +100,6 @@ ActiveAdmin.register Product do
 
       f.actions
     end
+    # render partial: 'fancybox'
   end
 end

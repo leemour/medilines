@@ -1,0 +1,12 @@
+:javascript
+  var translation = {
+      error:    '<p class="fancybox-error">Невозможно подгрузить контент.<br/>Пожалуйста, попробуйте позже.</p>',
+      closeBtn: '<a title="Закрыть" class="fancybox-item fancybox-close" href="javascript:;"></a>',
+      next:     '<a title="Следующий" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+      prev:     '<a title="Предыдущий" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+  };
+  $(function(){
+    $(".fancybox").fancybox({
+      tpl: translation
+    });
+  });

@@ -13,6 +13,7 @@
 // Reset Away!
 //body.active_admin
 //  @include global-reset
+@import "fancybox"
 
 // Instead reset here
 html, body, div, span, applet, object, iframe,
@@ -119,7 +120,7 @@ body.active_admin
 //
 // Notice that Active Admin CSS rules are nested within a
 // 'body.active_admin' selector to prevent conflicts with
-// other pages in the app. It is best to wrap your changes in a 
+// other pages in the app. It is best to wrap your changes in a
 // namespace so they are properly recognized. You have options
 // if you e.g. want different styles for different namespaces:
 //
@@ -183,12 +184,19 @@ body.active_admin
 
   form span.img-url
     border: 1px solid #ddd
+    display: inline-block
     color: #000
+    clear: right
     float: left
     font-size: 13px
     font-style: normal
     margin-right: 3px
     padding: 2px 3px
+
+  form
+    .img-img
+      display: block
+      clear: left
 
   form li.hidden
     padding: 0

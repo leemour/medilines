@@ -3,7 +3,7 @@
 module NavigationHelper
 
   def nav_item(name, path, inactive = false)
-    NavItem.new(params, name, path, inactive ).render
+    NavItem.new(params, name, path, inactive).render
   end
 
   class NavItem
@@ -11,7 +11,7 @@ module NavigationHelper
     # include Rails.application.routes.url_helpers
     include Haml::Helpers
 
-    def initialize(params, name, path, inactive )
+    def initialize(params, name, path, inactive)
       init_haml_helpers
       @params   = params
       @name     = name

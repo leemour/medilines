@@ -19,6 +19,9 @@ body.product #main
       .info
         margin: 3px 0 0 0
         height: 107px
+        p
+          height: 4em
+          overflow: hidden
       .images
         float: none
         margin-top: 0
@@ -34,7 +37,7 @@ body.product #main
       width: 50%
 
       header
-        height: 105px
+        height: 115px
         padding: 10px
 
         &:before
@@ -43,13 +46,17 @@ body.product #main
           float: left
           height: 105px
           margin-right: 15px
+          margin-bottom: 10px
           width: 140px
         h3
-          font-size: 18px
+          color: #643403
+          font-size: 22px
+          line-height: 1
           margin: 0
 
         p
-          font-size: 14px
+          color: #657578
+          font-size: 13px
 
       &.controls header:before
         background-position: 140px 0
@@ -59,6 +66,25 @@ body.product #main
 
       &.lamp header:before
         background-position: 140px 105px
+
+      &.assistant h3
+        font-size: 20px
+
+      .text
+        padding: 5px 15px 0
+        ul
+          margin-left: 10px
+          list-style-type: none
+          li
+            padding-left: 10px
+            text-indent: -0.5em
+          li:before
+            font-size: 1.5em
+            content: "•"
+            color: #BD6B31
+            left: -10px
+            top: 3px
+            position: relative
 
 
 

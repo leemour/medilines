@@ -23,9 +23,31 @@ module ApplicationHelper
     end
   end
 
-  def product_img_link(product, display_size, n=nil, link_size=:large)
-    link_to image_tag(product.img(n, display_size)),
-      product.img(n, link_size), class: 'fancybox', :'data-fancybox-group' => product.name
+  def fancybox
+    translation = {
+      error:    '<p class="fancybox-error">Невозможно подгрузить контент.<br/>Пожалуйста, попробуйте позже.</p>',
+      closeBtn: '<a title="Закрыть" class="fancybox-item fancybox-close" href="javascript:;"></a>',
+      next:     '<a title="Следующий" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+      prev:     '<a title="Предыдущий" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+    }.to_json
+    %|$(function(){
+      $(".fancybox").fancybox({
+        tpl: #{translation}
+      });
+    });|
+  end
+
+  # def product_img_link(product, show_size, n=nil, link_size=:large)
+  #   img = image_tag product.img(n, show_size)
+  #   url = product.img(n, link_size)
+
+  #   link_to img, url, class: 'fancybox', :'data-fancybox-group' => product.name
+  # end
+
+  def img_link(photo, show_size, link_size)
+    img = image_tag photo.url(show_size)
+    url = photo.url(link_size)
+    link_to img, url, class: 'fancybox', :'data-fancybox-group' => photo.model.name
   end
 
   # Breadcrumbs for all resources
@@ -35,6 +57,7 @@ module ApplicationHelper
     make_breadcrumbs current
   end
 
+  # Я знаю, что это ужасный код. И ты это знаешь. Прости меня, если сможешь.
   def make_breadcrumbs(item = nil, output = [])
     unless item
       output << link_to('Главная', root_path)
