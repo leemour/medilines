@@ -10,8 +10,8 @@
         :alt => product.name), product_url(product)
 
     .images
-      - 1.upto 5 do |n|
-        = product_img_link(product, n, :small)
+      - product.photos.each do |photo|
+        = img_link(photo, :small, :large)
 
     .info
       %p.slogan= link_to product.slogan, product_url(product)

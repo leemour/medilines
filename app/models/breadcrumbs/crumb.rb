@@ -8,12 +8,12 @@ class Crumb
     name = defined?(@item.name) ? @item.name : @item.title
   end
 
-  def home?
-    @item.is_a?(Page) && @item.slug == 'home'
-  end
-
   def page?
     @item.is_a? Page
+  end
+
+  def home?
+    page? && @item.slug == 'home'
   end
 
   def product?

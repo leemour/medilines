@@ -6,21 +6,18 @@
   %p.price= "#{@product.price} руб." if @product.price
 
   .details
-    = image_tag(@product.image_url(:large), :size => "330x245",
-      :alt => @product.name)
+    = img_link(@product.image, :large, :large)
 
     .info
-      %p.slogan= @product.slogan
+      %h2.slogan= @product.slogan
       %p= short_text(@product.features, 300)
 
     .images
-      - 1.upto 5 do |n|
-        = product_img_link(@product, n, :medium)
+      - @product.photos.each do |photo|
+        = img_link(photo, :medium, :large)
 
 %section.content
-  = @product.description1.html_safe if @product.description1
+  = @product.description1.html_safe
 
 :javascript
-  $(function() {
-    $(".fancybox").fancybox();
-  });
+  #{fancybox}

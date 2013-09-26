@@ -10,18 +10,10 @@
 
 %nav#main-menu
   %ul.nav
-    %li{ class: is_active?(dentals_path) }
-      = link_to 'Установки', dentals_path
-    %li{ class: is_active?(visuals_path) }
-      =link_to 'Визуализация', visuals_path
-    %li{ class: is_active?(components_path) }
-      =link_to 'Комплектующие', components_path
-    %li.inactive
-      -#=link_to 'Запчасти', spares_path
-      Запчасти
-    %li{ class: is_active?(promotions_path) }
-      =link_to 'Акции', promotions_path
-    %li
-      =link_to 'Скачать каталог', '/docs/MediLines_Catalog_2013.pdf'
-    %li{ class: is_active?(contacts_path) }
-      =link_to 'Контакты', contacts_path
+    = nav_item 'Установки',       dentals_path
+    = nav_item 'Визуализация',    visuals_path
+    = nav_item 'Комплектующие',   components_path
+    = nav_item 'Запчасти',        'spares_path',      true
+    = nav_item 'Акции',           promotions_path
+    = nav_item 'Скачать каталог', '/docs/MediLines_Catalog_2013.pdf'
+    = nav_item 'Контакты',        contacts_path

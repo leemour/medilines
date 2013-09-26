@@ -1,5 +1,5 @@
 - breadcrumbs = get_breadcrumbs
-- if breadcrumbs
+- if breadcrumbs.any?
   %nav
     %ul.nav.breadcrumbs
       - breadcrumbs.each do |link|
