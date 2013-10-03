@@ -5,13 +5,13 @@ class Page < ActiveRecord::Base
   friendly_id :title, :use => :slugged
 
   attr_accessible :content, :intro, :slug, :title
+  attr_accessor :path
+  attr_reader   :title, :intro, :keywords, :description
 
   validates_presence_of :title, :slug
   validates_uniqueness_of :title, :slug
   validates_length_of :title, :minimum => 3
 
-  attr_accessor :path
-  attr_reader   :title, :intro, :keywords, :description
 
   def self.get_page(slug)
     page = Page.find_by_slug(slug)
@@ -31,7 +31,7 @@ class Page < ActiveRecord::Base
   end
 
   def add_info_from(item)
-    avoid_undefined_method_error item
+    avoid_undefined_method_error_from item
     @title = item.name         || item.title    || ''
     @intro = item.description  || item.features || ''
   end
@@ -40,17 +40,17 @@ class Page < ActiveRecord::Base
     @keywords = %{
       стоматологические установки,Fedesa,Forest,автоклав,медицинское оборудование,
       визиограф,радиовизиограф,стоматологическое кресло,рентген,томограф
-    }
+    }.gsub /\n */, ''
     @description = %{
       Продажа стоматологического оборудования: стоматологические установки
       Forest, Fedesa, рентгены, системы визуализации. Комплектующие и запчасти.
       Техническое обслуживание, ремонт, обучение, консультации.
-    }
+    }.gsub /\n */, ''
   end
 
   private
 
-  def avoid_undefined_method_error(item)
+  def avoid_undefined_method_error_from(item)
     class << item
       def method_missing(meth)
         return nil if %w{name title description features}.include? meth.to_s
