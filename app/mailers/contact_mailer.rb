@@ -1,11 +1,11 @@
-# encoding: UTF-8
+# encoding: utf-8
 class ContactMailer < ActionMailer::Base
-  default to:   ENV['CONTACT_MAIL_TO']
+  default to:   ENV['CONTACT_MAIL']
 
   def contact_message(message)
-    mail(from: "#{message.name} <#{message.email}>",
+    mail(from:    "#{message.name} <#{message.email}>",
          subject: "Medilines обратная связь",
-         encoding: 'UTF-8',
-         body: "#{message.name} пишет:\n" + message.content)
+         encoding: "UTF-8",
+         body:     "#{message.name} пишет:\n" + message.content)
   end
 end

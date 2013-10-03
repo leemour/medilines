@@ -15,10 +15,10 @@ fallback/default.png: fallback/default-5a4d60d56da948e21913b6e2ac41a1e4.png
 fallback/default/index.png: fallback/default-5a4d60d56da948e21913b6e2ac41a1e4.png
 fallback/full_default.png: fallback/full_default-98c9a14a55d76148183ef7d067560b16.png
 fallback/full_default/index.png: fallback/full_default-98c9a14a55d76148183ef7d067560b16.png
+fallback/large_default.png: fallback/large_default-cf83d29dc38e6478902eb0ea2d74c1dc.png
+fallback/large_default/index.png: fallback/large_default-cf83d29dc38e6478902eb0ea2d74c1dc.png
 fallback/medium_default.png: fallback/medium_default-2c5639d507cab0a603c1680f931af89b.png
 fallback/medium_default/index.png: fallback/medium_default-2c5639d507cab0a603c1680f931af89b.png
-fallback/small_default-0.png: fallback/small_default-0-1ea0b00339e5e2297646a9c26aecb50c.png
-fallback/small_default-0/index.png: fallback/small_default-0-1ea0b00339e5e2297646a9c26aecb50c.png
 fallback/small_default.png: fallback/small_default-31dfcb8e3aac91edf3b1b44618285185.png
 fallback/small_default/index.png: fallback/small_default-31dfcb8e3aac91edf3b1b44618285185.png
 fallback/thumb_default.png: fallback/thumb_default-c1c7c49b95fd4537f69cca5be2ed74de.png
@@ -53,8 +53,8 @@ ckeditor/contents.css: ckeditor/contents-e4d8643b0fb43d62fbcab244c85bb13e.css
 ckeditor/contents/index.css: ckeditor/contents-e4d8643b0fb43d62fbcab244c85bb13e.css
 active_admin.css: active_admin-1d5f560ba7c6b63dd03e96b3f582e8ab.css
 active_admin/index.css: active_admin-1d5f560ba7c6b63dd03e96b3f582e8ab.css
-application.css: application-183cdb7fd154ac656fef53fb24f783cf.css
-application/index.css: application-183cdb7fd154ac656fef53fb24f783cf.css
+application.css: application-685ad4d442f71c428b8c5071ec279da1.css
+application/index.css: application-685ad4d442f71c428b8c5071ec279da1.css
 ckeditor/application.js: ckeditor/application-6d796595ef93aaeb19a9474406efa939.js
 ckeditor/application/index.js: ckeditor/application-6d796595ef93aaeb19a9474406efa939.js
 ckeditor/filebrowser/images/gal_add.jpg: ckeditor/filebrowser/images/gal_add-eeb256bdeb48266c9891e7d1c20b7e67.jpg
