@@ -194,9 +194,27 @@ body.active_admin
     padding: 2px 3px
 
   form
+    li
+      clear: both
+
+      &.datetime_select li,
+        clear: none
+
+    .existing
+      display: none
+    .remove_label
+      clear: both
+      margin-top: 5px
+    .replace_label
+      margin-top: 3px
     .img-img
+      clear: both
       display: block
-      clear: left
+      float: left
+      margin-bottom: 10px
+
+    fieldset.actions li
+      clear: none
 
   form li.hidden
     padding: 0

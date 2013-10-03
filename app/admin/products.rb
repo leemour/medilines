@@ -100,6 +100,8 @@ ActiveAdmin.register Product do
 
       f.actions
     end
-    # render partial: 'fancybox'
+    f.inputs do
+      f.template.render partial: 'fancybox'
+    end
   end
 end
