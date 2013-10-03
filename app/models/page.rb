@@ -6,7 +6,7 @@ class Page < ActiveRecord::Base
 
   attr_accessible :content, :intro, :slug, :title
   attr_accessor :path
-  attr_reader   :title, :intro, :keywords, :description
+  attr_reader   :keywords, :description
 
   validates_presence_of :title, :slug
   validates_uniqueness_of :title, :slug
@@ -20,20 +20,10 @@ class Page < ActiveRecord::Base
   end
 
   def self.make_from(item = nil)
-    page = Page.new
-    page.add_info_from item if item
+    data = Page.get_info_from item
+    page = Page.new(data)
     page.add_seo
     page
-  end
-
-  def should_generate_new_friendly_id?
-    new_record?
-  end
-
-  def add_info_from(item)
-    avoid_undefined_method_error_from item
-    @title = item.title  || item.name      || ''
-    @intro = item.intro  || item.features  || item.description || ''
   end
 
   def add_seo
@@ -48,13 +38,26 @@ class Page < ActiveRecord::Base
     }.gsub /\n */, ''
   end
 
-  private
-  attr_writer :title, :intro, :keywords, :description
+  def should_generate_new_friendly_id?
+    new_record?
+  end
 
-  def avoid_undefined_method_error_from(item)
+  private
+  # attr_writer :title, :intro, :keywords, :description
+
+  def self.get_info_from(item)
+    Page.avoid_undefined_method_error_from item
+    title = item.title  || item.name      || ''
+    intro = item.intro  || item.features  || item.description || ''
+    {title: title, intro: intro}
+  end
+
+  def self.avoid_undefined_method_error_from(item)
     class << item
       def method_missing(meth)
-        return nil if %w{title name intro features description}.include? meth.to_s
+        if %w{title name intro features description}.include? meth.to_s
+          return nil unless has_attribute? meth
+        end
         super
       end
     end
