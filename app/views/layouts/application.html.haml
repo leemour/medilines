@@ -1,7 +1,7 @@
 !!!
 %html{lang: 'ru'}
   %head
-    %meta{ charset: 'utf8-' }/
+    %meta{ charset: 'utf-8' }/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title= page_title(@page)
     %meta{ name: 'description', content: @page.description }/
@@ -20,7 +20,7 @@
       .container
         = render 'layouts/header'
 
-    - if @page.intro && @page.intro != ''
+    - unless @page.intro.blank?
       %section.intro
         .container
           = @page.intro.html_safe

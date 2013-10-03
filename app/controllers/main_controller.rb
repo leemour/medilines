@@ -36,7 +36,7 @@ class MainController < ApplicationController
 
   def product
     @product = Product.including_brand(params[:product])
-    @page    = Page.get_info(@product)
+    @page    = Page.make_from @product
     if @product.dental?
       render 'products/dental/show'
     else
@@ -54,13 +54,13 @@ class MainController < ApplicationController
 
   def category_init
     get_category
-    @page     = Page.get_info(@category)
+    @page     = Page.make_from @category
   end
 
   # Initialize vars before brand actions
   def category_brand_init
     get_category
     @brand    = Brand.find_by_slug!(params[:brand])
-    @page     = Page.get_info(@brand)
+    @page     = Page.make_from @brand
   end
 end

@@ -11,53 +11,51 @@ class Page < ActiveRecord::Base
   validates_length_of :title, :minimum => 3
 
   attr_accessor :path
+  attr_reader   :title, :intro, :keywords, :description
 
   def self.get_page(slug)
-    @page = Page.find_by_slug(slug)
-    @page = Page.seo(@page)
-    @page
+    page = Page.find_by_slug(slug)
+    page.add_seo
+    page
   end
 
-  def self.get_info(item = nil)
-    if item
-      if item.has_attribute? :name
-        title = item.name
-      elsif item.has_attribute? :title
-        title = item.title
-      end
-
-      if item.has_attribute? :description
-        intro = item.description
-      elsif item.has_attribute? :features
-        intro = item.features
-      end
-    end
-    title ||= ''
-    intro ||= ''
-    struct = Struct.new :title, :intro, :content
-    @page = struct.new
-    @page.title = title
-    @page.intro = intro
-    @page = Page.seo(@page)
-    @page
+  def self.make_from(item = nil)
+    page = Page.new
+    page.add_info_from item if item
+    page.add_seo
+    page
   end
 
   def should_generate_new_friendly_id?
     new_record?
   end
 
-  private
-  def self.seo(item)
-    class << item
-      attr_accessor :description, :keywords
-    end
-    item.keywords = 'стоматологические установки,Fedesa,Forest,автоклав,медицинское
-      оборудование,визиограф,радиовизиограф,стоматологическое кресло,рентген,томограф'
-    item.description = 'Мы поставляем стоматологическое оборудование:
-      стоматологические установки Forest, Fedesa, рентгены, системы визуализации.
-      Продаем комплектующие и запчасти. Проводим техническое обслуживание, ремонт,
-      обучение, консультации.'
-    item
+  def add_info_from(item)
+    avoid_undefined_method_error item
+    @title = item.name         || item.title    || ''
+    @intro = item.description  || item.features || ''
   end
 
+  def add_seo
+    @keywords = %{
+      стоматологические установки,Fedesa,Forest,автоклав,медицинское оборудование,
+      визиограф,радиовизиограф,стоматологическое кресло,рентген,томограф
+    }
+    @description = %{
+      Продажа стоматологического оборудования: стоматологические установки
+      Forest, Fedesa, рентгены, системы визуализации. Комплектующие и запчасти.
+      Техническое обслуживание, ремонт, обучение, консультации.
+    }
+  end
+
+  private
+
+  def avoid_undefined_method_error(item)
+    class << item
+      def method_missing(meth)
+        return nil if %w{name title description features}.include? meth.to_s
+        super
+      end
+    end
+  end
 end

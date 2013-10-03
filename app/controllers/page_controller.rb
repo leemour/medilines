@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 class PageController < ApplicationController
 
   before_filter :setup_negative_captcha, :only => [:contacts, :send_mail]
@@ -10,7 +10,7 @@ class PageController < ApplicationController
 
   def contacts
     @message = ContactMessage.new
-    page()
+    page
   end
 
   def send_mail

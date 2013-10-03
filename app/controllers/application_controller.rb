@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   #
   #private
   #def render_error(status, exception)
-  #  @page = Page.get_info(nil)
+  #  @page = Page.make_from nil
   #  @page.title = "Ошибка #{status}"
   #  @not_found_path = request.fullpath
   #  #@exception = exception
