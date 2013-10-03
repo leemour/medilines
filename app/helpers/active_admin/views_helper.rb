@@ -5,7 +5,8 @@ module ActiveAdmin::ViewsHelper #camelized file name
   def img_with_url(photo, show_size=:small)
     image = image_tag(photo.url(show_size))
     html  = content_tag :span, photo.url, class: 'img-url'
-    html += link_to image, photo.url, class: 'img-img'
+    html += link_to image, photo.url, class: 'img-img fancybox',
+      :'data-fancybox-group' => photo.model.name
   end
 
   def parent_category(cat)

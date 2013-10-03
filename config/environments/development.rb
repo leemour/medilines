@@ -1,3 +1,4 @@
+# Set ENV variables
 require_relative '../env'
 
 Medilines::Application.configure do
@@ -16,11 +17,11 @@ Medilines::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.default_url_options = { :host => 'www.medilines.ru' }
+  onfig.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method       = :smtp
+  config.action_mailer.perform_deliveries    = true
+  config.action_mailer.default                 :charset => "utf-8"
+  config.action_mailer.default_url_options   = { :host => 'medilines.dev' }
   config.action_mailer.smtp_settings = {
     :address        => "smtp.mandrillapp.com",
     :port           => 587, # ports 587 and 2525 are also supported with STARTTLS
@@ -43,6 +44,9 @@ Medilines::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Never serve assets from public folder
+  config.serve_static_assets = false
 
   # LiveReload
   config.middleware.insert_before(

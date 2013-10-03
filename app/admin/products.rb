@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 ActiveAdmin.register Product do
   menu :priority => 2
 
@@ -100,6 +100,8 @@ ActiveAdmin.register Product do
 
       f.actions
     end
-    # render partial: 'fancybox'
+    f.inputs do
+      f.template.render partial: 'fancybox'
+    end
   end
 end
