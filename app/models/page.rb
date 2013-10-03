@@ -32,8 +32,8 @@ class Page < ActiveRecord::Base
 
   def add_info_from(item)
     avoid_undefined_method_error_from item
-    @title = item.name         || item.title    || ''
-    @intro = item.description  || item.features || ''
+    @title = item.title  || item.name      || ''
+    @intro = item.intro  || item.features  || item.description || ''
   end
 
   def add_seo
@@ -49,11 +49,12 @@ class Page < ActiveRecord::Base
   end
 
   private
+  attr_writer :title, :intro, :keywords, :description
 
   def avoid_undefined_method_error_from(item)
     class << item
       def method_missing(meth)
-        return nil if %w{name title description features}.include? meth.to_s
+        return nil if %w{title name intro features description}.include? meth.to_s
         super
       end
     end

@@ -25,11 +25,12 @@ module UrlHelper
 
   # Host for url_for in SitemapGenerator
   def default_url_options
-    if Rails.env.production?
-      { :host => "www.medilines.ru" }
-    else
-      { :host => "medilines.dev" }
-    end
+    # if Rails.env.production?
+    #   { :host => "www.medilines.ru" }
+    # else
+    #   { :host => "medilines.dev" }
+    # end
+    { :host => request.host }
   end
 
   # URL With parameters - Used in Sitemap Generator

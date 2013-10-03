@@ -17,7 +17,7 @@ Medilines::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  onfig.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method       = :smtp
   config.action_mailer.perform_deliveries    = true
   config.action_mailer.default                 :charset => "utf-8"
@@ -44,9 +44,6 @@ Medilines::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
-  # Never serve assets from public folder
-  config.serve_static_assets = false
 
   # LiveReload
   config.middleware.insert_before(

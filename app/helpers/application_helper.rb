@@ -1,7 +1,7 @@
-# encoding: UTF-8
+# encoding: utf-8
 
 module ApplicationHelper
-  # require 'breadcrumbs'
+
   # Generating page title if title exists
   def page_title(page)
     appname = 'Медилайн Сервис'
@@ -36,13 +36,6 @@ module ApplicationHelper
       });
     });|
   end
-
-  # def product_img_link(product, show_size, n=nil, link_size=:large)
-  #   img = image_tag product.img(n, show_size)
-  #   url = product.img(n, link_size)
-
-  #   link_to img, url, class: 'fancybox', :'data-fancybox-group' => product.name
-  # end
 
   def img_link(photo, show_size, link_size)
     img = image_tag photo.url(show_size)
@@ -86,7 +79,7 @@ module ApplicationHelper
       else
         return []
     end
-    name = defined?(item.name) ? item.name : item.title
+    name = defined?(item.title) ? item.title : item.name
     output << link_to(name, url)
     make_breadcrumbs(cons, output)
   end
