@@ -41,6 +41,8 @@ r_spares.jpg: r_spares-3f217f1c0e5f02019f522e2bb0ac07c5.jpg
 r_spares/index.jpg: r_spares-3f217f1c0e5f02019f522e2bb0ac07c5.jpg
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
+riabit_logo.png: riabit_logo-974dffd68e0e2b03b3078b0e3adc9d10.png
+riabit_logo/index.png: riabit_logo-974dffd68e0e2b03b3078b0e3adc9d10.png
 us.png: us-238691e8450c6bd68131f09bcf546d4a.png
 us/index.png: us-238691e8450c6bd68131f09bcf546d4a.png
 active_admin.js: active_admin-2e607c884dd824ec9b6a89999a9a40c4.js
@@ -53,8 +55,8 @@ ckeditor/contents.css: ckeditor/contents-e4d8643b0fb43d62fbcab244c85bb13e.css
 ckeditor/contents/index.css: ckeditor/contents-e4d8643b0fb43d62fbcab244c85bb13e.css
 active_admin.css: active_admin-1d5f560ba7c6b63dd03e96b3f582e8ab.css
 active_admin/index.css: active_admin-1d5f560ba7c6b63dd03e96b3f582e8ab.css
-application.css: application-685ad4d442f71c428b8c5071ec279da1.css
-application/index.css: application-685ad4d442f71c428b8c5071ec279da1.css
+application.css: application-38403b3315f2c7461d00db53fd3e04f2.css
+application/index.css: application-38403b3315f2c7461d00db53fd3e04f2.css
 ckeditor/application.js: ckeditor/application-6d796595ef93aaeb19a9474406efa939.js
 ckeditor/application/index.js: ckeditor/application-6d796595ef93aaeb19a9474406efa939.js
 ckeditor/filebrowser/images/gal_add.jpg: ckeditor/filebrowser/images/gal_add-eeb256bdeb48266c9891e7d1c20b7e67.jpg
