@@ -1,4 +1,4 @@
-- @subcategories.each do |cat|
+- @category.children.each do |cat|
 
   %div{class: "category #{cat.slug}"}
     = link_to image_tag(cat.logo_url(:small), :alt => "Категория #{cat.name}"),

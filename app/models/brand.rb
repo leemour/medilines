@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 
 class Brand < ActiveRecord::Base
   extend FriendlyId
@@ -6,6 +6,7 @@ class Brand < ActiveRecord::Base
 
   has_many :products
   has_many :categories, :through => :products
+
   attr_accessible :country, :description, :details, :flag, :remove_flag,
                   :flag_cache, :image, :remove_image, :image_cache, :logo,
                   :name, :slogan, :slug
@@ -20,20 +21,24 @@ class Brand < ActiveRecord::Base
   mount_uploader :flag,  ImageUploader
   mount_uploader :logo,  LogoUploader
 
+  def title
+    name
+  end
+
+  def intro
+    description
+  end
+
   def remove_image=(val)
     image_will_change! if val
     super
   end
 
-  def should_generate_new_friendly_id?
-    new_record?
+  def self.all_in_category(category)
+    Brand.joins(:products).where('products.category_id = ?', category.id).uniq
   end
 
-  def self.find_all_in_category(category)
-    #products = Product.includes(:brand).find_all_by_category_id(category.id)
-    #products.map { |product| product.brand }.uniq
-    brands = Brand.joins(:products).
-              where('products.category_id = ?', category.id).uniq
-    brands
+  def should_generate_new_friendly_id?
+    new_record?
   end
 end

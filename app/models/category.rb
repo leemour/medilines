@@ -1,5 +1,3 @@
-# encoding: UTF-8
-
 class Category < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
@@ -7,6 +5,9 @@ class Category < ActiveRecord::Base
   belongs_to :parent, :class_name => 'Category', :foreign_key => 'parent_id'
   has_many :products
   has_many :brands, :through => :products
+
+  # alias_attribute :title, :name
+  # alias_attribute :intro, :description
 
   attr_accessible :description, :name, :slug, :parent, :logo, :parent_id
 
@@ -26,21 +27,19 @@ class Category < ActiveRecord::Base
   scope :components, join_parent('components')
   scope :spares,     join_parent('spare-parts')
 
-  def self.find_children(cat)
-    Category.includes(:brands).find_all_by_parent_id(cat.id)
+  def title
+    name
   end
 
-  def self.get_info(category)
-    struct = Struct.new :header, :intro, :header2, :outro
-    @page = struct.new
-    @page.header  = category.name
-    @page.intro   = category.description
-    @page.header2 = 'Мы предлагаем наилучшие товары'
-    @page.outro   = 'Вы можете заказать любые приборы визуализации'
-    @page
+  def intro
+    description
   end
 
-  def is_root?
+  def children
+    Category.includes(:brands).find_all_by_parent_id id
+  end
+
+  def root?
     parent_id.nil?
   end
 

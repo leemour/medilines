@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130621172440) do
+ActiveRecord::Schema.define(:version => 20131009135633) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -79,6 +79,9 @@ ActiveRecord::Schema.define(:version => 20130621172440) do
     t.string   "logo"
   end
 
+  add_index "categories", ["parent_id"], :name => "index_categories_on_parent_id"
+  add_index "categories", ["slug"], :name => "index_categories_on_slug"
+
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
     t.string   "data_content_type"
@@ -124,6 +127,7 @@ ActiveRecord::Schema.define(:version => 20130621172440) do
     t.string   "photo3"
     t.string   "photo4"
     t.string   "photo5"
+    t.integer  "position"
   end
 
   add_index "products", ["brand_id"], :name => "index_products_on_brand_id"

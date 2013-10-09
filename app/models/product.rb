@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 
 class Product < ActiveRecord::Base
   extend FriendlyId
@@ -6,9 +6,10 @@ class Product < ActiveRecord::Base
 
   belongs_to :brand
   belongs_to :category
+
   attr_accessible :description1, :description2, :features, :name, :price,
-                  :slogan, :slug, :brand_id, :category_id,
-                  :image, :remove_image, :image_cache,
+                  :slogan, :slug, :brand_id, :category_id, :position,
+                  :image,  :remove_image,   :image_cache,
                   :photo1, :remove_photo1, :photo1_cache,
                   :photo2, :remove_photo2, :photo2_cache,
                   :photo3, :remove_photo3, :photo3_cache,
@@ -22,6 +23,9 @@ class Product < ActiveRecord::Base
   validates_uniqueness_of :name, :slug
   validates_length_of :name, :minimum => 3
 
+  default_scope order("position asc")
+
+  scope :with_brand, proc { includes(:brand) }
   scope :recent, proc { |n| order("created_at desc").limit(n) }
   scope :join_categories_included, lambda { |slug|
         joins(:category).
@@ -39,6 +43,14 @@ class Product < ActiveRecord::Base
   mount_uploader :photo3, ProductImageUploader
   mount_uploader :photo4, ProductImageUploader
   mount_uploader :photo5, ProductImageUploader
+
+  def title
+    name
+  end
+
+  def intro
+    features
+  end
 
   def dental?
     category.slug == 'dental-units'
@@ -72,9 +84,12 @@ class Product < ActiveRecord::Base
     Product.includes(:brand).find_by_slug!(slug)
   end
 
-  def self.with_brand_in_category(brand, category)
-    Product.joins(:brand).where(:brands => {:slug => brand.slug}).
-        joins(:category).where(categories: {slug: category.slug})
+  def self.with_brand(brand)
+    Product.joins(:brand).where(:brands => {:slug => brand.slug})
+  end
+
+  def self.in_category(category)
+    Product.joins(:category).where(categories: {slug: category.slug})
   end
 
   private

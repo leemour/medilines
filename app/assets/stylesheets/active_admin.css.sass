@@ -62,9 +62,10 @@ body.active_admin
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
-// Main styles
-@import "admin/admin"
 // Fancybox from gem
 @import "fancybox"
 // CKeditor
 @import "admin/ckeditor"
+// Main styles
+//= depend_on admin/_admin
+@import "admin/admin"

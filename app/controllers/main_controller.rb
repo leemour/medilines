@@ -1,4 +1,3 @@
-# encoding: UTF-8
 class MainController < ApplicationController
   include UrlHelper
 
@@ -6,9 +5,8 @@ class MainController < ApplicationController
   before_filter :category_brand_init, :only => [:category_brand]
 
   def category
-    @subcategories = Category.find_children(@category)
-    if @subcategories.empty?
-      @brands = Brand.find_all_in_category(@category)
+    if @category.children.empty?
+      @brands = Brand.all_in_category(@category)
       render "/categories/brands"
     else
       render "/categories/index"
@@ -17,7 +15,7 @@ class MainController < ApplicationController
 
   def subcategory
     if @category.products.count > 1
-      @brands = Brand.find_all_in_category(@category)
+      @brands = Brand.all_in_category(@category)
       render "/categories/brands"
     else
       @products = @category.products.includes(:brand)
@@ -26,7 +24,7 @@ class MainController < ApplicationController
   end
 
   def category_brand
-    @products = Product.with_brand_in_category(@brand, @category)
+    @products = Product.with_brand(@brand).in_category(@category)
     if @products.count > 1
       render '/products/index'
     else
@@ -48,7 +46,7 @@ class MainController < ApplicationController
   private
   # Get category depending on url
   def get_category
-    category = params[:subcategory] || params[:category]
+    category  = params[:subcategory] || params[:category]
     @category = Category.find_by_slug!(category)
   end
 

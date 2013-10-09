@@ -8,6 +8,8 @@ ActiveAdmin.register Product do
   scope "Запчасти",           :spares
   scope "Все",                :all
 
+  config.sort_order = 'position_asc'
+
   index do
     selectable_column
     # column :slug
@@ -21,13 +23,21 @@ ActiveAdmin.register Product do
        link_to product.category.name, admin_category_path(product.category)
     end
     column :image do |product|
-       image_tag(product.image_url(:thumb).to_s) if product.image_url
+       image_tag(product.image_url(:thumb))
     end
     column :price do |product|
       number_to_currency product.price, :unit => "р", :precision => 0
     end
 
     default_actions
+  end
+
+  # Save Products sorting order after each dragging
+  collection_action :sort, :method => :post do
+    params[:product].each_with_index do |id, index|
+      Product.update_all(['position=?', index+1], ['id=?', id])
+    end
+    render :nothing => true
   end
 
   filter :category, :as => :select, :collection => proc { Category.all }
@@ -46,6 +56,7 @@ ActiveAdmin.register Product do
         row :name
         row :brand
         row :category
+        row :position
         row :image do
           img_link(product.image, :large, :full) if product.image
         end
@@ -80,6 +91,7 @@ ActiveAdmin.register Product do
       f.input :name, :required => true
       f.input :brand
       f.input :category
+      f.input :position
       f.input :image, :hint => img_with_url(f.object.image, :large), :as => 'uploader',
               :removable => true
       f.input :price

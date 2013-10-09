@@ -48,6 +48,8 @@ ru:
         logo: Лого
         image: Фото
         flag: Флаг
+        remove_flag: Удалить Флаг
+        replace_flag: Заменить Флаг
         created_at: Создан
         updated_at: Изменен
       category:
@@ -66,20 +68,32 @@ ru:
         brand_id: Бренд
         category: Категория
         category_id: Категория
-        type: Тип
+        position: Место
         price: Цена
         options: Опции
         features: Особенности
-        description1: Описание1
-        description2: Описание2
+        description1: Описание 1
+        description2: Описание 2
         design: Дизайн
         slogan: Слоган
         image: Фото
-        photo1: Фото1
-        photo2: Фото2
-        photo3: Фото3
-        photo4: Фото4
-        photo5: Фото5
+        remove_image: Удалить Фото
+        replace_image: Заменить Фото
+        photo1: Фото 1
+        remove_photo1: Удалить Фото 1
+        replace_photo1: Заменить Фото 1
+        photo2: Фото 2
+        remove_photo2: Удалить Фото 2
+        replace_photo2: Заменить Фото 2
+        photo3: Фото 3
+        remove_photo3: Удалить Фото 3
+        replace_photo3: Заменить Фото 3
+        photo4: Фото 4
+        remove_photo4: Удалить Фото 4
+        replace_photo4: Заменить Фото 4
+        photo5: Фото 5
+        remove_photo5: Удалить Фото 5
+        replace_photo5: Заменить Фото 5
         created_at: Создан
         updated_at: Изменен
   activemodel:

@@ -20,7 +20,7 @@ class Page < ActiveRecord::Base
   end
 
   def self.make_from(item = nil)
-    data = Page.get_info_from item
+    data = Page.data_from item
     page = Page.new(data)
     page.add_seo
     page
@@ -43,23 +43,10 @@ class Page < ActiveRecord::Base
   end
 
   private
-  # attr_writer :title, :intro, :keywords, :description
 
-  def self.get_info_from(item)
-    Page.avoid_undefined_method_error_from item
-    title = item.title  || item.name      || ''
-    intro = item.intro  || item.features  || item.description || ''
+  def self.data_from(item)
+    title = item.title  || ''
+    intro = item.intro  || ''
     {title: title, intro: intro}
-  end
-
-  def self.avoid_undefined_method_error_from(item)
-    class << item
-      def method_missing(meth)
-        if %w{title name intro features description}.include? meth.to_s
-          return nil unless has_attribute? meth
-        end
-        super
-      end
-    end
   end
 end

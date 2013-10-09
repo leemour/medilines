@@ -35,7 +35,7 @@ module UrlHelper
 
   # URL With parameters - Used in Sitemap Generator
   def sitemap_product_url(product)
-    if product.category.is_root?
+    if product.category.root?
       category = product.category
       subcategory = 'category'
     else
@@ -47,7 +47,7 @@ module UrlHelper
   end
 
   def sitemap_brand_url(brand, category)
-    if category.is_root?
+    if category.root?
       subcategory = 'category'
     else
       subcategory = category
@@ -58,7 +58,7 @@ module UrlHelper
   end
 
   def sitemap_category_url(category)
-    if category.is_root?
+    if category.root?
       slug = root_cat(category.slug)
       slug.chomp!('s')
       url = url_for(["#{slug}s"])

@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 
 ActiveAdmin.register Brand do
   menu :priority => 3
@@ -65,7 +65,8 @@ ActiveAdmin.register Brand do
       f.input :slug, :hint => "Генерируется автоматически", :required => false
       f.input :name, :required => true
       f.input :country, as: :string, :required => true
-      f.input :flag, :hint => flag_with_url(f.object.flag)
+      f.input :flag, :hint => flag_with_url(f.object.flag), :as => 'uploader',
+              :removable => true
       f.input :flag_cache, :as => :hidden
       f.input :image, :hint => flag_with_url(f.object.flag)
       f.input :image_cache, :as => :hidden
