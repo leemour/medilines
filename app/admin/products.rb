@@ -82,6 +82,7 @@ ActiveAdmin.register Product do
       f.input :category
       f.input :image, :hint => img_with_url(f.object.image, :large), :as => 'uploader',
               :removable => true
+      f.input :price
       f.input :slogan
       f.input :features,     :as =>:ckeditor
       f.input :description1, :as =>:ckeditor
@@ -90,7 +91,7 @@ ActiveAdmin.register Product do
 
       f.object.photos.each.with_index(1) do |photo, i|
         f.input :"photo#{i}", :hint => img_with_url(photo, :medium),
-                :as => :uploader, :removable => true
+                :as => 'uploader', :removable => true
       end
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
       f.input :updated_at, :wrapper_html => { :class => 'inline-list' }
