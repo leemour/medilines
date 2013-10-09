@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 
 class ContactMessage
   include ActiveModel::Validations
@@ -9,7 +9,7 @@ class ContactMessage
   attr_accessor :name, :email, :content
 
   validates_presence_of :name, :email, :content
-  validates :email, length: {:minimum => 3, :maximum => 254},
+  validates :email, length: {:maximum => 254},
             :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
   validates_length_of :content, :maximum => 500
 

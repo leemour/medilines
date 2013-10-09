@@ -2,29 +2,26 @@
 ActiveAdmin.register Product do
   menu :priority => 2
 
-  scope "Стоматолог. кресла", :dentals
-  scope "Визуализация",       :visuals
+  scope "Установки",          :dentals
+  scope "Визуал.",            :visuals
   scope "Компоненты",         :components
   scope "Запчасти",           :spares
   scope "Все",                :all
 
   index do
     selectable_column
-    column :slug
+    # column :slug
     column :name, :sortable => :name do |product|
       link_to product.name, admin_product_path(product)
     end
     column :brand_id, :sortable => :brand_id do |product|
-      product.brand.name
+      link_to product.brand.name, admin_brand_path(product.brand)
     end
     column :category_id, :sortable => :category_id do |product|
-       product.category.name
+       link_to product.category.name, admin_category_path(product.category)
     end
     column :image do |product|
        image_tag(product.image_url(:thumb).to_s) if product.image_url
-    end
-    column :description1 do |product|
-      product.description1[0..60].html_safe
     end
     column :price do |product|
       number_to_currency product.price, :unit => "р", :precision => 0

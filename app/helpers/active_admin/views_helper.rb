@@ -9,6 +9,13 @@ module ActiveAdmin::ViewsHelper #camelized file name
       :'data-fancybox-group' => photo.model.name
   end
 
+  def flag_with_url(photo)
+    image = image_tag(photo.url)
+    html  = content_tag :span, photo.url, class: 'img-url'
+    html += link_to image, photo.url, class: 'img-img fancybox',
+      :'data-fancybox-group' => photo.model.name
+  end
+
   def parent_category(cat)
     if cat.parent
       parent = cat.parent_id.to_s + ' (' +

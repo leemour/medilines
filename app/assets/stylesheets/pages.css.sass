@@ -1,3 +1,105 @@
-// Place all the styles related to the Page controller here.
-// They will automatically be included in application.css.
-// You can use Sass here: http://sass-lang.com/
+// =HOME
+// ========================
+#service-menu
+  overflow: hidden
+  margin: 10px 0 20px
+  li
+    width: 50%
+    img
+      float: left
+      margin-right: 10px
+    h2
+      color: #ABA97F
+      font-size: 16px
+      a
+        color: #9E994A
+        &:visited
+          color: #9E994A
+        &:hover
+          color: #A88D6A
+        &:active
+          color: #878456
+    dl
+      float: left
+      dt
+        font-weight: bold
+
+// =CONTACTS
+// ========================
+.contact-details
+  float: left
+  min-width: 250px
+  overflow: hidden
+  width: 30%
+  .full-contacts
+    p
+      margin: 3px 0
+  .contact-form
+    margin-top: 20px
+    h3
+      color: #ac8957
+    div
+      &.field, &.actions
+        margin-bottom: 10px
+    label
+      display: block
+      font-weight: bold
+    input[type=text], textarea
+      border: 1px solid #ddd4ac
+      padding: 6px 4px
+      border-radius: 3px
+      -moz-border-radius: 3px
+      -webkit-border-radius: 3px
+      margin: 1px 0
+      position: relative
+      width: 90%
+      &:focus
+        border: 2px solid #b1aa8a
+        margin: 0
+    input[type=submit]
+      padding: 4px 18px
+
+    .field_with_errors
+      background: none
+      display: block
+      padding: 2px
+      label
+        color: #cb4a4f
+      input[type=text], textarea
+        border: 2px solid #da9ea1
+        border-radius: 3px
+        -moz-border-radius: 3px
+        -webkit-border-radius: 3px
+        margin: 0
+        &:focus
+          border: 2px solid #b1aa8a
+          margin: 0
+
+    #error_explanation
+      background: none
+      border: 2px solid #bbbbbb
+      margin: 10px 0
+      width: 90%
+      h2
+        background-color: #bd5c65
+        color: #FFF
+        font-size: 13.5px
+        margin-bottom: 5px
+        padding: 5px 15px
+      li
+        background-color: #fff5f5
+        //border: 1px dashed #da9ea1
+        color: #333333
+        list-style: outside none
+        background: url(exclamation.png) no-repeat 4px 2px transparent
+        margin-bottom: 5px
+        padding: 2px 15px 4px 25px
+
+#ya-map
+  background-color: #EEEEEE
+  border: 1px solid #CCCCCC
+  float: right
+  height: 500px
+  margin: 10px 20px 20px 0
+  min-width: 300px
+  width: 60%

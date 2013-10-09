@@ -1,4 +1,3 @@
-# encoding: utf-8
 class PageController < ApplicationController
 
   before_filter :setup_negative_captcha, :only => [:contacts, :send_mail]
@@ -28,10 +27,10 @@ class PageController < ApplicationController
   # Initialize contact form  captcha
   def setup_negative_captcha
     @captcha = NegativeCaptcha.new(
-        :secret => ENV['NEGATIVE_CAPTCHA_SECRET'], #A secret from environment.rb
-        :spinner => request.remote_ip,
-        :fields => [:name, :email, :content], #Whatever fields are in your form
-        :params => params
+      :secret => ENV['NEGATIVE_CAPTCHA_SECRET'], #A secret from environment.rb
+      :spinner => request.remote_ip,
+      :fields => [:name, :email, :content], #Whatever fields are in your form
+      :params => params
     )
   end
 end

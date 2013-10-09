@@ -1,0 +1,219 @@
+body.active_admin
+  @include sans-family
+  line-height: 150%
+  font-size: 72%
+  background: #fff
+  margin: 0
+  padding: 0
+  color: $text-color
+
+
+  // =GENERAL
+  // ========================
+  #wrapper
+    max-width: 980px
+    margin: 0 auto
+  #active_admin_content
+    padding: 0 10px 20px
+
+    #main_content_wrapper #main_content
+      margin-right: 250px
+    #sidebar
+      margin-left: -230px
+      width: 230px
+
+
+  // =HEADER
+  // ========================
+  #header
+    font-size: 14px
+    padding: 9px 20px
+
+    h1
+      font-size: 16px
+      padding-top: 1px
+
+    #dashboard
+      font-weight: bold
+
+    #utility_nav
+      .current_user
+        font-size: 90%
+
+  #title_bar
+    padding: 3px 15px
+
+    h2
+      font-size: 1.6em
+
+    .action_items a
+      padding: 8px 15px
+
+    #titlebar_left,
+    #titlebar_right
+      height: 40px
+      padding-top: 1px
+
+    .breadcrumb
+      margin-bottom: 5px
+      a,
+      a:link,
+      a:visited,
+      a:active
+        color: #676f76
+
+
+  // =SIDEBAR
+  // ========================
+  .sidebar_section
+    select
+      width: 200px
+    input[type=text]
+      width: 180px
+
+    form.filter_form .filter_form_field.filter_date_range input[type=text]
+      background-position: 104% 7px
+      font-size: 12px
+      padding: 8px 8px 7px 4px
+      width: 77px
+
+    form input[type=submit],
+    form.filter_form a.clear_filters_btn
+      font-size: 12px
+      line-height: 1.3
+      padding: 5px 10px 4px
+
+
+  // =FOOTER
+  // ========================
+  #footer p
+    display: none
+
+
+  // =DASHBOARD
+  // ========================
+  &.admin_dashboard
+    .blank_slate_container
+      clear: none
+      margin-bottom: 10px
+      text-align: left
+      .blank_slate
+        display: block
+    .with_sidebar .blank_slate_container .blank_slate
+      margin-top: 0
+
+    .panel.recent-products th
+      max-width: 200px
+      text-align: left
+
+
+  // =TABLE
+  // ========================
+  &.show .attributes_table th
+    text-align: right
+    padding-right: 30px
+    width: 100px
+
+  table.index_table
+    th, th.selectable
+      padding: 5px 6px 3px
+      &.logo,
+      &.photo,
+      &.image,
+      &.flag,
+      &.price
+        text-align: center
+    td
+      padding: 10px 6px 3px
+      &.price
+        padding: 10px 1px 8px 6px
+      h1, h2, h3
+        font-size: 13px
+        margin: 0
+    .slug
+      max-width: 90px
+      word-wrap: break-word
+    .sign_in_count
+      max-width: 80px
+      a
+        white-space: normal !important
+    .flag
+      max-width: 30px
+
+  // table.index_table td
+  //   padding: 8px 8px 6px
+
+
+  // =FORM
+  // ========================
+
+  form
+    li
+      clear: both
+      &.hidden
+        padding: 0
+      &.datetime_select li,
+        clear: none
+
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=number],
+    input[type=url],
+    input[type=tel],
+    textarea
+      font-size: 13px
+
+    .existing
+      display: none
+    .remove_label
+      clear: both
+      margin-top: 5px
+    .replace_label
+      margin-top: 3px
+    .img-img
+      clear: both
+      display: block
+      float: left
+      margin-bottom: 10px
+
+    fieldset.actions li
+      clear: none
+
+    span.img-url
+      border: 1px solid #ddd
+      display: inline-block
+      color: #000
+      clear: right
+      float: left
+      font-size: 13px
+      font-style: normal
+      margin-right: 3px
+      padding: 2px 3px
+
+    .inline-list
+      fieldset ol > li label
+        margin: 0 3px 0 10px
+        width: auto
+      .fragment
+        float: left
+
+    fieldset
+      &.actions
+        margin-left: 10px
+      ol > li
+        label
+          width: 120px
+        p.inline-hints
+          margin-left: 120px
+        fieldset ol
+          padding-left: 120px
+        &.inline-list.check_boxes fieldset ol li,
+        &.inline-list.radio fieldset ol li
+          margin: 0
+          label
+            float: left
+            overflow: hidden
+            margin-right: 10px
+            padding: 2px 0 0 2px
+            width: auto

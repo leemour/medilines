@@ -1,11 +1,11 @@
-# encoding: UTF-8
+# encoding: utf-8
 
 ActiveAdmin.register Category do
   menu :priority => 4
 
   scope "Корневые",           :roots
-  scope "Стомат. уст.",       :dentals
-  scope "Визуализация",       :visuals
+  scope "Установки",          :dentals
+  scope "Визуал.",            :visuals
   scope "Компоненты",         :components
   scope "Запчасти",           :spares
   scope "Все",                :all
@@ -65,7 +65,7 @@ ActiveAdmin.register Category do
       else
         f.input :parent
       end
-      f.input :logo, :hint => img_with_url(f, :logo)
+      f.input :logo, :hint => img_with_url(f.object.logo, :large)
       f.input :logo_cache, :as => :hidden
       f.input :description
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
