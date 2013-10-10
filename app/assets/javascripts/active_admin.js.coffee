@@ -21,5 +21,6 @@ jQuery ($) ->
     $( "#products tbody" ).sortable
       axis: 'y'
       cursor: 'move'
+      cancel: "a,button"
       update: (event, ui) ->
         sendSortRequestOfModel("products")
