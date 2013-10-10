@@ -5,7 +5,6 @@
 # Sort Product columns
 sendSortRequestOfModel = (model_name) ->
   formData = $('#' + model_name + ' tbody').sortable('serialize')
-  alert(formData)
   formData += "&" + $('meta[name=csrf-param]').attr("content") +
     "=" + encodeURIComponent($('meta[name=csrf-token]').attr("content"))
   $.ajax
