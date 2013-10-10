@@ -1,5 +1,6 @@
 ru:
   active_admin:
+    admin: Админ
     dashboard: "Админка"
     dashboard_welcome:
       welcome: "Добро пожаловать в Active Admin. Это стандартная страница управления сайтом."

@@ -14,18 +14,18 @@ ActiveAdmin.register Brand do
       brand.description[0..60]
     end
     column :flag do |brand|
-      image_tag(brand.flag_url.to_s) if brand.flag?
+      image_tag brand.flag_url
     end
     column :logo do |brand|
-      image_tag(brand.logo_url(:thumb).to_s) if brand.logo?
+      image_tag brand.logo_url(:thumb)
     end
 
     default_actions
   end
 
-  filter :name, :label => "Названию"
-  filter :slug, :label => "Ссылке"
-  filter :country, :label => "Стране"
+  filter :name,     :label => "Названию"
+  filter :slug,     :label => "Ссылке"
+  filter :country,  :label => "Стране"
   filter :created_at
   filter :updated_at
 
@@ -38,13 +38,13 @@ ActiveAdmin.register Brand do
         row :name
         row :country
         row :flag do
-          image_tag(brand.flag.url) if brand.flag.url
+          image_tag brand.flag.url
         end
         row :image do
-          image_tag(brand.image.url) if brand.image.url
+          image_tag brand.image.url
         end
         row :logo do
-          image_tag(brand.logo.url) if brand.logo.url
+          image_tag brand.logo.url
         end
         row :slogan
         row :description
@@ -65,12 +65,17 @@ ActiveAdmin.register Brand do
       f.input :slug, :hint => "Генерируется автоматически", :required => false
       f.input :name, :required => true
       f.input :country, as: :string, :required => true
-      f.input :flag, :hint => flag_with_url(f.object.flag), :as => 'uploader',
-              :removable => true
+      f.input :flag, :hint => img_with_url(f.object.flag),
+              :as => 'uploader', :removable => true
+
       f.input :flag_cache, :as => :hidden
-      f.input :image, :hint => flag_with_url(f.object.flag)
+      f.input :image, :hint => img_with_url(f.object.image),
+              :as => 'uploader', :removable => true
+
       f.input :image_cache, :as => :hidden
-      f.input :logo, :hint => img_with_url(f.object.logo, :small)
+      f.input :logo, :hint => img_with_url(f.object.logo, :small),
+              :as => 'uploader', :removable => true
+
       f.input :logo_cache, :as => :hidden
       f.input :slogan
       f.input :description, :required => true
