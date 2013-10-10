@@ -2,19 +2,34 @@ ru:
   activerecord:
     models:
       admin_user:
+        zero: Пользователей
         one: Пользователь
+        few: Пользователя
+        many: Пользователей
         other: Пользователи
       page:
+        zero: Страниц
         one: Страница
+        few: Страницы
+        many: Страниц
         other: Страницы
       brand:
+        zero: Брендов
         one: Бренд
+        few: Бренда
+        many: Брендов
         other: Бренды
       category:
+        zero: Категорий
         one: Категория
+        few: Категории
+        many: Категорий
         other: Категории
       product:
+        zero: Товаров
         one: Товар
+        few: Товара
+        many: Товаров
         other: Товары
     attributes:
       admin_user:
@@ -48,8 +63,6 @@ ru:
         logo: Лого
         image: Фото
         flag: Флаг
-        remove_flag: Удалить Флаг
-        replace_flag: Заменить Флаг
         created_at: Создан
         updated_at: Изменен
       category:
@@ -77,25 +90,16 @@ ru:
         design: Дизайн
         slogan: Слоган
         image: Фото
-        remove_image: Удалить Фото
-        replace_image: Заменить Фото
         photo1: Фото 1
-        remove_photo1: Удалить Фото 1
-        replace_photo1: Заменить Фото 1
         photo2: Фото 2
-        remove_photo2: Удалить Фото 2
-        replace_photo2: Заменить Фото 2
         photo3: Фото 3
-        remove_photo3: Удалить Фото 3
-        replace_photo3: Заменить Фото 3
         photo4: Фото 4
-        remove_photo4: Удалить Фото 4
-        replace_photo4: Заменить Фото 4
         photo5: Фото 5
-        remove_photo5: Удалить Фото 5
-        replace_photo5: Заменить Фото 5
         created_at: Создан
         updated_at: Изменен
+      common:
+        remove: Удалить %{attribute}
+        replace: Заменить %{attribute}
   activemodel:
     models:
       contact_message:

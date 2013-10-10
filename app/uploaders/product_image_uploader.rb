@@ -7,7 +7,7 @@ class ProductImageUploader < ImageUploader
     process :resize_to_fill => [75, 100]
   end
   version :medium do
-    process :resize_to_fill => [93, 135]
+    process :resize_to_fill => [100, 135]
   end
   version :large do
     process :resize_to_fill => [400, 300]

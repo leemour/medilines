@@ -1,4 +1,3 @@
-# encoding: utf-8
 # A formtastic input which incorporates carrierwave uploader functionality.
 #
 # Intelligently adds the cache field, displays and links to the current
@@ -96,7 +95,7 @@ class UploaderInput < Formtastic::Inputs::FileInput
 
   def replace_label_html
     template.content_tag(:label, class: "replace_label") do
-      template.content_tag(:span, I18n.t("activerecord.attributes.#{object.class.to_s.downcase}.replace_#{method.to_s}"))
+      template.content_tag(:span, localize_action('replace'))
     end
   end
 
@@ -112,7 +111,7 @@ class UploaderInput < Formtastic::Inputs::FileInput
       template.content_tag(:label, class: "remove_label") do
         template.check_box_tag("#{object_name}[remove_#{method}]", "1", false, id: "#{sanitized_object_name}_remove_#{sanitized_method_name}") <<
             # XXX: There are probably better ways to do these translations using defaults.
-            template.content_tag(:span, I18n.t("activerecord.attributes.#{object.class.to_s.downcase}.remove_#{method.to_s}"))
+            template.content_tag(:span, localize_action('remove'))
       end
     end or "".html_safe
   end
@@ -159,5 +158,14 @@ class UploaderInput < Formtastic::Inputs::FileInput
 
       opts[:class] = opts[:class].join(' ')
     end
+  end
+
+  private
+
+  def localize_action(action)
+    attr_scope   = "activerecord.attributes.#{object.class.to_s.downcase}"
+    action_scope = "activerecord.attributes.common"
+    attribute    = I18n.t(method.to_s, scope: attr_scope)
+    I18n.t(action, scope: action_scope, attribute: attribute)
   end
 end

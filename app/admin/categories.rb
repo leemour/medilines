@@ -17,7 +17,7 @@ ActiveAdmin.register Category do
       link_to cat.name, admin_category_path(cat)
     end
     column :parent_id, :sortabe => :parent_id do |cat|
-      link_to cat.parent.name, admin_category_path(cat.parent) if cat.parent
+      parent_category(cat)
     end
     column :logo do |cat|
       image_tag(cat.logo_url(:thumb))
@@ -30,8 +30,9 @@ ActiveAdmin.register Category do
   filter :name, :label => "Названию"
   filter :slug, :label => "Ссылке"
   filter :parent, :as => :select, :label => "Искать по Родительской",
-         #:collection => Category.all(:conditions => "parent_id IS NULL OR parent_id = ''")
-         :collection => Category.joins("JOIN categories as cat2 ON cat2.parent_id = categories.id").uniq
+         :collection => Category.joins(
+            "JOIN categories as cat2 ON cat2.parent_id = categories.id"
+          ).uniq
   filter :created_at, :label => "Cоздана"
   filter :updated_at, :label => "Изменена"
 

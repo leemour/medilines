@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 ActiveAdmin.register Product do
   menu :priority => 2
 
@@ -92,8 +93,9 @@ ActiveAdmin.register Product do
       f.input :brand
       f.input :category
       f.input :position
-      f.input :image, :hint => img_with_url(f.object.image, :large), :as => 'uploader',
-              :removable => true
+      f.input :image, :hint => img_with_url(f.object.image, :large),
+              :as => 'uploader', :removable => true
+
       f.input :price
       f.input :slogan
       f.input :features,     :as =>:ckeditor
