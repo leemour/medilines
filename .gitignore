@@ -19,3 +19,12 @@
 
 # Ignore DB credentials
 /config/database.yml
+
+# Ignore Uploads
+/public/uploads
+
+# Ignore Log
+/log
+
+# Ignore RubyMine
+/.idea
