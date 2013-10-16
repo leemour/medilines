@@ -22,12 +22,12 @@ r_spares.jpg: 3f217f1c0e5f02019f522e2bb0ac07c5
 rails.png: a3386665c05a2d82f711a4aaa72d247c
 riabit_logo.png: 974dffd68e0e2b03b3078b0e3adc9d10
 us.png: 238691e8450c6bd68131f09bcf546d4a
-active_admin.js: 3cf5ac537f595c628f39414274f53740
+active_admin.js: 6bd220530f61fc3ef4362cb73d595ffe
 application.js: 361d0bc5e6960f1b218f4c1121265c6f
 ckeditor/config.js: ded84b8f3cce7bcf505616a6ff5ac6a1
 ckeditor/contents.css: a53edc4ddbb3d4c1ebbc9f52bf1568db
 active_admin.css: 8cb84325437a8b13d7fa94c874fdc6bd
-application.css: a2655777147b40bff45ed37ec63c83f9
+application.css: 83ad32b83d2b8d26ce3564ae5245ddc9
 ckeditor/application.js: 868842c715a25d2917f7abe507c73704
 ckeditor/filebrowser/images/gal_add.jpg: eeb256bdeb48266c9891e7d1c20b7e67
 ckeditor/filebrowser/images/gal_add.png: 25bbe2481e1238501fa8858c96bf1769
@@ -323,5 +323,3 @@ fancybox_loading.gif: 5e878dc3d52fae0c9f3f0d6745837e68
 fancybox_overlay.png: 4da01fc7c6bbf99abc8e2ece4b05b18e
 fancybox_sprite.png: 6db739144c51af76aea8960fc35dbda7
 jquery.min.map: 6c267bfd2b3f36e6edccb2e584934c1c
-glyphicons-halflings-white.png: 6cccd17a7aed91dbc0157d343c68c0d9
-glyphicons-halflings.png: 2851b489e8c39f8fad44fc10efb99c3e

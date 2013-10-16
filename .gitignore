@@ -23,8 +23,8 @@
 # Ignore Uploads
 /public/uploads
 
-# Ignore Log
-/log
+# Ignore Backup
+/backup
 
 # Ignore RubyMine
 /.idea

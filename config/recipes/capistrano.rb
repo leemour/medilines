@@ -1,39 +1,75 @@
+log_formatters = [
+  { :match => /successful/,            :color => :green,   :priority => 10 },
+  { :match => /executing command/,     :color => :blue,    :priority => 10, :style => :underscore },
+  { :match => /^transaction: commit$/, :color => :magenta, :priority => 10, :style => :blink }
+]
+
+log_formatter(log_formatters)
+
+# Helpers
+def copy_to_local(path)
+  time        = Time.now.strftime "%Y-%m-%d_%H-%M"
+  backup_path = File.expand_path "~leemour/Backup"
+  dir         = "#{backup_path}/#{application}/#{path}/#{time}"
+  destination = ENV['to'] || dir
+  download "#{shared_path}/#{path}", destination, recursive: true
+end
+
+def copy_to_remote(path)
+  time = Time.now.strftime "%Y-%m-%d_%H-%M"
+  dir  = "#{shared_path}/backup/#{path}/#{time}"
+  run  "mkdir -p #{dir}"
+  run  "cp -a #{shared_path}/#{path}/* #{dir}"
+end
+
+# Data & Settings
 namespace :config do
-  desc "Copy uploads to remote server"
+  desc "Upload Config to remote server"
   task :up do
-    run    "mkdir -p #{shared_path}/uploads"
-    upload "public/uploads", "#{shared_path}/uploads"
+    remote_backup
+    upload "config/database.yml #{shared_path}/config/database.yml"
+    upload "config/env.rb #{shared_path}/config/env.rb"
   end
-  task :down do
-    run    "mkdir -p #{shared_path}/uploads"
-    upload "public/uploads", "#{shared_path}/uploads"
+  desc "Download Config to backup path"
+  task :backup do
+    copy_to_local "config"
   end
-  task :down_to do
-    run    "mkdir -p #{shared_path}/uploads"
-    upload "public/uploads", "#{shared_path}/uploads"
+  desc "Backup Config to remote shared folder"
+  task :remote_backup do
+    copy_to_remote "config"
   end
 end
 
-# namespace :assets do
-#   task :sync do
-#     assets_path = "#{user}@#{domain}:#{shared_path}"
-#     system "rsync -vr --exclude='.DS_Store' public/assets #{assets_path}"
-#   end
-# end
+namespace :database do
+  desc "Upload DB to remote server"
+  task :up do
+    remote_backup
+    # Uploading development DB as production!
+    upload "db/development.sqlite3 #{shared_path}/db/production.sqlite3"
+  end
+  desc "Download DB to backup path"
+  task :backup do
+    copy_to_local "db"
+  end
+  desc "Backup DB to remote shared folder"
+  task :remote_backup do
+    copy_to_remote "db"
+  end
+end
 
 namespace :uploads do
-  desc "Upload uploads to SHARED_PATH/uploads"
+  desc "Upload Uploads to remote shared dir"
   task :up do
     run    "mkdir -p #{shared_path}/uploads"
-    upload "public/uploads", "#{shared_path}/uploads"
+    upload "public/uploads", "#{shared_path}/uploads", recursive: true
   end
-  desc "Download uploads to default public/uploads"
-  task :down do
-    download "#{shared_path}/uploads", "public/uploads"
+  desc "Download uploads to backup folder"
+  task :backup do
+    copy_to_local "uploads"
   end
-  desc "Download uploads to custom local folder"
-  task :down_to do
-    download "#{shared_path}/uploads", ENV['to']
+  desc "Backup Uploads to remote shared folder"
+  task :remote_backup do
+    copy_to_remote "uploads"
   end
   desc "Synchronize uploads to remote"
   task :sync do
@@ -42,14 +78,18 @@ namespace :uploads do
   end
 end
 
+
+# Rake
 namespace :rake do
-  set :dbz, %w[create migrate reset rollback seed setup]
-  set :assetz, %w[precompile clean]
-  set :tmpz, %w[cache:clear clear create pids:clear sessions:clear sockets:clear]
+  dbz    = %w[create migrate reset rollback seed setup]
+  assetz = %w[precompile clean]
+  tmpz   = %w[cache:clear clear create pids:clear sessions:clear sockets:clear]
 
   task :cd_current do
     run "cd #{current_path}"
   end
+
+  task
 
   desc "Invoke rake task"
   # run like: cap staging rake:invoke task=a_certain_task
@@ -111,3 +151,10 @@ namespace :rake do
   #   rake_exec
   # end
 end
+
+# namespace :assets do
+#   task :sync do
+#     assets_path = "#{user}@#{domain}:#{shared_path}"
+#     system "rsync -vr --exclude='.DS_Store' public/assets #{assets_path}"
+#   end
+# end
