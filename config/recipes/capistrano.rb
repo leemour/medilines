@@ -84,7 +84,7 @@ namespace :rake do
   desc "Invoke rake task"
   # run like: cap staging rake:invoke task=a_certain_task
   task :invoke do
-    rake.cd_current
+    run "cd #{current_path}"
     run "bundle exec rake #{ENV['task']} RAILS_ENV=#{rails_env}"
   end
 

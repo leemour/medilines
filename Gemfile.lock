@@ -91,7 +91,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
-    colored (1.2)
     columnize (0.3.6)
     cucumber (1.2.5)
       builder (>= 2.1.2)
@@ -368,7 +367,6 @@ DEPENDENCIES
   carrierwave
   ckeditor
   coffee-rails (~> 3.2.1)
-  colored
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner
