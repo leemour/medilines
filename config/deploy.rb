@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 load "config/recipes/capistrano"
-load "config/env.rb"
+load "config/env"
 
 set :stages, %w[production staging]
 set :default_stage, "staging"

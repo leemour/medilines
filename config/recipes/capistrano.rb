@@ -81,16 +81,6 @@ end
 
 # Rake
 namespace :rake do
-  dbz    = %w[create migrate reset rollback seed setup]
-  assetz = %w[precompile clean]
-  tmpz   = %w[cache:clear clear create pids:clear sessions:clear sockets:clear]
-
-  task :cd_current do
-    run "cd #{current_path}"
-  end
-
-  task
-
   desc "Invoke rake task"
   # run like: cap staging rake:invoke task=a_certain_task
   task :invoke do
@@ -98,33 +88,20 @@ namespace :rake do
     run "bundle exec rake #{ENV['task']} RAILS_ENV=#{rails_env}"
   end
 
-  # DB
-  namespace :db do
-    dbz.each do |command|
-      desc "Rake db:#{command}"
-      task command, roles: :app, except: {no_release: true} do
-        rake.cd_current
-        run "bundle exec rake db:#{ENV['task']} RAILS_ENV=#{rails_env}"
-      end
-    end
-  end
-  # Assets
-  namespace :assets do
-    assetz.each do |command|
-      desc "Rake assets:#{command}"
-      task command, roles: :app, except: {no_release: true} do
-        rake.cd_current
-        run "bundle exec rake assets:#{ENV['task']} RAILS_ENV=#{rails_env}"
-      end
-    end
-  end
-  # Tmp
-  namespace :tmp do
-    tmpz.each do |command|
-      desc "Rake tmp:#{command}"
-      task command, roles: :app, except: {no_release: true} do
-        rake.cd_current
-        run "bundle exec rake tmp:#{ENV['task']} RAILS_ENV=#{rails_env}"
+  # Predefined tasks
+  groups = {
+    "db"     => %w[create migrate reset rollback seed setup],
+    "assets" => %w[precompile clean],
+    "tmp"    => %w[cache:clear clear create pids:clear sessions:clear sockets:clear]
+  }
+  groups.keys.each do |group|
+    namespace group.to_sym do
+      groups[group].each do |command|
+        desc "Rake #{group}:#{command}"
+        task command, roles: :app, except: {no_release: true} do
+          run "cd #{current_path}"
+          run "bundle exec rake #{group}:#{command} RAILS_ENV=#{rails_env}"
+        end
       end
     end
   end
