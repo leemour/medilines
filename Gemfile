@@ -23,7 +23,7 @@ gem 'capistrano'
 
 group :production do
   gem 'sqlite3'
-  gem 'pg'
+  # gem 'pg'
   gem 'newrelic_rpm'
 end
 
