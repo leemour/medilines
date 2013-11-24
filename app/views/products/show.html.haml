@@ -17,7 +17,16 @@
         = img_link(photo, :medium, :large)
 
 %section.content
-  = @product.description1.html_safe
+  - if @product.description2.empty?
+    = @product.description1.html_safe
+
+  - else
+    .column
+      .content-inner.first
+        = @product.description1.html_safe
+    .column
+      .content-inner
+        = @product.description2.html_safe
 
 :javascript
   #{fancybox}

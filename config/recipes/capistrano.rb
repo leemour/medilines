@@ -78,7 +78,6 @@ namespace :uploads do
   end
 end
 
-
 # Rake
 namespace :rake do
   desc "Invoke rake task"
@@ -92,7 +91,8 @@ namespace :rake do
   groups = {
     "db"     => %w[create migrate reset rollback seed setup],
     "assets" => %w[precompile clean],
-    "tmp"    => %w[cache:clear clear create pids:clear sessions:clear sockets:clear]
+    "tmp"    => %w[cache:clear clear create pids:clear sessions:clear sockets:clear],
+    "cache"  => %w[clear]
   }
   groups.keys.each do |group|
     namespace group.to_sym do
