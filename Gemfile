@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 gem 'haml', '>= 3.1.6'
-# gem 'bootstrap-sass', '>= 2.0.4.0'
 gem 'jquery-rails'
 gem 'fancybox2-rails'
 gem 'friendly_id'
@@ -23,7 +22,6 @@ gem 'capistrano'
 
 group :production do
   gem 'sqlite3'
-  # gem 'pg'
   gem 'newrelic_rpm'
 end
 
@@ -37,7 +35,6 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'haml-rails', '>= 0.3.4'
-  # gem 'debugger'
   gem 'byebug'
   gem 'database_cleaner'
   gem 'launchy'
@@ -66,10 +63,10 @@ end
 
 group :assets do
   # gem 'turbo-sprockets-rails3'
-
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   # gem 'compass'
+  # gem 'bootstrap-sass', '>= 2.0.4.0'
   # gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
 end
