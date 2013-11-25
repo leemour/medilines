@@ -2,9 +2,9 @@ require "bundler/capistrano"
 load "config/recipes/capistrano"
 load "config/env"
 
-set :stages, %w[production staging]
-set :default_stage, "staging"
-require 'capistrano/ext/multistage'
+# set :stages, %w[production staging]
+# set :default_stage, "staging"
+# require 'capistrano/ext/multistage'
 
 set :domain, ENV["REMOTE_IP"]
 server domain, :app, :web, :db, :primary => true
