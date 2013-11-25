@@ -23,6 +23,7 @@ set :use_sudo, false
 set :rails_env, "production"
 set :ssh_options, { :forward_agent => true, :port => ENV["REMOTE_PORT"] }
 default_run_options[:pty] = true
+git_server = 'bb'
 
 
 namespace :deploy do
@@ -65,8 +66,8 @@ namespace :deploy do
 
   desc "Make sure local git is in sync with remote."
   task :check_revision, roles: :web do
-    unless `git rev-parse HEAD` == `git rev-parse bb/deploy`
-      puts "WARNING: HEAD is not the same as bb/deploy"
+    unless `git rev-parse HEAD` == `git rev-parse #{git_server}/#{branch}`
+      puts "WARNING: HEAD is not the same as #{git_server}/#{branch}"
       puts "Run `git push` to sync changes."
       exit
     end

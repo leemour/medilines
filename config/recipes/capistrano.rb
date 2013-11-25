@@ -79,7 +79,7 @@ namespace :uploads do
 end
 
 # Rake
-namespace :rake do
+namespace :sake do
   desc "Invoke rake task"
   # run like: cap staging rake:invoke task=a_certain_task
   task :invoke do
