@@ -85,7 +85,7 @@ class Product < ActiveRecord::Base
   end
 
   def self.with_brand(brand)
-    Product.joins(:brand).where(:brands => {:slug => brand.slug})
+    Product.joins(:brand).where(brands: {slug: brand.slug})
   end
 
   def self.in_category(category)

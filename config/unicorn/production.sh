@@ -5,9 +5,14 @@ set -e
 
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-MEDI_ROOT=/srv/www/medilines/current
-PID=/srv/www/medilines/shared/pids/unicorn.pid
-CMD="$MEDI_ROOT/bin/unicorn -D -c $MEDI_ROOT/config/unicorn.rb -E production"
+
+application='medilines'
+if [ "$STAGE" = "staging" ]; then
+  application=$application'_staging'
+fi
+MEDI_ROOT=/srv/www/$application/current
+PID=/srv/www/$application/shared/pids/unicorn.pid
+CMD="$MEDI_ROOT/bin/unicorn -D -c $MEDI_ROOT/config/unicorn/unicorn.rb -E production"
 # INIT_CONF=$MEDI_ROOT/config/init.conf
 action="$1"
 set -u

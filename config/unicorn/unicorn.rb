@@ -3,7 +3,8 @@ worker_processes (rails_env == 'production' ? 2 : 2)
 preload_app true
 timeout 15
 
-deploy_to       = '/srv/www/medilines'
+application = ENV['STAGE'] == 'staging' ? 'medilines_staging' : 'medilines'
+deploy_to       = "/srv/www/#{application}"
 listen            "#{deploy_to}/shared/unicorn.sock", :backlog => 1024
 pid               "#{deploy_to}/shared/pids/unicorn.pid"
 working_directory "#{deploy_to}/current"

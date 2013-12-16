@@ -4,7 +4,7 @@ class Category < ActiveRecord::Base
 
   belongs_to :parent, :class_name => 'Category', :foreign_key => 'parent_id'
   has_many :products
-  has_many :brands, :through => :products
+  has_many :brands, :through => :products, :uniq => true
 
   # alias_attribute :title, :name
   # alias_attribute :intro, :description

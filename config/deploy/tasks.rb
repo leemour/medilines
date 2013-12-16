@@ -22,6 +22,33 @@ def copy_to_remote(path)
   run  "cp -a #{shared_path}/#{path}/* #{dir}"
 end
 
+def copy_shared_to(destination)
+  production  = "#{deploy_to}/../#{application}/shared"
+  staging     = "#{deploy_to}/../#{application}_staging/shared"
+
+  case destination
+  when :staging
+    from = production
+    to   = staging
+  when :production
+    from = staging
+    to   = production
+  end
+  %w[config db uploads].each do |folder|
+    run  "cp -rp #{from}/#{folder} #{to}/#{folder}"
+  end
+end
+
+# Copy between Staging and Production
+desc "Copy shared folders from production to staging"
+task :shared_to_staging do
+  copy_shared_to :staging
+end
+desc "Copy shared folders from staging to production"
+task :shared_to_prod do
+  copy_shared_to :production
+end
+
 # Data & Settings
 namespace :config do
   desc "Upload Config to remote server"

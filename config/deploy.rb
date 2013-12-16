@@ -1,10 +1,10 @@
 require "bundler/capistrano"
-load "config/recipes/capistrano"
+load "config/deploy/tasks"
 load "config/env"
 
-# set :stages, %w[production staging]
-# set :default_stage, "staging"
-# require 'capistrano/ext/multistage'
+set :stages, %w[production staging]
+set :default_stage, "staging"
+require 'capistrano/ext/multistage'
 
 set :domain, ENV["REMOTE_IP"]
 server domain, :app, :web, :db, :primary => true
@@ -14,7 +14,7 @@ set :repository,  "git@bitbucket.org:leemour/#{application}.git"
 set :deploy_to, "/srv/www/#{application}"
 set :branch, "master"
 set :keep_releases, 5
-set :scm, "git"
+set :scm, "git"d
 set :deploy_via, :remote_cache
 
 set :user, ENV["REMOTE_USER"]
@@ -31,7 +31,7 @@ namespace :deploy do
     desc "#{command} unicorn server"
     task command, roles: :app, except: {no_release: true} do
       # run "/etc/init.d/unicorn_#{application} #{command}"
-      run "service unicorn_#{application} #{command}"
+      run "service unicorn_#{application}_#{stage} #{command}"
     end
   end
 
@@ -39,7 +39,8 @@ namespace :deploy do
   task :setup_config, roles: :app do
     # Server config
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    sudo "ln -nfs #{current_path}/config/nginx.staging.conf /etc/nginx/sites-enabled/#{application}_staging"
+    sudo "ln -nfs #{current_path}/config/unicorn/#{stage}.sh /etc/init.d/unicorn_#{application}_#{stage}"
     # App config
     run  "mkdir -p #{shared_path}/config"
     put  File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
