@@ -11,10 +11,10 @@ server domain, :app, :web, :db, :primary => true
 
 set :application, "medilines"
 set :repository,  "git@bitbucket.org:leemour/#{application}.git"
-set :deploy_to, "/srv/www/#{application}"
+set(:deploy_to) { "/srv/www/#{app_stage}" } # lazy evaluation
 set :branch, "master"
 set :keep_releases, 5
-set :scm, "git"d
+set :scm, "git"
 set :deploy_via, :remote_cache
 
 set :user, ENV["REMOTE_USER"]

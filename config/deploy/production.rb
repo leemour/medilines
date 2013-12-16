@@ -1,1 +1,1 @@
-set :application, "medilines"
+set :app_stage, "medilines"
