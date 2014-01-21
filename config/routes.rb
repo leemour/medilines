@@ -9,7 +9,7 @@ Medilines::Application.routes.draw do
 
   root :to              => 'page#page',
                             :page => 'home'
-  get '/promotions'     => 'page#page',
+  get '/promotions'     => 'page#promotions',
       as: :promotions,      :page => 'promotions'
   get '/contacts'       => 'page#contacts',
       as: :contacts,        :page => 'contacts'

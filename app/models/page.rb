@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class Page < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, :use => :slugged
@@ -14,17 +12,25 @@ class Page < ActiveRecord::Base
 
 
   def self.get_page(slug)
-    page = Page.find_by_slug(slug)
+    page = find_by_slug(slug)
     page.add_seo
     page
   end
 
   def self.make_from(item = nil)
-    data = Page.data_from item
-    page = Page.new(data)
+    data = data_from item
+    page = new(data)
     page.add_seo
     page
   end
+
+  def self.data_from(item)
+    title = item.title  || ''
+    intro = item.intro  || ''
+    {title: title, intro: intro}
+  end
+  private_class_method :data_from
+
 
   def add_seo
     @keywords = %{
@@ -40,13 +46,5 @@ class Page < ActiveRecord::Base
 
   def should_generate_new_friendly_id?
     new_record?
-  end
-
-  private
-
-  def self.data_from(item)
-    title = item.title  || ''
-    intro = item.intro  || ''
-    {title: title, intro: intro}
   end
 end

@@ -13,6 +13,12 @@ ru:
         few: Страницы
         many: Страниц
         other: Страницы
+      promotion:
+        zero: Акций
+        one: Акция
+        few: Акции
+        many: Акций
+        other: Акции
       brand:
         zero: Брендов
         one: Бренд
@@ -51,6 +57,12 @@ ru:
         title: Название
         intro: Введение
         content: Контент
+        created_at: Создана
+        updated_at: Изменена
+      promotion:
+        slug: Ссылка
+        title: Название
+        content: Текст
         created_at: Создана
         updated_at: Изменена
       brand:

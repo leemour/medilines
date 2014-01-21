@@ -1,3 +1,8 @@
 %h1 Акции
 
-= @page.content.html_safe
+= @page.intro.html_safe
+
+- @promotions.each do |promo|
+  .promotion
+    %h2= promo.title
+    .details= promo.content.html_safe

@@ -68,5 +68,10 @@ module Medilines
     config.sass.preferred_syntax = :sass
     config.assets.initialize_on_precompile = false
     config.serve_static_assets = true
+
+    # Rspec generator
+    config.generators do |g|
+      g.test_framework :rspec
+    end
   end
 end

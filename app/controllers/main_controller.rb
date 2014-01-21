@@ -14,13 +14,8 @@ class MainController < ApplicationController
   end
 
   def subcategory
-    if @category.products.count > 1
-      @brands = Brand.all_in_category(@category)
-      render "/categories/brands"
-    else
-      @products = @category.products.includes(:brand)
-      render "/products/index"
-    end
+    @products = @category.products.includes(:brand)
+    render "/products/index"
   end
 
   def category_brand

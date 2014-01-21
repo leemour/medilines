@@ -47,7 +47,7 @@ ActiveAdmin.register Page do
   form do |f|
     f.inputs "Описание страницы #{f.object.title if f.object.title}" do
       f.input :slug
-      f.input :title
+      f.input :title, :required => true
       f.input :intro,   :as =>:ckeditor
       f.input :content, :as =>:ckeditor
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }

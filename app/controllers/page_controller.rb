@@ -12,6 +12,11 @@ class PageController < ApplicationController
     page
   end
 
+  def promotions
+    @promotions = Promotion.limit(10)
+    page
+  end
+
   def send_mail
     @message = ContactMessage.new(@captcha.values) #Decrypted params
     if @captcha.valid? && @message.valid?
