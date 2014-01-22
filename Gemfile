@@ -1,7 +1,7 @@
 ruby '2.0.0'
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.16'
 
 gem 'haml', '>= 3.1.6'
 gem 'jquery-rails'
@@ -18,7 +18,7 @@ gem 'negative_captcha'
 gem 'sitemap_generator'
 
 gem 'unicorn'
-gem 'capistrano'
+gem 'capistrano', '~> 2.15'
 
 group :production do
   gem 'sqlite3'
@@ -33,6 +33,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'spring'
+  gem "spring-commands-rspec"
   gem 'sqlite3'
   gem 'haml-rails', '>= 0.3.4'
   gem 'byebug'

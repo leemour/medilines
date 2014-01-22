@@ -1,7 +1,11 @@
-# encoding: utf-8
-
 ActiveAdmin.register Product do
   menu :priority => 2
+
+  controller do
+    def scoped_collection
+      Product.unscoped
+    end
+  end
 
   scope "Установки",          :dentals
   scope "Визуал.",            :visuals
@@ -55,6 +59,9 @@ ActiveAdmin.register Product do
         row :id
         row :slug
         row :name
+        row :status do
+          product.status_ru
+        end
         row :brand
         row :category
         row :position
@@ -90,6 +97,9 @@ ActiveAdmin.register Product do
     f.inputs "Описание товара #{f.object.name if f.object.name}" do
       f.input :slug, :hint => "Генерируется автоматически", :required => false
       f.input :name, :required => true
+      f.input :status, :as => :select, :collection =>
+        f.object.class.statuses.map { |name, translation| [translation, name] }
+
       f.input :brand
       f.input :category
       f.input :position

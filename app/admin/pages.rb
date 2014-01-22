@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 ActiveAdmin.register Page do
   menu :priority => 5
 
@@ -30,6 +28,9 @@ ActiveAdmin.register Page do
         row :id
         row :slug
         row :title
+        row :status do
+          page.status_ru
+        end
         row :intro do
           page.intro.html_safe if page.intro
         end
@@ -48,6 +49,9 @@ ActiveAdmin.register Page do
     f.inputs "Описание страницы #{f.object.title if f.object.title}" do
       f.input :slug
       f.input :title, :required => true
+      f.input :status, :as => :select, :collection =>
+        f.object.class.statuses.map { |name, translation| [translation, name] }
+
       f.input :intro,   :as =>:ckeditor
       f.input :content, :as =>:ckeditor
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }

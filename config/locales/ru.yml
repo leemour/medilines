@@ -55,6 +55,7 @@ ru:
       page:
         slug: Ссылка
         title: Название
+        status: Статус
         intro: Введение
         content: Контент
         created_at: Создана
@@ -62,6 +63,7 @@ ru:
       promotion:
         slug: Ссылка
         title: Название
+        status: Статус
         content: Текст
         created_at: Создана
         updated_at: Изменена
@@ -89,6 +91,7 @@ ru:
       product:
         slug: Ссылка
         name: Название
+        status: Статус
         brand: Бренд
         brand_id: Бренд
         category: Категория

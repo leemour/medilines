@@ -1,6 +1,12 @@
 ActiveAdmin.register Promotion do
   menu :priority => 6
 
+  controller do
+    def scoped_collection
+      Promotion.unscoped
+    end
+  end
+
   index do
     selectable_column
     column :slug
@@ -19,6 +25,9 @@ ActiveAdmin.register Promotion do
       attributes_table_for promo do
         row :id
         row :slug
+        row :status do
+          promo.status_ru
+        end
         row :title
         row :content do
           promo.content.html_safe if promo.content
@@ -35,6 +44,9 @@ ActiveAdmin.register Promotion do
     f.inputs "Описание акции #{f.object.title if f.object.title}" do
       f.input :slug
       f.input :title, :required => true
+      f.input :status, :as => :select, :collection =>
+        f.object.class.statuses.map { |name, translation| [translation, name] }
+
       f.input :content, :as =>:ckeditor
       f.input :created_at, :wrapper_html => { :class => 'inline-list' }
       f.input :updated_at, :wrapper_html => { :class => 'inline-list' }

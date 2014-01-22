@@ -1,29 +1,27 @@
-# encoding: utf-8
-
 class Product < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
+
+  include Statusable
+  status published: "опубликовано", draft: "черновик"
 
   belongs_to :brand
   belongs_to :category
 
   attr_accessible :description1, :description2, :features, :name, :price,
-                  :slogan, :slug, :brand_id, :category_id, :position,
-                  :image,  :remove_image,   :image_cache,
-                  :photo1, :remove_photo1, :photo1_cache,
-                  :photo2, :remove_photo2, :photo2_cache,
-                  :photo3, :remove_photo3, :photo3_cache,
-                  :photo4, :remove_photo4, :photo4_cache,
-                  :photo5, :remove_photo5, :photo5_cache
+                  :slogan, :slug, :brand_id, :category_id, :position, :status,
+                  :image,  :remove_image,   :image_cache
+  (1..5).each { |n| attr_accessible :"photo#{n}",
+                                    :"remove_photo#{n}", :"photo#{n}_cache" }
 
   attr_accessor :photo1, :photo2, :photo3, :photo4, :photo5
 
-  validates_presence_of :name, :slug, :brand_id, :category_id
-  validates_presence_of :image, :message => "Добавьте фотографию товара"
+  validates_presence_of   :name, :slug, :brand_id, :category_id
+  validates_presence_of   :image, :message => "Добавьте фотографию товара"
   validates_uniqueness_of :name, :slug
-  validates_length_of :name, :minimum => 3
+  validates_length_of     :name, :minimum => 3
 
-  default_scope order("position asc")
+  default_scope published.order("position asc")
 
   scope :with_brand, proc { includes(:brand) }
   scope :recent, proc { |n| order("created_at desc").limit(n) }
@@ -38,11 +36,20 @@ class Product < ActiveRecord::Base
   scope :spares,     join_categories_included('spare-parts')
 
   mount_uploader :image,  ProductMainImageUploader
-  mount_uploader :photo1, ProductImageUploader
-  mount_uploader :photo2, ProductImageUploader
-  mount_uploader :photo3, ProductImageUploader
-  mount_uploader :photo4, ProductImageUploader
-  mount_uploader :photo5, ProductImageUploader
+  (1..5).each { |n| mount_uploader :"photo#{n}", ProductImageUploader }
+
+  def self.including_brand(slug)
+    Product.includes(:brand).find_by_slug!(slug)
+  end
+
+  def self.with_brand(brand)
+    Product.joins(:brand).where(brands: {slug: brand.slug})
+  end
+
+  def self.in_category(category)
+    Product.joins(:category).where(categories: {slug: category.slug})
+  end
+
 
   def title
     name
@@ -78,18 +85,6 @@ class Product < ActiveRecord::Base
 
   def lamp_text
     description2.split(text_separator)[1] || ''
-  end
-
-  def self.including_brand(slug)
-    Product.includes(:brand).find_by_slug!(slug)
-  end
-
-  def self.with_brand(brand)
-    Product.joins(:brand).where(brands: {slug: brand.slug})
-  end
-
-  def self.in_category(category)
-    Product.joins(:category).where(categories: {slug: category.slug})
   end
 
   private

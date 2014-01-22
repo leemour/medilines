@@ -2,17 +2,19 @@ class Page < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, :use => :slugged
 
-  attr_accessible :content, :intro, :slug, :title
+  include Statusable
+  status published: "опубликовано", draft: "черновик"
+
+  attr_accessible :content, :intro, :slug, :title, :status
   attr_accessor :path
   attr_reader   :keywords, :description
 
-  validates_presence_of :title, :slug
+  validates_presence_of   :title, :slug
   validates_uniqueness_of :title, :slug
-  validates_length_of :title, :minimum => 3
-
+  validates_length_of     :title, :minimum => 3
 
   def self.get_page(slug)
-    page = find_by_slug(slug)
+    page = published.find_by_slug(slug)
     page.add_seo
     page
   end
