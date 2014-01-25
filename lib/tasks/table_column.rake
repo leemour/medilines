@@ -7,7 +7,7 @@ namespace :table_column do
       raise StandardError, 'Wrong arguments'
     end
     model = args[:model].constantize
-    if model.update_all args.field => args.value
+    if model.unscoped.update_all args.field => args.value
       puts 'Successfully updated'
     end
   end
