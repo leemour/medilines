@@ -14,8 +14,8 @@ describe Statusable do
       Foo.statuses.should == { published: "опубликовано", draft: "черновик" }
     end
     it "can't be run multiple times" do
-      -> { Foo.status published: "опубликовано", draft: "черновик" }
-        .should raise_error(NameError)
+      expect { Foo.status published: "опубликовано", draft: "черновик" }
+        .to raise_error Statusable::StatusDefinedError
     end
   end
 end

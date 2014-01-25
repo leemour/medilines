@@ -30,7 +30,7 @@ module UrlHelper
     # else
     #   { :host => "medilines.dev" }
     # end
-    { :host => request.host }
+    { :host => "www.medilines.ru" }
   end
 
   # URL With parameters - Used in Sitemap Generator

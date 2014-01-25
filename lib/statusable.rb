@@ -5,10 +5,12 @@ module Statusable
   #   @statuses = {}
   # end
 
+  class StatusDefinedError < StandardError; end
+
   module ClassMethods
     def status(statuses_with_translations)
       unless statuses.empty?
-        raise NameError, "Model statuses already defined #{statuses}"
+        raise StatusDefinedError, "Model statuses already defined #{statuses}"
       end
       @statuses = statuses_with_translations
       validates_inclusion_of :status, :in => status_keys,

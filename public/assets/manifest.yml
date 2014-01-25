@@ -53,8 +53,8 @@ ckeditor/config.js: ckeditor/config-93d14acab5a37f7071ae3d8cf998c23a.js
 ckeditor/config/index.js: ckeditor/config-93d14acab5a37f7071ae3d8cf998c23a.js
 ckeditor/contents.css: ckeditor/contents-e4d8643b0fb43d62fbcab244c85bb13e.css
 ckeditor/contents/index.css: ckeditor/contents-e4d8643b0fb43d62fbcab244c85bb13e.css
-active_admin.css: active_admin-6735cb817a2f810e88d8183bf67ab3b6.css
-active_admin/index.css: active_admin-6735cb817a2f810e88d8183bf67ab3b6.css
+active_admin.css: active_admin-dff4d9938aaccb087e8973d3278474d4.css
+active_admin/index.css: active_admin-dff4d9938aaccb087e8973d3278474d4.css
 application.css: application-ca213545350b0aadf3771918113599a6.css
 application/index.css: application-ca213545350b0aadf3771918113599a6.css
 ckeditor/application.js: ckeditor/application-a922c6ba8495995a73ee8e978cfab92d.js

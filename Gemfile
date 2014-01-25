@@ -1,9 +1,11 @@
-ruby '2.0.0'
+ruby '2.1.0'
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.16'
 
-gem 'haml', '>= 3.1.6'
+gem 'sqlite3'
+
+gem 'haml'
 gem 'jquery-rails'
 gem 'fancybox2-rails'
 gem 'friendly_id'
@@ -21,7 +23,6 @@ gem 'unicorn'
 gem 'capistrano', '~> 2.15'
 
 group :production do
-  gem 'sqlite3'
   gem 'newrelic_rpm'
 end
 
@@ -35,8 +36,7 @@ end
 group :development, :test do
   gem 'spring'
   gem "spring-commands-rspec"
-  gem 'sqlite3'
-  gem 'haml-rails', '>= 0.3.4'
+  gem 'haml-rails'
   gem 'byebug'
   gem 'database_cleaner'
   gem 'launchy'
@@ -47,16 +47,17 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec-rails'
-  gem 'spork-rails'
+  # gem 'spork-rails'
   gem 'guard-rspec'
-  gem 'guard-spork'
-  gem 'guard-cucumber'
+  # gem 'guard-spork'
+  # gem 'guard-cucumber'
   #gem 'simplecov'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'factory_girl_rails'
+  gem 'ffaker'
   #system-dependent notifications (uncomment for a team)
   gem 'rb-inotify', :require => false
   #gem 'rb-fsevent', :require => false
@@ -65,18 +66,7 @@ end
 
 group :assets do
   gem 'turbo-sprockets-rails3'
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  # gem 'compass'
-  # gem 'bootstrap-sass', '>= 2.0.4.0'
-  # gem 'therubyracer', :platforms => :ruby
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
-
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'

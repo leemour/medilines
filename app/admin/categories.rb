@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 ActiveAdmin.register Category do
   menu :priority => 4
 

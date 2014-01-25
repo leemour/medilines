@@ -27,18 +27,26 @@ body.active_admin
   // ========================
   #header
     font-size: 14px
-    padding: 9px 20px
+    // padding: 9px 20px
 
     h1
       font-size: 16px
-      padding-top: 1px
+      padding: 1px 20px 0 10px
 
     #dashboard
       font-weight: bold
 
     #utility_nav
+      font-size: 90%
       .current_user
         font-size: 90%
+
+    ul.tabs > li
+      margin: 8px 0
+      a
+        padding: 6px 5px 4px
+      &#comments
+        display: none
 
   #title_bar
     padding: 3px 15px
@@ -66,10 +74,12 @@ body.active_admin
   // =SIDEBAR
   // ========================
   .sidebar_section
-    select
-      width: 200px
-    input[type=text]
-      width: 180px
+    form.filter_form
+      select
+        width: 200px
+      input[type=text]
+        margin: 3px 0 0 0
+        width: 180px
 
     form.filter_form .filter_form_field.filter_date_range input[type=text]
       background-position: 104% 7px

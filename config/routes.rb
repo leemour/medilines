@@ -7,46 +7,46 @@ Medilines::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  root :to              => 'page#page',
-                            :page => 'home'
-  get '/promotions'     => 'page#promotions',
-      as: :promotions,      :page => 'promotions'
-  get '/contacts'       => 'page#contacts',
-      as: :contacts,        :page => 'contacts'
-  post '/contacts'      => 'page#send_mail',
-      as: :send_mail
-  get '/contacts/mail-sent' => 'page#page',
-                            :page => 'mail-sent'
+  root :to                    => 'page#page',
+                                  :page => 'home'
+  get   '/promotions'         => 'page#promotions',
+        as: :promotions,          :page => 'promotions'
+  get   '/contacts'           => 'page#contacts',
+        as: :contacts,            :page => 'contacts'
+  post '/contacts'            => 'page#send_mail',
+        as: :send_mail,           :page => 'send_mail'
+  get   '/contacts/mail-sent' => 'page#page',
+        as: :mail_sent,           :page => 'mail-sent'
 
   scope '/dental-units', :category => 'dental-units' do
     root :to                           => 'main#category',
-        as: :dentals
+          as: :dentals
     get ':brand'                       => 'main#category_brand',
-        as: :dental_category_brand
+          as: :dental_category_brand
     get ':brand/:product'              => 'main#product',
-        as: :dental_category_brand_product
+          as: :dental_category_brand_product
   end
 
   scope '/visual-systems', :category => 'visual-systems' do
     root :to                           => 'main#category',
-        as: :visuals
+          as: :visuals
     get ':subcategory'                 => 'main#subcategory',
-        as: :visual_category
+          as: :visual_category
     get ':subcategory/:brand'          => 'main#category_brand',
-        as: :visual_category_brand
+          as: :visual_category_brand
     get ':subcategory/:brand/:product' => 'main#product',
-        as: :visual_category_brand_product
+          as: :visual_category_brand_product
   end
 
   scope '/components', :category => 'components' do
     root :to                           => 'main#category',
-         as: :components
+          as: :components
     get ':subcategory'                 => 'main#subcategory',
-        as: :components_category
+          as: :components_category
     get ':subcategory/:brand'          => 'main#category_brand',
-        as: :components_category_brand
+          as: :components_category_brand
     get ':subcategory/:brand/:product' => 'main#product',
-        as: :components_category_brand_product
+          as: :components_category_brand_product
   end
 
   #scope '/spare-parts', :category => 'spare-parts' do

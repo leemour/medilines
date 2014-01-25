@@ -1,4 +1,3 @@
-# encoding: utf-8
 class ContactMailer < ActionMailer::Base
   default to:   ENV['CONTACT_MAIL']
 

@@ -13,7 +13,7 @@ class Brand < ActiveRecord::Base
 
   validates_presence_of :name, :slug
   validates_uniqueness_of :name, :slug
-  validates_length_of :name, :minimum => 4
+  validates_length_of :name, :minimum => 2
 
   mount_uploader :image, ImageUploader
   mount_uploader :flag,  ImageUploader

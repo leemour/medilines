@@ -6,7 +6,7 @@ class Page < ActiveRecord::Base
   status published: "опубликовано", draft: "черновик"
 
   attr_accessible :content, :intro, :slug, :title, :status
-  attr_accessor :path
+  # attr_accessor :path
   attr_reader   :keywords, :description
 
   validates_presence_of   :title, :slug

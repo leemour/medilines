@@ -6,9 +6,6 @@ class Category < ActiveRecord::Base
   has_many :products
   has_many :brands, :through => :products, :uniq => true
 
-  # alias_attribute :title, :name
-  # alias_attribute :intro, :description
-
   attr_accessible :description, :name, :slug, :parent, :logo, :parent_id
 
   validates_presence_of :name, :slug

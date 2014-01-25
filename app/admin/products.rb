@@ -47,8 +47,8 @@ ActiveAdmin.register Product do
 
   filter :category, :as => :select, :collection => proc { Category.all }
   filter :brand, :as => :select, :collection => proc { Brand.all }
-  filter :name, :label => "Названию"
-  filter :slug, :label => "Ссылке"
+  filter :name
+  filter :slug
   filter :created_at
   filter :updated_at
 
