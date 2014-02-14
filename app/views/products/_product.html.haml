@@ -9,10 +9,10 @@
     = link_to image_tag(product.image_url(:small), :size => "175x130",
         :alt => product.name), product_url(product)
 
-    .images
-      - product.photos.each do |photo|
-        = img_link(photo, :small, :large)
-
     .info
       %p.slogan= link_to product.slogan, product_url(product)
-      %p= short_text(product.features, 200)
+      %p= short_text(product.features, 200).html_safe
+
+    .images
+      - product.photos.each do |photo|
+        = img_link(photo, :small, :large) if photo.url

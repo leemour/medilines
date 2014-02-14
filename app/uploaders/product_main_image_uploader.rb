@@ -4,10 +4,10 @@ class ProductMainImageUploader < ImageUploader
   end
 
   version :thumb do
-     process :resize_to_fill => [50, 50]
+    process :resize_to_fill => [50, 50]
   end
   version :small do
-     process :resize_to_fill => [175, 130]
+    process :resize_to_fill => [175, 130]
   end
   version :large do
     process :resize_to_fill => [330, 245]

@@ -3,6 +3,10 @@ class ProductImageUploader < ImageUploader
     "uploads/#{model.class.to_s.underscore}/#{model.slug}"
   end
 
+  def default_url
+    nil
+  end
+
   version :small do
     process :resize_to_fill => [75, 100]
   end

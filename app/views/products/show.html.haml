@@ -14,7 +14,7 @@
 
     .images
       - @product.photos.each do |photo|
-        = img_link(photo, :medium, :large)
+        = img_link(photo, :medium, :large) if photo.url
 
 %section.content
   - if @product.description2.empty?
